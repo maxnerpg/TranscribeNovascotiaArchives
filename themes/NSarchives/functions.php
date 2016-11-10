@@ -1,5 +1,41 @@
 <?php
+function collection_order_array() {
+    $commaSeparatedList = get_theme_option('Collection Order');
 
+    if ($commaSeparatedList == NULL) {
+        $collections = get_records('Collection', array(), 0);
+        $num_collections = count($collections);
+        $commaSeparatedList = '';
+
+        for ($i=0; $i < $num_collections; $i++) {
+                $commaSeparatedList .= $collections[$i]->id;
+                $commaSeparatedList .= ',';
+        }
+
+        $commaSeparatedList = rtrim($commaSeparatedList, ",");
+    }
+
+    $arrayList=explode(",",$commaSeparatedList);
+    return $arrayList;
+}
+
+// This function supplements ItemFunctions.php in application/helpers
+function return_files($files, array $props = array(), $wrapperAttributes = array('class'=>'item-file'))
+{
+    // require_once APP_DIR . '/helpers/Media.php';
+    // $helper = new Omeka_View_Helper_Media;
+    return $files;
+}
+
+// This function supplements FileFunctions.php in application/helpers
+function return_files_for_item($options = array(), $wrapperAttributes = array('class'=>'item-file'), $item = null)
+{
+    if (!$item) {
+        $item = get_current_record('item');
+    }
+
+    return return_files($item->Files, $options, $wrapperAttributes);
+}
 function public_nav_main_bootstrap() {
     $partial = array('common/menu-partial.phtml', 'default');
     $nav = public_nav_main();  // this looks like $this->navigation()->menu() from Zend
