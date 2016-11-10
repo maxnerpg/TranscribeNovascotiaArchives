@@ -1,0 +1,681 @@
+// Add your custom CSS here
+
+
+
+img {
+    max-width: 100%;
+}
+
+body {background-color:#ECECEC;
+
+
+}
+.navbar {
+	border-radius: 0;
+	border:0;
+	background-color:white;
+	height:70px;
+	margin-bottom:0;
+  z-index: 1001;
+	}
+
+div#transcribeNavbar {
+	background-color:white;
+	padding-left:0;
+	margin-left:55px;
+	z-index:99;
+}
+
+div#transcribeNavbar li {
+	height:50px;
+}
+
+
+div#transcribeNavbar li:hover {
+	color:#999;
+	background-color:#fff;
+}
+
+
+
+
+div.vcenter {
+ position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  
+ }
+.navbar .navbar-toggle .icon-bar {
+	background-color:black;
+	}
+	
+.navbar .navbar-toggle {
+	border-color:black;
+}
+
+div#header-dhlabbox {
+	height:70px;
+	width:70px;
+	float:left;
+	background-color:#404040;
+	font-family: Text-Regular;
+	font-size:1.7em;
+	text-rendering: optimizeLegibility;
+	position:relative;
+}
+
+div#header-allbox {
+	width:330px;
+	height:70px;
+}
+
+div#header-transcribebox {
+	width:260px;
+	height:70px;
+	float:left;background-color:#F6A947;
+	line-height: 75px;
+	margin-top:0;
+	margin-bottom:0;
+	font-size:2.8em;
+	text-align: center;
+}
+
+div#header-transcribebox a {
+
+	font-family: Text-Regular;
+	text-decoration: none;
+	color:white;
+	text-rendering: optimizeLegibility;
+
+}
+
+div#header-dhlabbox-dh {
+	color:white;
+	position:absolute;
+	top:15px;
+	left:13px;
+	z-index: 2;	
+}
+
+div#header-dhlabbox-lab {
+	color:#F6A947;
+	position:absolute;
+	top:27px;
+	left:19px;
+	z-index: 1;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color:black;
+	padding-top:10px;
+}
+
+.navbar li, .navbar li a {
+	font-family: "InterstateRegularCondensed";
+	color:black;
+	font-size:1.125em;
+	text-transform: uppercase;
+	height:70px;
+	line-height:55px;
+	margin-right:15px;
+	margin-left:15px;
+}
+
+.navbar li a:hover {
+	color:#999;
+	background-color:#fff;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+	background-color: #fff;
+}
+
+.navbar li form {
+	line-height:0;
+	margin:0;
+	padding:0;
+	position:relative;
+	top:-1px;
+}
+
+
+
+.navbar li div.form-group {
+	width:135px;
+}
+
+input#query {width:120px;}
+
+
+
+.dropdown-menu li, .dropdown-menu li a {
+	font-family: "InterstateRegular";
+	color:#cccccc;
+	background-color:#464646;
+	font-size:14px;
+	height:55px;
+	line-height:55px;
+	text-transform:none;
+	margin:0;
+}
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus
+{background-color:#fff;}
+.dropdown-menu li a:hover {
+	color:#ffffff;
+	background-color:#f6a947;
+}
+
+
+
+	
+.navbar-toggle {margin-top:18px;}
+
+a.dropdown-toggle {white-space: nowrap;}
+
+/* Home Page styles */
+
+div.calltoactionbox {
+	background-color:rgba(0,0,0,.7);
+	color:white;
+	width:80%;
+	max-width:550px;
+	padding:65px;
+	z-index: 50;
+}
+
+ div.calltoactionbox a {
+	 color:white;
+ }
+ 
+ div.calltoactionbox .btn {
+	 background-color: #f6a847;
+	 width:80%;
+	 margin: 40px auto 0 auto;
+	 font-weight: bold;
+	 color:#ffffff;
+	 font-size:18px;
+ }
+
+div.calltoactionbox h1 {
+	font-family: YaleDesign;
+	font-size:36px;
+	text-align: center;
+	margin-bottom:30px;
+	margin-top:0;
+}
+
+div.calltoactionbox p {
+	font-family: InterstateLight;
+	font-size:14px;
+	text-align: justify;
+}
+
+
+
+/* SIMPLE PAGE THEMING */
+
+
+body.simple-page  h2 {
+	color:#333333;
+	font-family: 'YaleDesign';
+	text-align:center;
+}
+
+body.simple-page div.row {
+
+	font-family: 'InterstateLight';
+}
+
+
+
+/* FOOTER STUFF */
+
+    
+html {
+  position: relative;
+  min-height: 100%;
+
+  touch-action: manipulation;
+  content-zooming:none;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 120px;
+}
+
+/* Hide the footer on transcripton pages */
+body#trancription footer {
+	display:none;
+}
+
+
+footer {
+	background-color:#333333;
+	color:white;
+	height:120px;
+	position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+div#footersection {
+position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+div#footersection div.row {
+	margin-right:50px;
+}
+
+
+div#footerPOTYDHL {
+	font-family:InterstateLightCondensed; font-size:16px;
+	margin-right:20px;
+}
+
+
+/* COLLECTION VIEW */
+.main {padding-left:330px;
+
+
+}
+
+
+div.collectionTitle {
+	width:330px;
+	float:left; 
+	padding-right:30px;
+	padding-left:30px;
+
+}
+
+.collectionTitle h1 {
+	font-family: "YaleDesign";
+	font-size:24px;
+	text-align:right;
+	margin-top:50px;
+	line-height:30px;
+
+}
+
+div.collectionDesc {
+	font-family: "InterstateLight";
+	font-size:14px;
+	line-height:1.5em;
+	margin-top:50px;
+	padding-right:40px;
+	margin-bottom:50px;
+}
+
+div#collectionProgress {
+		width:95%;
+		height:10px;
+		border-radius: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		background:#fff;
+}
+
+div.item-progress {
+	margin-bottom:0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background:#626262;
+	height:10px;
+}
+
+.progress-bar {
+	background-color:#f6a947;
+	box-shadow: none;
+}
+
+div#pageshavebeen {
+	text-align:right;
+	font-family: "InterstateLight";
+	font-size:14px;
+	color:#999999;
+		line-height: 1em;
+}
+
+
+
+div.header-gradient {
+	background:linear-gradient(#ececec, #ffffff);
+	background:-webkit-linear-gradient(#ececec, #ffffff);
+
+}
+
+
+#columns {
+	width: 90%;
+	margin: 30px auto;
+}
+
+div.section-title {
+	padding-bottom:20px;
+}
+
+div.section-title div.row {
+	margin-right:50px;
+}
+div#columns figcaption {
+	color:#666666;
+	padding:19px;
+	background-color:#ffffff;
+	font-family:InterstateLight;
+	font-size:12px;
+	line-height: 1.25em;
+}
+
+div#columns figcaption h3, div#columns figcaption h3 a {
+	font-family: InterstateRegular;
+	font-size:16px;
+	margin-top:0;
+	color:#666666;
+	text-decoration: none;
+
+	
+}
+
+div#columns figure:hover figcaption h3, div#columns figure:hover figcaption h3 a {
+	color:#000000;
+} 
+
+
+
+div#columns figure {
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	column-break-inside: avoid;
+	display: inline-block;
+}
+
+div.masonryrow {
+ column-width: 250px;
+ -moz-column-width: 250px;
+ -webkit-column-width: 250px;
+ column-gap: 1em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em; 
+ column-fill: auto;
+}
+
+.masonrywell {
+ position:relative;
+ display: block;
+}
+
+div.thumbholder{
+	background-color:#000;
+	padding:19px;
+	padding-bottom:14px;
+	position: relative;
+}
+
+div.hoverMeta {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	background:linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+	height:80px;
+	padding-top:45px;
+	padding-left:20px;
+	font-family:InterstateLight;
+	color:white;
+	display:none;
+	line-height: normal;
+}
+
+div.hoverEdit {
+	position:absolute;
+	top:0;
+	left:0;
+	border-radius: 4px;
+	margin-top:15px;
+	text-align: center;
+	vertical-align: middle;
+	margin-left:20px;
+	width:40px;
+	height:40px;
+	background-color:#f6a947;
+	color:white;
+	display:none;
+	-webkit-box-shadow: 1px 1px #000000;
+	-moz-box-shadow: 1px 1px #000000;
+	box-shadow: 1px 1px #000000;
+
+}
+
+div.hoverEdit .glyphicon { 
+	line-height: 40px;
+	font-size: large;
+}
+
+div.hoverMeta .glyphicon { 
+	width: 17px;
+	line-height:8px;
+} 
+
+
+div#columns figure:hover div.hoverMeta, div#columns figure:hover div.hoverEdit{
+	display:block;
+	pointer-events: none;
+
+}
+
+div#columns figure img {
+	width: 100%;
+	height: auto;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+/* ITEM VIEW */
+
+div.collectionTitleToItem {
+	padding-left:90px;
+
+
+
+}
+
+.collectionTitleToItem h1, .collectionTitleToItem h1 a {
+	font-family: "InterstateLight";
+	font-size:16px;
+	margin-top:15px;
+	line-height:1.5em;
+	color:#515151;
+	text-decoration: none;
+}
+
+.collectionTitleToItem h1 a:hover {
+	text-decoration: underline;
+}
+
+.collectionTitleToItem h1 strong {
+	font-family: "InterstateBold";
+	font-weight:normal;
+}
+
+/* FONTS */
+
+div.yul-wordmark {	
+
+	text-rendering: optimizeLegibility;
+	line-height:normal;
+	
+}
+div.yul-wordmark span.yul-wordmark-smallcap {
+    font-family: 'YaleDesign-SmallCap', Georgia, "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    font-size:16px;
+
+}
+
+div.yul-wordmark span.yul-wordmark-yale {
+    font-family: 'YaleDesign', Georgia, "Times New Roman", Times, serif;
+    font-size: 26px;
+}
+
+div.yul-wordmark span.yul-wordmark-italic {
+    font-family: 'YaleDesign', Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	font-size:17px;
+}
+
+
+/* MOBILE */
+
+/* Large Screen Sizes */
+@media (min-width: 829px) {
+	.dropdown-menu {
+		top:70px;
+		margin: 0;
+		width:100%;
+		border: none;
+		border-radius: 0px;
+		padding:0;
+	}
+	
+	nav div.container-fluid {
+	padding-left: 0;
+	}
+}
+
+
+	
+	
+
+
+@media (max-width:500px) {
+	div.calltoactionbox {
+	padding:15px;
+	}
+}
+
+@media (max-width:376px) {
+	div#header-allbox {
+	width:300px;
+	}
+	div#header-transcribebox {
+	width:230px;
+	}
+
+
+
+
+}
+
+
+@media (max-width:321px) {
+
+	div#header-allbox {
+	background-color:#f6a947;
+	}
+	div#header-transcribebox {
+	width:190px;
+	font-size:2.2em;
+	}
+
+	.navbar .navbar-toggle .icon-bar {
+	background-color:white;
+	}
+	
+	.navbar .navbar-toggle {
+	border-color:white;
+	}
+}
+
+@media (max-width:374px) {
+
+	div#header-allbox {
+	background-color:#f6a947;
+	width:100%;
+	}
+	div#header-transcribebox {
+	width:190px;
+	
+	}
+
+}
+
+
+
+@media (max-width: 829px) {
+	footer {
+		display:none;
+	}
+	
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+		color:black;
+	}
+	.dropdown-menu li, .dropdown-menu li a {
+		background-color:white;
+		margin-left:10px;
+		height:25px;
+	}
+	div#transcribeNavbar li {
+		height:inherit;
+	}
+
+	
+	
+}
+
+
+@font-face {
+    font-family: 'YaleDesign';
+    src: url(fonts/yaledesign-medium-webfont.eot);
+    src: url(fonts/yaledesign-medium-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/yaledesign-medium-webfont.woff) format('woff'), url(fonts/yaledesign-medium-webfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'YaleDesign';
+  src: url("fonts/yaledesign-italic-webfont.eot");
+  src: url("fonts/yaledesign-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/yaledesign-italic-webfont.ttf") format("truetype"), url("fonts/yaledesign-italic-webfont.woff") format("woff");
+  font-style: italic;
+  font-weight: normal;
+}
+
+
+
+@font-face {
+    font-family: 'YaleDesign-SmallCap';
+    src: url(fonts/yaledessmacap-webfont.eot);
+    src: url(fonts/yaledessmacap-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/yaledessmacap-webfont.woff) format('woff'), url(fonts/yaledessmacap-webfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("//hello.myfonts.net/count/2f830c");
+
+@font-face {font-family: 'Text-Regular';src: url('fonts/text.eot');src: url('fonts/text.eot?#iefix') format('embedded-opentype'),url('fonts/text.woff2') format('woff2'),url('fonts/text.woff') format('woff'),url('fonts/text.ttf') format('truetype');}
+
+@font-face {font-family: 'InterstateBoldCondensed';src: url('fonts/Interstate-BoldCondensed.eot');src: url('fonts/Interstate-BoldCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-BoldCondensed.ttf') format('truetype');}
+
+@font-face {font-family: 'InterstateBold';src: url('fonts/Interstate-Bold.eot');src: url('fonts/Interstate-Bold.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Bold.ttf') format('truetype');}
+
+
+@font-face {font-family: 'InterstateLight';src: url('fonts/Interstate-Light.eot');src: url('fonts/Interstate-Light.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Light.ttf') format('truetype');}
+
+@font-face {font-family: 'InterstateLightCondensed';src: url('fonts/Interstate-LightCondensed.eot');src: url('fonts/Interstate-LightCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-LightCondensed.ttf') format('truetype');}
+
+@font-face {font-family: 'InterstateRegular';src: url('fonts/Interstate-Regular.eot');src: url('fonts/Interstate-Regular.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Regular.ttf') format('truetype');}
+
+@font-face {font-family: 'InterstateRegularCondensed';src: url('fonts/Interstate-RegularCondensed.eot');src: url('fonts/Interstate-RegularCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-RegularCondensed.ttf') format('truetype');}
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
