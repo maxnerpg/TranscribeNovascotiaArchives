@@ -94,6 +94,7 @@
         
         
          ?>
+		 	<div class="col-sm-3">
 	            <figure>
 	            <div class="masonrywell">
 					<div class="thumbholder">
@@ -124,7 +125,7 @@
 	                </figcaption>
 	            </div>
 	            </figure>
-	            
+	            </div>
 	            
 	            <?php $files = $item->getFiles();
             

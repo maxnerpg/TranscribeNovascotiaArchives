@@ -273,7 +273,6 @@ div#footerPOTYDHL {
 
 
 div.collectionTitle {
-	width:330px;
 	float:left; 
 	padding-right:30px;
 	padding-left:30px;
@@ -284,7 +283,6 @@ div.collectionTitle {
 
 	font-size:24px;
 	text-align:right;
-	margin-top:50px;
 	line-height:30px;
 
 }

@@ -2,19 +2,26 @@
     $pageTitle = __('Browse collections');
     echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
-
+       
+            	               
+	
+	
+</div>
+</div>
     <h1><?php echo 'Browse all collections'; ?></h1>
-    <div class="browse-collections">
+     <div id="columns" class="container">
+        
         <?php if ($total_results > 0): ?>
             <?php foreach (loop('collections') as $collection): ?>
-               
-                        <div class="col-sm-3">
-                            
-                            <div class="thumbnail">
+            <div class="col-sm-3">
+            <figure>
+	            <div class="masonrywell">
+					<div class="thumbholder">
                             <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
                                 <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
                             <?php endif; ?>
-                            <div class="caption">
+                    </div>
+                    <figcaption>
                            
                             <?php if ($collection->hasContributor()): ?>
                                 <?php echo metadata('collection', array('Dublin Core', 'Contributor'), array('all'=>true, 'delimiter'=>', ')); ?>
@@ -25,10 +32,12 @@
                             <?php endif; ?>
                           
                             <?php echo link_to_collection(); ?>
-                            </div>
-                            </div>
+                    </figcaption>
+        
                             
-                        </div>
+                    </div>
+                </figure>
+                </div>
                     
                         <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'collection' => $collection)); ?>
                 
