@@ -145,7 +145,7 @@ class ScriptusPlugin extends Omeka_Plugin_AbstractPlugin
                 array(
                     'module'       => 'scriptus',
                     'controller'   => 'index',
-                    'action'       => 'submissionstats',
+                    'action'       => 'dashboard',
                 )
             )
         ); 
