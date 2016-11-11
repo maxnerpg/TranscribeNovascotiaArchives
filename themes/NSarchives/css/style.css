@@ -17,6 +17,7 @@ body {background-color:#ECECEC;
 .site-banner {
 	background-color:#ECECEC;
 }
+
 .navbar {
 	border-radius: 0;
 	border:0;
@@ -204,7 +205,9 @@ div.calltoactionbox p {
 }
 
 
-
+.search-form {
+	padding: 10px;
+}
 /* SIMPLE PAGE THEMING */
 
 
