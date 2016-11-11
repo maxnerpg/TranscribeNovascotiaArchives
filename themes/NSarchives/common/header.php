@@ -49,7 +49,7 @@
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    <header role="banner">
+    <header role="banner" class="site-banner">
          <div class="container">
             
              <h1 class="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1>
