@@ -40,7 +40,7 @@
                 </div>
                 </figure>
             </div>
-</div>
+
                   
                 
                     <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
@@ -53,6 +53,7 @@
         <?php else : ?>
             <p><?php echo 'No items added, yet.'; ?></p>
         <?php endif; ?>
+    </div>
     </div>
     <?php echo pagination_links(); ?>
 
