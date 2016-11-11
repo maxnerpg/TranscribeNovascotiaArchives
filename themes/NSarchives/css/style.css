@@ -26,7 +26,6 @@ body {background-color:#ECECEC;
 div#transcribe-navbar {
 	background-color:#2750A0;
 	padding-left:0;
-	margin-left:55px;
 	z-index:99;
 }
 
@@ -134,7 +133,7 @@ div#header-transcribebox a {
 	width:135px;
 }
 
-input#query {width:120px;}
+input#query {width:220px;display:inline;}
 
 
 
