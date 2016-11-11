@@ -12,6 +12,7 @@ body {background-color:#ECECEC;
 }
 .site-title{
 	color:#2750A0;
+
 }
 .navbar {
 	border-radius: 0;
@@ -86,7 +87,7 @@ div#header-transcribebox {
 
 div#header-transcribebox a {
 
-	font-family: Text-Regular;
+
 	text-decoration: none;
 	color:white;
 	text-rendering: optimizeLegibility;
@@ -101,8 +102,8 @@ div#header-transcribebox a {
 }
 
 .navbar li, .navbar li a {
-	font-family: "InterstateRegularCondensed";
-	color:black;
+
+	color:white;
 	font-size:1.125em;
 	text-transform: uppercase;
 	height:70px;
@@ -138,7 +139,7 @@ input#query {width:120px;}
 
 
 .dropdown-menu li, .dropdown-menu li a {
-	font-family: "InterstateRegular";
+
 	color:#cccccc;
 	background-color:#464646;
 	font-size:14px;
@@ -260,7 +261,7 @@ div#footersection div.row {
 
 
 div#footerPOTYDHL {
-	font-family:InterstateLightCondensed; font-size:16px;
+	font-size:16px;
 	margin-right:20px;
 }
 
@@ -281,7 +282,7 @@ div.collectionTitle {
 }
 
 .collectionTitle h1 {
-	font-family: "YaleDesign";
+
 	font-size:24px;
 	text-align:right;
 	margin-top:50px;
@@ -290,7 +291,7 @@ div.collectionTitle {
 }
 
 div.collectionDesc {
-	font-family: "InterstateLight";
+
 	font-size:14px;
 	line-height:1.5em;
 	margin-top:50px;
@@ -323,7 +324,7 @@ div.item-progress {
 
 div#pageshavebeen {
 	text-align:right;
-	font-family: "InterstateLight";
+	
 	font-size:14px;
 	color:#999999;
 		line-height: 1em;
@@ -354,13 +355,13 @@ div#columns figcaption {
 	color:#666666;
 	padding:19px;
 	background-color:#ffffff;
-	font-family:InterstateLight;
+	
 	font-size:12px;
 	line-height: 1.25em;
 }
 
 div#columns figcaption h3, div#columns figcaption h3 a {
-	font-family: InterstateRegular;
+
 	font-size:16px;
 	margin-top:0;
 	color:#666666;
@@ -413,7 +414,7 @@ div.hoverMeta {
 	height:80px;
 	padding-top:45px;
 	padding-left:20px;
-	font-family:InterstateLight;
+	
 	color:white;
 	display:none;
 	line-height: normal;
@@ -473,7 +474,7 @@ div.collectionTitleToItem {
 }
 
 .collectionTitleToItem h1, .collectionTitleToItem h1 a {
-	font-family: "InterstateLight";
+
 	font-size:16px;
 	margin-top:15px;
 	line-height:1.5em;
@@ -486,7 +487,7 @@ div.collectionTitleToItem {
 }
 
 .collectionTitleToItem h1 strong {
-	font-family: "InterstateBold";
+	
 	font-weight:normal;
 }
 
@@ -497,23 +498,6 @@ div.yul-wordmark {
 	text-rendering: optimizeLegibility;
 	line-height:normal;
 	
-}
-div.yul-wordmark span.yul-wordmark-smallcap {
-    font-family: 'YaleDesign-SmallCap', Georgia, "Times New Roman", Times, serif;
-    text-transform: uppercase;
-    font-size:16px;
-
-}
-
-div.yul-wordmark span.yul-wordmark-yale {
-    font-family: 'YaleDesign', Georgia, "Times New Roman", Times, serif;
-    font-size: 26px;
-}
-
-div.yul-wordmark span.yul-wordmark-italic {
-    font-family: 'YaleDesign', Georgia, "Times New Roman", Times, serif;
-	font-style:italic;
-	font-size:17px;
 }
 
 
@@ -636,30 +620,6 @@ div.yul-wordmark span.yul-wordmark-italic {
 
 
 
-@font-face {
-    font-family: 'YaleDesign-SmallCap';
-    src: url(fonts/yaledessmacap-webfont.eot);
-    src: url(fonts/yaledessmacap-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/yaledessmacap-webfont.woff) format('woff'), url(fonts/yaledessmacap-webfont.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@import url("//hello.myfonts.net/count/2f830c");
-
-@font-face {font-family: 'Text-Regular';src: url('fonts/text.eot');src: url('fonts/text.eot?#iefix') format('embedded-opentype'),url('fonts/text.woff2') format('woff2'),url('fonts/text.woff') format('woff'),url('fonts/text.ttf') format('truetype');}
-
-@font-face {font-family: 'InterstateBoldCondensed';src: url('fonts/Interstate-BoldCondensed.eot');src: url('fonts/Interstate-BoldCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-BoldCondensed.ttf') format('truetype');}
-
-@font-face {font-family: 'InterstateBold';src: url('fonts/Interstate-Bold.eot');src: url('fonts/Interstate-Bold.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Bold.ttf') format('truetype');}
-
-
-@font-face {font-family: 'InterstateLight';src: url('fonts/Interstate-Light.eot');src: url('fonts/Interstate-Light.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Light.ttf') format('truetype');}
-
-@font-face {font-family: 'InterstateLightCondensed';src: url('fonts/Interstate-LightCondensed.eot');src: url('fonts/Interstate-LightCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-LightCondensed.ttf') format('truetype');}
-
-@font-face {font-family: 'InterstateRegular';src: url('fonts/Interstate-Regular.eot');src: url('fonts/Interstate-Regular.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-Regular.ttf') format('truetype');}
-
-@font-face {font-family: 'InterstateRegularCondensed';src: url('fonts/Interstate-RegularCondensed.eot');src: url('fonts/Interstate-RegularCondensed.eot?#iefix') format('embedded-opentype'),url('fonts/Interstate-RegularCondensed.ttf') format('truetype');}
 
 
 @font-face {
