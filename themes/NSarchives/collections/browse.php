@@ -8,8 +8,7 @@
         <?php if ($total_results > 0): ?>
           <ul class="thumbnails">
             <?php foreach (loop('collections') as $collection): ?>
-                <div class="collection">
-                    <div class="row">
+               
                         <div class="col-sm-3">
                              <li class="span4">
                             <div class="thumbnail">
@@ -17,7 +16,7 @@
                                 <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
                             <?php endif; ?>
                             <div class="caption">
-                            <p>Description</p>
+                           
                             <?php if ($collection->hasContributor()): ?>
                                 <?php echo metadata('collection', array('Dublin Core', 'Contributor'), array('all'=>true, 'delimiter'=>', ')); ?>
                             <?php endif; ?>
@@ -25,7 +24,7 @@
                             <?php if (metadata('collection', array('Dublin Core', 'Description'))): ?>
                                 <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet'=>150))); ?>
                             <?php endif; ?>
-                               <p align="center"><a href="/" class="btn btn-primary btn-block">Open</a></p>
+                          
                             <?php echo link_to_collection(); ?>
                             </div>
                             </div>
@@ -33,8 +32,7 @@
                         </div>
                     
                         <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'collection' => $collection)); ?>
-                    </div>
-                </div>
+                
             <?php endforeach; ?>
             </ul>
         <?php else : ?>
