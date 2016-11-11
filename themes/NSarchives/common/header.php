@@ -73,8 +73,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse"  id="transcribeNavbar">
       <ul class="nav navbar-nav">
-        </li>
-        <ul class="nav nav-pills navbar-left">
     <?php $count = 0 ?>
     <?php foreach ($this->container as $page): ?>
         <?php if( ! $page->isVisible() || !$this->navigation()->accept($page)) continue; ?>
@@ -106,8 +104,10 @@
         <?php endif; ?>
         <?php $count++ ?>
     <?php endforeach; ?>
-</ul>
 
+
+          
+        <li>
 		<?php if (!current_user()) { ?>
 		<a href="<?php echo WEB_ROOT; ?>/guest-user/user/login">Login</a>
 		<?php }; ?>
