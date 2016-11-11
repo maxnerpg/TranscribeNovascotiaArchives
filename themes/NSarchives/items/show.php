@@ -80,7 +80,7 @@
 
 <div id="columns" class="container">
 
-<div class="masonryrow">
+
 	
             <?php if (metadata('item', 'has files')): ?>
 
@@ -100,6 +100,7 @@
 			                    $fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title'))); 
 			
 ?>
+						<div class="col-sm-3">
                     	            <figure>
                     	            <div class="masonrywell">
 										<div class="thumbholder">
@@ -132,6 +133,7 @@
 						                </figcaption>
                     	            </div>
 					            </figure>
+						</div>
 			            <?php endforeach; ?>       
             <?php endif; ?>
 	
@@ -148,7 +150,7 @@
 	
 	
 </div>
-</div>
+
 </div>
     
     <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>

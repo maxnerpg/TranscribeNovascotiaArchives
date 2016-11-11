@@ -33,7 +33,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 	div.transcribeLeft {
 		width:330px;
-		float:left; 
+		float:right; 
 		padding-right:22px;
 		padding-left:22px;
 		padding-top:12px;
@@ -43,14 +43,14 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 	div.transcribeLeft h1 {
 		font-family: InterstateRegular;
-		font-size: 16px;
+		font-size: 20px;
 		color:#666666;
 		margin-bottom:23px;
 	}
 	
 	.transcribeLeft h2 {
 		font-family: "InterstateLight";
-		font-size: 12px;
+		font-size: 16px;
 		margin: 0 0 2px 0;
 	}
 	
@@ -72,7 +72,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 	.nav-tabs li {
 		font-family: InterstateRegular;
-		font-size:14px;
+		font-size:16px;
 		height:32px;
 	
 	}
@@ -87,10 +87,9 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 	div#transcribePageNav {
 		font-family: "InterstateLight";
-		font-size:12px;
-		padding-right:22px;
-		padding-left:22px;
-		padding-top:24px;
+		font-size:16px;
+	
+		padding:24px;
 		color:#999999;
 		background-color:#fff;
 		
@@ -172,7 +171,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 						disqus_url = temp[0];
 
 					    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-					    var disqus_shortname = 'yultranscribe'; // required: replace example with your forum shortname
+					    var disqus_shortname = 'nsatranscribe'; // required: replace example with your forum shortname
 
 					    /* * * DON'T EDIT BELOW THIS LINE * * */
 					    (function() {
