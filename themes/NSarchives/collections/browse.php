@@ -6,7 +6,6 @@
     <h1><?php echo 'Browse all collections'; ?></h1>
     <div class="browse-collections">
         <?php if ($total_results > 0): ?>
-          <ul class="thumbnails">
             <?php foreach (loop('collections') as $collection): ?>
                
                         <div class="col-sm-3">
@@ -28,13 +27,12 @@
                             <?php echo link_to_collection(); ?>
                             </div>
                             </div>
-                            </li>
+                            
                         </div>
                     
                         <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'collection' => $collection)); ?>
                 
             <?php endforeach; ?>
-            </ul>
         <?php else : ?>
             <p><?php echo 'No collections added, yet.'; ?></p>
         <?php endif; ?>
