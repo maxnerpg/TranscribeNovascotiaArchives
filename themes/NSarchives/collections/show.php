@@ -54,7 +54,6 @@
 
 <div id="columns" class="container">
 
-<div class="masonryrow">
 
 
 <?php $totalFiles = 0; //Will hold number of files in collection
@@ -149,8 +148,7 @@
                   $total_percent_completed = round($total_percent_completed / $totalFiles * 100); 
                   ?>   
 	
-	
-</div>
+
 </div>
 
 	
