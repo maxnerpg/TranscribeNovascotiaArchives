@@ -126,7 +126,7 @@
   }
 
   .author {
-    background-color: #854a16;
+    background-color: #B5651D;
     color: white;
     float: right;
     padding: 3px;
@@ -134,7 +134,7 @@
   }
 
   .postDate {
-    background-color: #854a16;
+    background-color: #B5651D;
     color: white;
     float: left;
     margin-right: 10px;
@@ -155,44 +155,27 @@
     clear: both;
   }
 
-  .section-title h1 {
-    font-size: 30pt;
-  }
-
-  .section-title, .login-link {
-    text-align: center;
-    margin-bottom: 5px;
-  }
-
-  .login-link {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    border-width: 2px;
-    border-style: ridge;
-    padding: 3px;
-    border-color: rgba(0, 0, 0, 0.03);
-  }
-
-   .login-link a {
-    color: blue;
-
-   }
-
-
-  @media (max-width: 959px) {
-    #user-transcriptions, #update-account, #recent-comments, #recent-transcriptions {
-      width: 95%;
-      margin: auto;
-      margin-bottom: 10px;
-    }
-  }
-  @media (max-width: 480px) {
-    .section-title h1 {
-      font-size: 28pt;
-    }
+  .section-title {
+    margin-top: 140px;
   }
 
   
+
+  @media (max-width: 959px) {
+  #user-transcriptions, #update-account, #recent-comments, #recent-transcriptions {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  .section-title {
+    margin-top: 120px;
+  }
+
+  @media (max-width: 767px) {
+    .section-title {
+      margin-top: -15px;
+    }
+  }
 
 }
 
@@ -200,11 +183,11 @@
 
   <div id="primary">
     <div class="content">
-      <div class="section-title"><h1>Your dashboard</h1></div>
+      <div class="section-title"></div>
+
+
       <?php $user = current_user(); ?>
-      <?php if (!$user): ?>
-        <div class="login-link"><a href="<?php echo WEB_ROOT;?>/guest-user/user/login">Login </a>to see your recent transcriptions and view account options.</div>
-      <?php else: ?>
+      <?php if ($user): ?>
       <div id="update-account">
 
         <h2>Update account</h2> 
@@ -233,7 +216,7 @@
 
       <div id="recent-comments">
 
-      <!-- <h2>Most recent comments</h2> -->
+      <h2>Most recent comments</h2>
       
       </div>
 
@@ -250,7 +233,7 @@
             <p> Transcription: <?php echo snippet_by_word_count($transcriptionItem["transcription"], 10, '...') ?></p> */ ?>
 
              <a href="<?php echo $transcriptionItem["URL_changed"] ?>" class="transcriptionLink">
-              <img src="<?php echo $transcriptionItem["image_url"] ?>" alt="<?php echo $transcriptionItem["file_title"] ?>,a part of <?php echo $transcriptionItem["item_title"] ?>" /> 
+              <img src="<?php echo $transcriptionItem["image_url"] ?>" /> 
 
               <div class="transcription-snippet">
                 <p> <?php echo snippet_by_word_count($transcriptionItem["transcription"], 10, '...') ?></p>
@@ -296,16 +279,18 @@ $(document).ready(function () {
   $.ajax({
     type: 'GET',
     /*the related=thread URL parameter below is necessary for the query to return links to the posts.  The second URL paramter, limit 100, is the max we can get back.  */
-    url: "https://disqus.com/api/3.0/forums/listPosts.jsonp?related=thread&limit=100",
+    url: "http://disqus.com/api/3.0/forums/listPosts.jsonp?related=thread&limit=100",
     data: { api_key: disqusPublicKey, forum : disqusShortname},
     dataType: 'jsonp',
     success: function (result) {
+    console.log("RESULT IS");
+    console.log(result);
 
       //The collection object will have the collections and then the associated comments stored in it
       collectionObject = {};
 
       //All the collections currently tracked.  Update as necessary.
-      collectionArray = ["Museum of Natural History Egg Cards", "Pioneer Lives", "Iowa Women’s Lives: Letters and Diaries", "Szathmary Culinary Manuscripts and Cookbooks", "Building the Transcontinental Railroad", "Nile Kinnick Collection", "Civil War Diaries and Letters", "World War I Diaries and Letters", "World War II Diaries and Letters"];
+      collectionArray = ["Pioneer Lives", "Iowa Women’s Lives: Letters and Diaries", "Szathmary Culinary Manuscripts and Cookbooks", "Building the Transcontinental Railroad", "Nile Kinnick Collection", "Civil War Diaries and Letters"];
 
       //The number of comments we're displaying for each collection
       commentsPerCollection = 3;
@@ -340,7 +325,7 @@ $(document).ready(function () {
         //The format of a title is DIY History | Transcribe | Collection Name | Item Name | File Name.
         //If the title fits that format, split the string on the '|' character and then pop the last two items off of the resulting array to format a title for the user.
         //If the title doesn't fit that format, then we avoid performing array operations on a non-array with the if statement.  
-        if (threadTitle.split(" | ").length >= 5){
+        if (threadTitle.split(" | ").length > 1){
           threadArray = threadTitle.split ( " | ");
 
           //Title we display to the user
@@ -372,6 +357,8 @@ $(document).ready(function () {
         }
       i++;  
       }
+      console.log("COLLECTION OBJECT IS");
+      console.log(collectionObject);
 
       //We will build the DOM to append to the recent-comments page with this string
       bodyString = '';
@@ -404,13 +391,10 @@ $(document).ready(function () {
         bodyString += '<div id="collapse' + collectionNumberTracker + '" class="accordion-body collapse ';
 
         if (collectionNumberTracker == 0){
-          bodyString += 'in" aria-expanded="true"';
-        }
-        else {
-          bodyString += 'aria-expanded="false"';
+          bodyString += 'in';
         }
 
-        bodyString += ' >';
+        bodyString += '">';
 
         //The value of each high-level property in collectionObject is the comments for each collection and the number of comments.  Here, we get all the comments to iterate through them
         collectionComments = collectionObject[collectionName]["commentData"];
@@ -433,13 +417,9 @@ $(document).ready(function () {
               author = comment.author.name;
               postDate = comment.createdAt;
               postDate = postDate.replace('T', ', ');
+              threadLink = comment.thread.link;
               threadTitle = comment.thread.title;
               displayTitle = comment.displayTitle;
-
-              threadLink = comment.thread.link;
-              threadArray = threadLink.split("?");
-              threadLink = threadArray[0];
-
 
               //postDate = formatDate(postDate, '%H:%m:%s');
 
@@ -452,12 +432,6 @@ $(document).ready(function () {
               post = postBody + postContext; 
 
               bodyString += post;
-          }
-          if (collectionComments.length == 0){
-            //The accordion requires content to function when there are no comments in a collection
-
-            //Create hidden content
-            bodyString += '<span class="hidden">filler</span>'
           }
         
         bodyString += '</div></div>'; 
