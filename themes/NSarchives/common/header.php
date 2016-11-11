@@ -73,6 +73,7 @@
     <div class="collapse navbar-collapse"  id="transcribe-navbar">
       <ul class="nav navbar-nav">
          <?php echo public_nav_main_bootstrap(); ?>
+         <ul class="nav nav-pills navbar-left">
         <li>
 		<?php if (!current_user()) { ?>
 		<a class="nav-header" href="<?php echo WEB_ROOT; ?>/guest-user/user/login">Login</a>
@@ -81,6 +82,7 @@
 		<a class="nav-header" href="<?php echo WEB_ROOT; ?>/users/logout">Logout</a>
 		<?php }; ?>
 		</li>
+        </ul>
       </ul>
 
     <form class="navbar-form navbar-right" role="search" action="<?php echo public_url(''); ?>search">
