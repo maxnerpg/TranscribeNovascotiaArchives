@@ -51,7 +51,10 @@
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header role="banner">
          <div class="container">
-             <h1 class="site-title text-center"><?php echo link_to_home_page(theme_logo()); ?></h1>
+             <div class="jumbotron">
+             <h1 class="col-sm-9"><?php echo link_to_home_page(theme_logo()); ?></h1>
+             <img class="col-sm-3" src="<?php echo img("ns-archives-a.png"); ?>" />
+             </div>
         </div>
 <nav class="navbar navbar-default">
   <div class="container" >
