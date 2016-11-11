@@ -7,7 +7,7 @@
     <?php if ( $description = option('description')): ?>
         <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
-	<meta name="application-name" content="Transcribe"/>
+	<meta name="application-name" content="Transcribe@NovaScotiaArchives"/>
 	
 
     <!-- Will build the page <title> -->
@@ -26,11 +26,6 @@
     <?php
         queue_css_file('lib/bootstrap.min');
         queue_css_file('style');
-         
-    
-
-        queue_css_file('supersized');
-
         echo head_css();
     ?>
 
@@ -54,24 +49,26 @@
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    
+    <header role="banner">
+         <div class="container">
+             <h1 class="site-title text-center"><?php echo link_to_home_page(theme_logo()); ?></h1>
+        </div>
 <nav class="navbar navbar-default">
-  <div class="container-fluid" >
+  <div class="container" >
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#transcribeNavbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#transcribe-navbar" aria-expanded="false">
+        <span class="sr-only">Menu</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-	<a class="navbar-brand" href="#">Transcribe @ Nova Scotia Archives</a>
-			
+	
 	</div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse"  id="transcribeNavbar">
+    <div class="collapse navbar-collapse"  id="transcribe-navbar">
       <ul class="nav navbar-nav">
          <?php echo public_nav_main_bootstrap(); ?>
         <li>
@@ -84,19 +81,16 @@
 		</li>
       </ul>
 
-       <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" style="width:120px;" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+        <form class="navbar-form navbar-right" role="search" action="<?php echo public_url(''); ?>search">
+                        <?php echo search_form(array('show_advanced' => false)); ?>
+                    </form>
 
 
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
+</header>
     <main id="content" role="main">
     
           <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
