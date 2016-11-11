@@ -52,9 +52,8 @@
     <header role="banner">
          <div class="container">
             
-             <h1 class="col-sm-9"><?php echo link_to_home_page(theme_logo()); ?></h1>
-             <img class="col-sm-3" src="<?php echo img("ns-archives-a.png"); ?>" />
-         
+             <h1 class="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1>
+      
         </div>
 <nav class="navbar navbar-default">
   <div class="container" >

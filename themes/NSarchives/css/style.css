@@ -10,17 +10,20 @@ body {background-color:#ECECEC;
 
 
 }
+.site-title{
+	color:#2750A0;
+}
 .navbar {
 	border-radius: 0;
 	border:0;
-	background-color:white;
+	background-color:#2750A0;
 	height:70px;
 	margin-bottom:0;
   z-index: 1001;
 	}
 
 div#transcribeNavbar {
-	background-color:white;
+	background-color:#2750A0;
 	padding-left:0;
 	margin-left:55px;
 	z-index:99;
@@ -73,7 +76,7 @@ div#header-allbox {
 div#header-transcribebox {
 	width:260px;
 	height:70px;
-	float:left;background-color:#F6A947;
+	float:left;background-color:#2750A0;
 	line-height: 75px;
 	margin-top:0;
 	margin-bottom:0;
@@ -90,21 +93,7 @@ div#header-transcribebox a {
 
 }
 
-div#header-dhlabbox-dh {
-	color:white;
-	position:absolute;
-	top:15px;
-	left:13px;
-	z-index: 2;	
-}
 
-div#header-dhlabbox-lab {
-	color:#F6A947;
-	position:absolute;
-	top:27px;
-	left:19px;
-	z-index: 1;
-}
 
 .navbar-default .navbar-nav>li>a {
 	color:black;
@@ -163,7 +152,7 @@ input#query {width:120px;}
 {background-color:#fff;}
 .dropdown-menu li a:hover {
 	color:#ffffff;
-	background-color:#f6a947;
+	background-color:#2750A0;
 }
 
 
@@ -189,7 +178,7 @@ div.calltoactionbox {
  }
  
  div.calltoactionbox .btn {
-	 background-color: #f6a847;
+	 background-color:#2750A0;
 	 width:80%;
 	 margin: 40px auto 0 auto;
 	 font-weight: bold;
@@ -198,7 +187,7 @@ div.calltoactionbox {
  }
 
 div.calltoactionbox h1 {
-	font-family: YaleDesign;
+	
 	font-size:36px;
 	text-align: center;
 	margin-bottom:30px;
@@ -206,7 +195,7 @@ div.calltoactionbox h1 {
 }
 
 div.calltoactionbox p {
-	font-family: InterstateLight;
+	
 	font-size:14px;
 	text-align: justify;
 }
@@ -218,13 +207,13 @@ div.calltoactionbox p {
 
 body.simple-page  h2 {
 	color:#333333;
-	font-family: 'YaleDesign';
+
 	text-align:center;
 }
 
 body.simple-page div.row {
 
-	font-family: 'InterstateLight';
+	
 }
 
 
@@ -328,7 +317,7 @@ div.item-progress {
 }
 
 .progress-bar {
-	background-color:#f6a947;
+	background-color:#2750A0;
 	box-shadow: none;
 }
 
@@ -441,7 +430,7 @@ div.hoverEdit {
 	margin-left:20px;
 	width:40px;
 	height:40px;
-	background-color:#f6a947;
+	background-color:#2750A0;
 	color:white;
 	display:none;
 	-webkit-box-shadow: 1px 1px #000000;
@@ -574,7 +563,7 @@ div.yul-wordmark span.yul-wordmark-italic {
 @media (max-width:321px) {
 
 	div#header-allbox {
-	background-color:#f6a947;
+	background-color:#2750A0;
 	}
 	div#header-transcribebox {
 	width:190px;
@@ -593,7 +582,7 @@ div.yul-wordmark span.yul-wordmark-italic {
 @media (max-width:374px) {
 
 	div#header-allbox {
-	background-color:#f6a947;
+	background-color:#2750A0;
 	width:100%;
 	}
 	div#header-transcribebox {
