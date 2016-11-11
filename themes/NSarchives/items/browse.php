@@ -18,21 +18,23 @@
             <?php foreach (loop('items') as $item): ?>
            
                     <div class="col-sm-3">
-                        <?php $image = $item->Files; ?>
-                        <?php if ($image) {
-                                echo link_to_item('<div style="background-image: url(' . file_display_url($image[0], 'original') . ');" class="img"></div>');
-                            } else {
-                                echo link_to_item('<div style="background-image: url(' . img('defaultImage@2x.jpg') . ');" class="img"></div>');
-                            }
-                        ?>
-                  
-                        <?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?>
-                    
-                        <?php echo metadata('item', array('Dublin Core', 'Creator')); ?>
-                    
-                        <?php echo metadata('item', array('Dublin Core', 'Subject')); ?>
-                   
-                        <?php echo metadata('item', array('Dublin Core', 'Description'), array('snippet'=>150)); ?>
+                        <div class="item record">
+    <?php
+    $title = metadata($item, array('Dublin Core', 'Title'));
+    $description = metadata($item, array('Dublin Core', 'Description'), array('snippet' => 150));
+    ?>
+    <h3><?php echo link_to($item, 'show', strip_formatting($title)); ?></h3>
+    <?php if (metadata($item, 'has files')) {
+        echo link_to_item(
+            item_image('square_thumbnail', array(), 0, $item), 
+            array('class' => 'image'), 'show', $item
+        );
+    }
+    ?>
+    <?php if ($description): ?>
+        <p class="item-description"><?php echo $description; ?></p>
+    <?php endif; ?>
+</div>
                     </div>
                 
                     <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>

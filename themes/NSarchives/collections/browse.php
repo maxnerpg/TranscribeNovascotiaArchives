@@ -9,7 +9,7 @@
             <?php foreach (loop('collections') as $collection): ?>
                
                         <div class="col-sm-3">
-                             <li class="span4">
+                            
                             <div class="thumbnail">
                             <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
                                 <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
