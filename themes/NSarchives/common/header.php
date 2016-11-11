@@ -65,47 +65,49 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-		<div id="header-allbox">
-			<div id="header-dhlabbox">
-			    <div id="header-dhlabbox-dh">DH</div>
-			    <div id="header-dhlabbox-lab">Lab</div>
-			</div>
-			<div id="header-transcribebox" >
-			    <?php echo link_to_home_page("Transcribe"); ?>
-			</div>
-		</div>
+	<a class="navbar-brand" href="#">Transcribe @ Nova Scotia Archives</a>
+			
+	</div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse"  id="transcribeNavbar">
       <ul class="nav navbar-nav">
-	      
-
-          
-          
-          
-	      
-	      
-	      
-	      
-        <li class="dropdown">
-        
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Collections <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-	         <li><a href="<?php echo WEB_ROOT; ?>/collections/show/2">Cherokee</a></li>
-	         <li><a href="<?php echo WEB_ROOT; ?>/collections/show/3">Mi’kmaw</a></li>
-          </ul>
-          
-          
         </li>
-        
-        
-        
-        
-        
-        
-        <li><a href="<?php echo WEB_ROOT; ?>/about">About</a></li>
-        <li>
+        <ul class="nav nav-pills navbar-left">
+    <?php $count = 0 ?>
+    <?php foreach ($this->container as $page): ?>
+        <?php if( ! $page->isVisible() || !$this->navigation()->accept($page)) continue; ?>
+        <?php $hasChildren = $page->hasPages() ?>
+        <?php if( ! $hasChildren): ?>
+            <li <?php if($page->isActive()) echo 'class="active"'?> role="presentation">
+                <a class="nav-header" href="<?php echo $page->getHref() ?>">
+                    <?php echo $this->translate($page->getLabel()) ?>
+                </a>
+            </li>
+        <?php else: ?>
+            <li class="dropdown <?php if($page->isActive()) echo 'active'; ?>" role="presentation">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <?php echo $this->translate($page->getLabel()) ?>
+                    <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu" id="page_<?php echo $count ?>">
+                    <?php foreach($page->getPages() as $child): ?>
+                        <?php if( ! $child->isVisible() || !$this->navigation()->accept($child)) continue; ?>
+                        <li <?php if($child->isActive()) echo 'class="active"'?>>
+                            <a href="<?php echo $child->getHref() ?>">
+                                <?php echo $this->translate($child->getLabel()) ?>
+                            </a>
+                        </li>
+                    <?php endforeach ?>
+                </ul>
+            </li>   
+        <?php endif; ?>
+        <?php $count++ ?>
+    <?php endforeach; ?>
+</ul>
+
 		<?php if (!current_user()) { ?>
 		<a href="<?php echo WEB_ROOT; ?>/guest-user/user/login">Login</a>
 		<?php }; ?>
@@ -114,6 +116,14 @@
 		<?php }; ?>
 		</li>
       </ul>
+
+       <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" style="width:120px;" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
 
 
     </div><!-- /.navbar-collapse -->
