@@ -23,14 +23,14 @@ body {background-color:#ECECEC;
   z-index: 1001;
 	}
 
-div#transcribeNavbar {
+div#transcribe-navbar {
 	background-color:#2750A0;
 	padding-left:0;
 	margin-left:55px;
 	z-index:99;
 }
 
-div#transcribeNavbar li {
+div#transcribe-navbar li {
 	height:50px;
 }
 
