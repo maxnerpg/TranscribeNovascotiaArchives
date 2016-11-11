@@ -1,6 +1,6 @@
 
 <?php
-    $pageTitle = __('Search Transcribe@Yale ') . __('(%s results)', $total_results);
+    $pageTitle = __('Search Transcribe@Nova Scotia Archives ') . __('(%s results)', $total_results);
     echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
     $searchRecordTypes = get_search_record_types();
     $uri = WEB_ROOT .'/transcribe/';
