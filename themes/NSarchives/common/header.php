@@ -76,7 +76,7 @@
          <ul class="nav nav-pills navbar-left">
         <li>
 		<?php if (!current_user()) { ?>
-		<a class="nav-header" href="<?php echo WEB_ROOT; ?>/guest-user/user/login">Login</a>
+		<a class="nav-header" href="<?php echo WEB_ROOT; ?>/users/login">Login</a>
 		<?php }; ?>
 		<?php if (current_user()) { ?>
 		<a class="nav-header" href="<?php echo WEB_ROOT; ?>/users/logout">Logout</a>
