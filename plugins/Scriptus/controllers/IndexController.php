@@ -257,39 +257,8 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Get the most recent transcriptions from the database.  The view also makes a query to the Disqus API to get most recent comments
-    public function dashboardAction(){
+    public function submissionstatsAction(){
 
         $user = current_user();
         $db = get_db();
@@ -423,7 +392,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
     }
 
     //Get the new transcription submissions in past months.
-    public function submissionstatsAction(){
+    public function submissionstats2Action(){
 
         $currentYear = date("Y");
         $currentMonth = date("M");
