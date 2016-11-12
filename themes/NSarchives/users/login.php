@@ -7,8 +7,8 @@ echo head(array('bodyclass' => 'login', 'title' => $pageTitle), $header);
 div.loginbox {
 	background-color:rgba(0,0,0,.7);
 	color:white;
-	width:590px;
-	padding:35px;
+	    margin-top: 35px;
+    padding: 35px;
 }
 
  div.loginbox a {
@@ -62,12 +62,7 @@ label#rememberMe {
 	float:right;
 }
 
-div.vcenter {
- position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
+
 
 
 #content #flash ul {
@@ -98,7 +93,7 @@ div.vcenter {
 
 
  
-<div class="container loginbox vcenter">
+<div class="loginbox col-md-4 col-md-offset-4">
 	<div class="row">
 		<div class="col-sm-6" style="border-right: 1px solid white;padding-right:30px;">
 			<h4>
