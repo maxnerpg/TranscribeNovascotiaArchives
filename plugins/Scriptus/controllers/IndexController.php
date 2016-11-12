@@ -266,8 +266,9 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         if ($user){ 
             //Change this to prepared statement
             $username = $user->username; 
-            $sql = "select * from Scriptus_changes where username = '". $username . "' order by time_changed DESC limit 3;";
+            $sql = "select * from Scriptus_changes where username = ? order by time_changed DESC limit 3;";
             $stmt = new Zend_Db_Statement_Mysqli($db, $sql); 
+            $stmt->bind_param('s', $username);
             $stmt->execute(array($username));
 
             //The number of user transcriptions that should be displayed
