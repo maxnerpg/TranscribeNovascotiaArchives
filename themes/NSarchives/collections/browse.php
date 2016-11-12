@@ -3,7 +3,7 @@
     echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
    <div class="section-title">    
-	<div class="header-gradient">
+	<div class="header">
 		<div class="collectionTitle">
 		      <h1><?php echo 'Browse all collections'; ?></h1>
 		</div>

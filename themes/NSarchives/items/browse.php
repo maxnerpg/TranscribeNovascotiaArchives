@@ -4,7 +4,7 @@
 ?>
    
 <div class="section-title">    
-	<div class="header-gradient">
+	<div class="header">
 		<div class="collectionTitle">
 		     <h1><?php echo 'Browse all items'; ?></h1>
 		</div>

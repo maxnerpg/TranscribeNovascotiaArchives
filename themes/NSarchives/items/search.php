@@ -7,7 +7,7 @@
    
     <hr>
     <div class="section-title">    
-	<div class="header-gradient">
+	<div class="header">
 		<div class="collectionTitle">
 		     <h1><?php echo $pageTitle; ?></h1>
 		</div>

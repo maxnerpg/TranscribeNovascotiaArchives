@@ -81,6 +81,7 @@
 		<a class="nav-header" href="<?php echo WEB_ROOT; ?>/dashboard">Dashboard</a>
 		<?php }; ?>
 		</li>
+        </ul>
          <?php echo public_nav_main_bootstrap(); ?>
         <ul class="nav nav-pills navbar-left">
         <li>
