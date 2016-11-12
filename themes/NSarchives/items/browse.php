@@ -8,14 +8,10 @@
 		<div class="collectionTitle">
 		     <h1><?php echo 'Browse all items'; ?></h1>
 		</div>
-		<div class="main">
-		    <div class="container-fluid">
-		        <div class="row-fluid">
-		             <?php $subnav = public_nav_items(); echo $subnav->setUlClass('nav nav-pills'); ?>
-		        </div>
-		    </div>
-		</div>
 	</div>
+</div>
+<div class="panel col-sm-12">
+		      <?php $subnav = public_nav_items(); echo $subnav->setUlClass('nav nav-pills'); ?>
 </div>
     <div id="columns" class="container">
         <?php if ($total_results > 0): ?>

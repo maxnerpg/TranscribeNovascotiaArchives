@@ -11,6 +11,8 @@ div.loginbox {
 	color:white;
 	    margin-top: 35px;
     padding: 35px;
+	
+    margin-bottom: 150px;
 }
 
  div.loginbox a {
