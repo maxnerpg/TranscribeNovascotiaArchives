@@ -5,14 +5,15 @@
    
 <div class="section-title">    
 	<div class="header">
-		<div class="collectionTitle">
+		<div class="panel">
 		     <h1><?php echo 'Browse all items'; ?></h1>
+             <div class="panel col-sm-12">
+		      <?php $subnav = public_nav_items(); echo $subnav->setUlClass('nav nav-pills'); ?>
+</div>
 		</div>
 	</div>
 </div>
-<div class="panel col-sm-12">
-		      <?php $subnav = public_nav_items(); echo $subnav->setUlClass('nav nav-pills'); ?>
-</div>
+
     <div id="columns" class="container">
         <?php if ($total_results > 0): ?>
         <?php

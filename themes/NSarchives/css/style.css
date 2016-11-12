@@ -194,6 +194,9 @@ div.calltoactionbox p {
 	text-align: justify;
 }
 
+.item-search{
+	margin-bottom:100px;
+}
 
 .advanced-search-form {
 	padding: 10px;
@@ -289,7 +292,7 @@ div.collectionDesc {
 	line-height:1.5em;
 	margin-top:50px;
 	padding-right:40px;
-	margin-bottom:50px;
+	margin-bottom:10px;
 }
 
 div#collectionProgress {
