@@ -4,11 +4,12 @@
 ?>
    <div class="section-title">    
 	<div class="header">
-		<div class="collectionTitle">
+		<div class="panel">
 		      <h1><?php echo 'Browse all collections'; ?></h1>
 		</div>
 	</div>
 </div>
+
 
      <div id="columns" class="container">
         
