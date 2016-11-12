@@ -268,7 +268,7 @@ div#footersection div.row {
 
 
 /* COLLECTION VIEW */
-.main {padding-right:330px;
+.main-transcribe {padding-right:35%;
 
 
 }
@@ -587,7 +587,9 @@ div.collectionTitleToItem {
 		height:inherit;
 	}
 
-	
+	.transcribeLeft {
+		display: none;
+	}
 	
 }
 

@@ -30,9 +30,9 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	}
 
 	
-	
+
 	div.transcribeLeft {
-		width:30%;
+		width:35%;
 		float:right; 
 		padding-right:22px;
 		padding-left:22px;
@@ -187,7 +187,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 			</div>
 		</div>
-		<div class="main">
+		<div class="main-transcribe">
 		    <div class="container-fluid" style="padding-right:0;padding-left:0;">
 		        <div class="row-fluid">
 		           <img id="ImageID" src="<?php echo $this->imageUrl; ?>" alt=''/>
