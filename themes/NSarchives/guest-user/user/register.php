@@ -9,7 +9,8 @@ echo head(array('bodyclass' => 'login', 'title' => $pageTitle));
 div.loginbox {
 	background-color:rgba(0,0,0,.7);
 	color:white;
-	padding:35px;
+	    margin-top: 35px;
+    padding: 35px;
 }
 
  div.loginbox a {
@@ -142,7 +143,7 @@ label#rememberMe {
  
 <div class="loginbox col-md-4 col-md-offset-4">
 	<div class="row">
-		<div class="col-sm-6" style="border-right: 1px solid white;padding-right:30px;">
+		
 			<h4>
 				Register now
 			</h4>
@@ -150,26 +151,8 @@ label#rememberMe {
 				<?php echo $this->form; ?>  
 			</p>
 			 
-		</div>
-		<div class="col-sm-6" style="padding-left:30px;">
-			<div class="form-heading">
-				<h4 class="header">
-					Important Info
-				</h4>
-			</div>
 		
-			<ul>
-				             
-			   <li>
-                              The transcriptions you contribute will be licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-0 »</a>.
-
-                            </li>
-
-
-              
-                          </ul>
-			
-		</div>
+		
 
 			<div class="form-footer">
 				
