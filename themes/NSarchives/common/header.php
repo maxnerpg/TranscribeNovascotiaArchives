@@ -53,7 +53,7 @@
          <div class="container">
             
             <!-- <h1 class="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1> -->
-            <?php echo img("ns-archives-a.png"); ?>
+            <img class="img-responsive" src="<?php echo img("ns-archives-a.png"); ?>" />
             <!-- Social Media goes here -->
       
         </div>

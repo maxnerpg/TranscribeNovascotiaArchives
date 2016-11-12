@@ -50,26 +50,15 @@
 }
 </style>
 
-<div class="section-title">    
-	<div class="row">
-		<div class="collectionTitleToItem">
-			<h1>
-				<!-- If the item belongs to a collection, the following creates a link to that collection. -->
-	            <?php if (metadata('item', 'Collection Name')): ?>
-	                   <?php echo link_to_collection_for_item() . ' > '; 
-		               endif;
-		               echo '<strong>' . $itemTitle . '</strong>';
-		               ?>
-			</h1>
-		</div>
-	</div>
-	<div class="header-gradient">
+
+	<div class="section-title">
 		<div class="panel">
 		     <h3><?php echo $itemTitle; ?></h3>
-		     <div class="collectionDesc"><?php echo $itemDesc; ?></div>
+		    
 		</div>
+		 <div class="well"><?php echo $itemDesc; ?></div>
 	</div>
-</div>
+
 
 
 <div id="columns" class="container">
