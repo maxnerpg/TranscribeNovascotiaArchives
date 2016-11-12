@@ -30,20 +30,16 @@
 
 <div class="section-title">    
 	<div class="header-gradient">
-		<div class="collectionTitle">
-		     <h1><?php echo $collectionTitle; ?></h1>
+		<div class="panel-heading text-center">
+		     <h3><?php echo $collectionTitle; ?></h3>
 		</div>
-		<div class="main">
-		    <div class="container-fluid">
-		        <div class="row-fluid">
-		            <div class="collectionDesc"><?php echo $collectionDesc; ?></div>
-		        </div>
-		    </div>
+		<div class="panel-body">
+		    <?php echo $collectionDesc; ?>
 		</div>
 	</div>
 </div>
 
-	<div class="collectionTitle" id="pageshavebeen"></div>
+	<div class="panel" id="pageshavebeen"></div>
 	<div class="main">
 	    <div class="container-fluid">
 	        <div class="row-fluid">
