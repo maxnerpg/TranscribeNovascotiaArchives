@@ -509,17 +509,6 @@ div.collectionTitleToItem {
 	nav div.container-fluid {
 	padding-left: 0;
 	}
-	div.transcribeLeft {
-		width:30%;
-		float:right; 
-		padding-right:22px;
-		padding-left:22px;
-		padding-top:12px;
-		height:calc(100vh - 70px);
-		background-color:#fff;
-	}
-
-
 }
 
 
@@ -597,10 +586,7 @@ div.collectionTitleToItem {
 	div#transcribeNavbar li {
 		height:inherit;
 	}
-	.transcribeLeft {
-		    display: none;
-   
-	}
+
 	
 	
 }
