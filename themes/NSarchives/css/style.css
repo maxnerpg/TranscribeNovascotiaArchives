@@ -1,12 +1,14 @@
 // Add your custom CSS here
 
-
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 img {
     max-width: 100%;
 }
 
-body {background-color:#ECECEC;
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color:#ECECEC;
 
 
 }
@@ -58,16 +60,7 @@ div.vcenter {
 	border-color:black;
 }
 
-div#header-dhlabbox {
-	height:70px;
-	width:70px;
-	float:left;
-	background-color:#404040;
-	font-family: Text-Regular;
-	font-size:1.7em;
-	text-rendering: optimizeLegibility;
-	position:relative;
-}
+
 
 div#header-allbox {
 	width:330px;
@@ -345,7 +338,7 @@ div.header-gradient {
 }
 
 div.section-title {
-	padding-bottom:20px;
+	
 }
 
 div.section-title div.row {
@@ -493,12 +486,7 @@ div.collectionTitleToItem {
 
 /* FONTS */
 
-div.yul-wordmark {	
 
-	text-rendering: optimizeLegibility;
-	line-height:normal;
-	
-}
 
 
 /* MOBILE */
@@ -601,22 +589,15 @@ div.yul-wordmark {
 
 
 @font-face {
-    font-family: 'YaleDesign';
-    src: url(fonts/yaledesign-medium-webfont.eot);
-    src: url(fonts/yaledesign-medium-webfont.eot?#iefix) format('embedded-opentype'), url(fonts/yaledesign-medium-webfont.woff) format('woff'), url(fonts/yaledesign-medium-webfont.ttf) format('truetype');
+    font-family: 'Roboto', sans-serif;
+	src: url('https://fonts.googleapis.com/css?family=Roboto');
     font-weight: normal;
     font-style: normal;
 }
 
 
 
-@font-face {
-  font-family: 'YaleDesign';
-  src: url("fonts/yaledesign-italic-webfont.eot");
-  src: url("fonts/yaledesign-italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/yaledesign-italic-webfont.ttf") format("truetype"), url("fonts/yaledesign-italic-webfont.woff") format("woff");
-  font-style: italic;
-  font-weight: normal;
-}
+
 
 
 
