@@ -1,81 +1,33 @@
-<?php
-echo head(array('bodyid' => 'home'));
+<?php echo head(array('bodyid'=>'home')); ?>
 
-ini_set('display_errors',0);
-error_reporting(E_ALL);
+<?php echo get_theme_option('Homepage About'); ?>
+<div class="row">
+    <div class="col-sm-4">
+        <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
+            <h2><?php echo __('Featured Item'); ?></h2>
+            <?php echo random_featured_items(1); ?>
+        <?php endif; ?>
+    </div>
+    <div class="col-sm-4">
+        <?php if (get_theme_option('Display Featured Collection') !== '0'): ?>
+            <h2><?php echo __('Featured Collection'); ?></h2>
+            <?php echo random_featured_collection(); ?>
+        <?php endif; ?>
+    </div>
+    <div class="col-sm-4">
+        <?php if ((get_theme_option('Display Featured Exhibit') !== '0') && plugin_is_active('ExhibitBuilder') && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
+            <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
+        <?php endif; ?>
+    </div>
+</div>    
+<div class="row">
+    <div class="col-sm-12">
+        <h2><?php echo __('Recently Added Items'); ?></h2>
+        <?php echo recent_items(3); ?>
+        <p class="view-items-link"><a href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a></p>
+    </div>
+    
+    <?php fire_plugin_hook('public_home', array('view' => $this)); ?>
+</div>
 
-?>
-
-
-<div id="primary">
-    <?php if (get_theme_option('Homepage Text')): ?>
-    <p><?php echo get_theme_option('Homepage Text'); ?></p>
-    <?php endif; ?>
-
-<?php
-    $collectionTitle = '';
-    $collectionIDs = collection_order_array();
-    $num_of_collections = count($collectionIDs);
-    $div_counter = 1;
-
-    foreach ($collectionIDs as $collectionID) {
-
-        $collection = get_record_by_id('collection', $collectionID);
-        $collection_link = link_to_collection($collectionTitle, array(), 'show', $collection);
-        $collection_items = get_records('Item',
-            array(
-                'collection' => $collection['id'],
-                'sort_field' => 'Scripto,Weight',
-                'sort_dir' => 'a',
-            ),
-            999);
-
-        $num_of_collection_items = count($collection_items);
-
-        set_loop_records('items', $collection_items);
-        $collection_item_list = array();
-        foreach (loop('items') as $item) {
-            set_current_record('item', $item);
-            array_push($collection_item_list,
-                array(
-                    'thumb' => item_image('square_thumbnail', array('alt' => metadata($item, array('Dublin Core', 'Title')))),
-                    'link' => record_url($item),
-                    'name' => metadata($item, array('Dublin Core', 'Title')),
-             ));
-        }
-
-        echo '<h1 style="display: inline;">' .$collection_link. '</h1>';
-        echo '<hr style="visibility: hidden; margin-top: 2px; margin-bottom: 4px;" />';
-        echo '<ul id="collection'.$div_counter.'" class="slider">';
-
-        for ($i=0; $i < $num_of_collection_items; $i++) {
-            echo '<li>';
-            echo '<a href="'.$collection_item_list[$i]['link'].'" rel="tooltip" title="'.$collection_item_list[$i]['name'].'">'.$collection_item_list[$i]['thumb'].'</a>';
-            echo '</li>';
-        }
-
-        echo '</ul>';
-        echo '<hr style="visibility: hidden; margin-top: 3px; margin-bottom: 3px;" />';
-        $div_counter++;
-
-    }
-
-    echo "<script> " . PHP_EOL;
-    echo "!function( $ ){ " . PHP_EOL;
-    echo "$(function () { " . PHP_EOL;
-
-    for ($k=1; $k <= $num_of_collections; $k++) {
-        echo "$('#collection".$k."').bxSlider({ " . PHP_EOL;
-        echo "displaySlideQty: 7, " . PHP_EOL;
-        echo "moveSlideQty: 7 " . PHP_EOL;
-        echo " }); " . PHP_EOL;
-    }
-
-    echo "$('a[rel=tooltip]').tooltip(); " . PHP_EOL;
-    echo "}); " . PHP_EOL;
-    echo "}( window.jQuery ) " . PHP_EOL;
-    echo "</script> " . PHP_EOL;
-
-    fire_plugin_hook('public_home', array('view' => $this));
-    echo foot();
- ?>
+<?php echo foot(); ?>
