@@ -52,23 +52,21 @@
 
 <div class="section-title">    
 	<div class="row">
-		<div class="panel-heading">
-			<h3>
+		<div class="collectionTitleToItem">
+			<h1>
 				<!-- If the item belongs to a collection, the following creates a link to that collection. -->
 	            <?php if (metadata('item', 'Collection Name')): ?>
 	                   <?php echo link_to_collection_for_item() . ' > '; 
 		               endif;
 		               echo '<strong>' . $itemTitle . '</strong>';
 		               ?>
-			</h3>
+			</h1>
 		</div>
 	</div>
 	<div class="header-gradient">
-		<div class="panel-heading text-center">
-		     <h3><?php echo $itemTitle; ?></h3>
-		</div>
-		<div class="panel-body">
-		     <?php echo $itemDesc; ?>
+		<div class="panel">
+		     <h1><?php echo $itemTitle; ?></h1>
+		     <div class="collectionDesc"><?php echo $itemDesc; ?></div>
 		</div>
 	</div>
 </div>

@@ -30,10 +30,8 @@
 
 <div class="section-title">    
 	<div class="header-gradient">
-		<div class="panel-heading text-center">
+		<div class="panel">
 		     <h3><?php echo $collectionTitle; ?></h3>
-		</div>
-		<div class="panel-body">
 		    <?php echo $collectionDesc; ?>
 		</div>
 	</div>
