@@ -52,7 +52,7 @@
                     <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
             
             <?php endforeach; ?>
-            <div class="col-sm-9">
+            <div class="col-sm-12">
             <div id="outputs">
                 <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
                 <?php echo output_format_list(false); ?>
