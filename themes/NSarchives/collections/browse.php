@@ -20,7 +20,7 @@
 	            <div class="masonrywell">
 					<div class="thumbholder">
                             <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
-                                <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?>
+                               <h3> <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?> </h3>
                             <?php endif; ?>
                     </div>
                     <figcaption>

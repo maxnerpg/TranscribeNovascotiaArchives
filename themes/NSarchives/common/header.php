@@ -8,6 +8,7 @@
         <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
 	<meta name="application-name" content="Transcribe@NovaScotiaArchives"/>
+	<link rel="icon" type="image/png" href="/images/favicons/ns-archives-a32x32.png"  />
 	
 
     <!-- Will build the page <title> -->
@@ -53,7 +54,7 @@
          <div class="container">
             
             <!-- <h1 class="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1> -->
-            <img class="img-responsive" src="<?php echo img("ns-archives-a.png"); ?>" />
+            <img class="img-responsive" src="<?php echo img("ns-archives-a.jpg"); ?>" />
             <!-- Social Media goes here -->
       
         </div>
