@@ -31,15 +31,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 	
 	
-	div.transcribeLeft {
-		width:30%;
-		float:right; 
-		padding-right:22px;
-		padding-left:22px;
-		padding-top:12px;
-		height:calc(100vh - 70px);
-		background-color:#fff;
-	}
+	
 	
 	div.transcribeLeft h1 {
 	
