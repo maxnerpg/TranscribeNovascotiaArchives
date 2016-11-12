@@ -37,9 +37,9 @@
 </div>
 <div id="columns" class="container">		
 		<?php foreach ($this->recentUserTranscriptions as $transcriptionItem): ?>
-	
+	 <div class="col-sm-3">
 	        <figure>
-	            <div class="col-sm-3">
+	             <div class="masonrywell">
 					<div class="thumbholder">
 	                    <a href="<?php echo $transcriptionItem["URL_changed"];?>"><img src="<?php echo $transcriptionItem["image_url"] ?>" alt="<?php echo $transcriptionItem["file_title"] ?>,a part of <?php echo $transcriptionItem["item_title"] ?>" /></a>
 	                    
@@ -63,7 +63,7 @@
 	                </figcaption>
 	            </div>
 	            </figure>
-	            
+</div>
 	            
 	      
             <?php endforeach; ?>
