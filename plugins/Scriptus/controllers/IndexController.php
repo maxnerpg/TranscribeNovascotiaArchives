@@ -283,22 +283,29 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
                 if ($row = $stmt->fetch()){
 
                     $transcribeItem = array();
-
-                    $lastTranscribed = $row['URL_changed'];
-                    $transcribeItem["URL_changed"] = $row['URL_changed'];
-                    $transcribeItem['last_transcribed']  = (string)$lastTranscribed;
-                    $transcribeItem['time_changed'] = $row['time_changed'];
-                    $transcribeItem['display_title'] = $row['file_name'] . ', ' . $row['item_name'];
+                    $transcribeItem["URL_changed"] = $row["URL_changed"];
+                    $transcribeItem["username"] = $row["username"];
+                    $transcribeItem["time_changed"] = $row["time_changed"];
+                    $transcribeItem["collection_name"] = $row["collection_name"];
                     $urlArray = explode("/", $transcribeItem["URL_changed"]);
                     $fileID = array_pop($urlArray); //file ID in URL
                     $itemID = array_pop($urlArray); //item ID in URL
                     $scriptus = new Scriptus($itemID, $fileID);
+
+
                     $transcribeItem["image_url"] = $scriptus->getImageThumbnail();
                     $transcribeItem["collection_link"] = $scriptus->getCollectionLink();;
                     $transcribeItem["item_link"] = $scriptus->getItemLink();
                     $transcribeItem["item_title"] = $scriptus->getItemTitle();
                     $transcribeItem["file_title"] = $scriptus->getFileTitle();
                     $transcribeItem["transcription"] = $scriptus->getTranscription();
+
+                    $lastTranscribed = $row['URL_changed'];
+                    $transcribeItem["URL_changed"] = $row['URL_changed'];
+                    $transcribeItem['last_transcribed']  = (string)$lastTranscribed;
+                    $transcribeItem['time_changed'] = $row['time_changed'];
+                    $transcribeItem['display_title'] = $row['file_name'] . ', ' . $row['item_name'];
+
 
                     array_push($recentlyTranscribed, $transcribeItem);
 
