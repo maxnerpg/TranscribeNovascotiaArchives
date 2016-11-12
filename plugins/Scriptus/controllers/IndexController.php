@@ -531,7 +531,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $login = new Zend_Form_Element_Submit('login');
         $login ->setLabel('Sign in to transcribe');
         $login->setAttrib('class', 'btn btn-danger');
-        $login->setAttrib('onclick', "window.location.href = 'http://diyhistory.lib.uiowa.edu/users/login';");
+        $login->setAttrib('onclick', "window.location.href = 'http://transcribe.novascotia.io/users/login';");
         $login->setAttrib('id', 'save-button');
 
         if ($user) {
@@ -580,7 +580,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $login = new Zend_Form_Element_Submit('login');
         $login ->setLabel('Sign in to transcribe');
         $login->setAttrib('class', 'btn btn-danger');
-        $login->setAttrib('onclick', "window.location.href = 'http://diyhistory.lib.uiowa.edu/users/login';");
+        $login->setAttrib('onclick', "window.location.href = 'http://transcribe.novascotia.io/users/login';");
         $login->setAttrib('id', 'save-translation-button');
 
         if ($user) {
