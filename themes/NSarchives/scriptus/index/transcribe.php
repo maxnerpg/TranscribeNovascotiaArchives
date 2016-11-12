@@ -11,7 +11,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 <style>
 	
 	textarea#transcribebox {
-		font-size:14px;
+		font-size:18px;
 		height:calc(100vh - 360px);
 		margin-top:-10px;
 		resize: none;
@@ -72,7 +72,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 	.nav-tabs li {
 	
-		font-size:16px;
+		font-size:18px;
 		height:32px;
 	
 	}
@@ -87,7 +87,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 	div#transcribePageNav {
 	
-		font-size:16px;
+		font-size:18px;
 	
 		padding:24px;
 		color:#999999;

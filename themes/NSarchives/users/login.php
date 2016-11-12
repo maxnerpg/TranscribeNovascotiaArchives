@@ -27,7 +27,7 @@ div.loginbox .btn {
 }
 
  div.loginbox .btn:hover {
-	 background-color:#f6a947;
+	 background-color:#2750A0;
 	 color:white;
  }
 
@@ -37,18 +37,18 @@ div.loginbox .form-control {
 	border-radius: 0;
 }
 div.loginbox h4 {
-	font-family: YaleDesign;
-	font-size:28px;
+	
+	font-size:22px;
 	text-align: center;
 	margin-bottom:30px;
 }
-div.loginbox label, div.checkbox {	font-family: InterstateLight;
+div.loginbox label, div.checkbox {	
 	font-size:16px;
 
 }
 div.loginbox p {
-	font-family: InterstateLight;
-	font-size:18px;
+
+	font-size:16px;
 	text-align: justify;
 }
 #remember {

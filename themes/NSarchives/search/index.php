@@ -4,6 +4,25 @@
     echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
     $searchRecordTypes = get_search_record_types();
     $uri = WEB_ROOT .'/transcribe/';
+	$itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title')));
+    $itemDesc  = metadata('item', array('Dublin Core', 'Description'));
+	if ($itemTitle == '') {
+	    $itemTitle = __('[Untitled]');
+	}
+
+	$item = get_current_record('item');
+	$collection_id = $item->collection_id;
+	$collection = get_record_by_id('Collection', $collection_id);
+	$collectionTitleElement = $collection->getElementTexts('Dublin Core', 'Title');
+	$collectionTitle = $collectionTitleElement[0];
+	$title = $collectionTitle . ' | ' . $itemTitle;	
+	
+    $itemDate = strip_formatting(metadata('item', array('Dublin Core', 'Date')));
+	$itemCreator= strip_formatting(metadata('item', array('Dublin Core', 'Creator')));
+	$itemLoc = strip_formatting(metadata('item', array('Item Type Metadata', 'Location')));
+
+	
+	
 ?>
 <style>	
 	.collectionTitle h1, div.collectionDesc {
@@ -32,14 +51,14 @@
 </style>
 <div class="section-title">    
 	<div class="row">
-		<div class="collectionTitleToItem">
+		<div class="panelToItem">
 			<h1>
 			Searching <?php echo total_records('Item'); ?> manuscripts 
 			</h1>
 		</div>
 	</div>
 	<div class="header-gradient">
-		<div class="collectionTitle">
+		<div class="panel">
 		     <h1>Results</h1>
 		</div>
 		<div class="main">
@@ -60,7 +79,11 @@
 <?php foreach (loop('search_texts') as $searchText): ?>
 <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
 <?php $recordType = $searchText['record_type']; ?>
-<?php set_current_record($recordType, $record); ?>
+<?php set_current_record($recordType, $record); 
+$item = get_current_record('item');
+$file = get_current_record('item')->Files
+?>
+
 <?php $fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title')));
 	  $theTranscription = strip_formatting(metadata('file', array('Scriptus', 'Transcription')));
 	 $status =  $record->getElementTexts('Scriptus', 'Status');

@@ -8,7 +8,7 @@
         <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
 	<meta name="application-name" content="Transcribe@NovaScotiaArchives"/>
-	<link rel="icon" type="image/png" href="/images/favicons/ns-archives-a32x32.png"  />
+	<link rel="icon" href="<?php echo img('falvicon.ico'); ?>"  />
 	
 
     <!-- Will build the page <title> -->

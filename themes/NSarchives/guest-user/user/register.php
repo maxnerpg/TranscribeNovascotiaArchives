@@ -25,7 +25,7 @@ div.loginbox .btn {
 	margin: 40px auto 0 auto;
 	font-weight: bold;
 	color:#666666;
-	font-size:22px;
+	font-size:18px;
 }
 
  
@@ -36,8 +36,8 @@ div.loginbox input#submit {
 	border-radius: 4px;
 	border:none;
 	color:#666666;
-	font-size:22px;
-	font-family:"InterstateBold"
+	font-size:18px;
+
 }
 div.loginbox input#submit:hover {
  background-color:#2750A0;
@@ -46,7 +46,6 @@ div.loginbox input#submit:hover {
 
 div.loginbox input {width:100%;
 	color:black;
-	font-family:"InterstateLight";
 	line-height: normal;
 	height:30px;
 	font-size:18px;
@@ -61,7 +60,7 @@ div.two {
 }
 p.explanation {
 	line-height: normal;
-	font-size:12px;
+	font-size:16px;
 	color:#cccccc;
 	
 	
@@ -79,7 +78,7 @@ div.loginbox .form-control {
 }
 div.loginbox h4 {
 	YaleDesign;
-	font-size:24px;
+	font-size:22px;
 	text-align: center;
 	margin-bottom:30px;
 }
