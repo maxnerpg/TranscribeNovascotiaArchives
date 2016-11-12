@@ -65,7 +65,7 @@
 	</div>
 	<div class="header-gradient">
 		<div class="panel">
-		     <h1><?php echo $itemTitle; ?></h1>
+		     <h3><?php echo $itemTitle; ?></h3>
 		     <div class="collectionDesc"><?php echo $itemDesc; ?></div>
 		</div>
 	</div>

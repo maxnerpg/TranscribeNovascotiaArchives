@@ -23,24 +23,22 @@
 
 	}
 	div#pageshavebeen {
-		text-align:left;
+		
 	}
 }
 </style>
 
-<div class="section-title">    
-	<div class="header-gradient">
+
 		<div class="panel">
 		     <h3><?php echo $collectionTitle; ?></h3>
 		    <?php echo $collectionDesc; ?>
 		</div>
-	</div>
-</div>
 
-	<div class="panel" id="pageshavebeen"></div>
-	<div class="main">
+
+	<div class="well" >
 	    <div class="container-fluid">
 	        <div class="row-fluid">
+				<h4 id="pageshavebeen"> </h4>	
 	            <div id="progressBar"></div>
 	        </div>
 	    </div>
@@ -178,7 +176,7 @@
         statusText = '<strong>' + fileProgress + ' </strong>of<strong> ' + totalFiles + ' </strong>pages transcribed';
 
         jQuery( "div#progressBar" ).append( progressBar );
-        jQuery( "div#pageshavebeen" ).append( statusText );
+        jQuery( "#pageshavebeen" ).append( statusText );
 
 </script>
 
