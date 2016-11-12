@@ -187,7 +187,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 			</div>
 		</div>
-		<div class="main-transcribe">
+		<div class="main">
 		    <div class="container-fluid" style="padding-right:0;padding-left:0;">
 		        <div class="row-fluid">
 		           <img id="ImageID" src="<?php echo $this->imageUrl; ?>" alt=''/>
