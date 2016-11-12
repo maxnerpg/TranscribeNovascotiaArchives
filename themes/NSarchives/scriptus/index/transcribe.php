@@ -21,12 +21,12 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 /* 	Custom Phoreus Cherokee font for Collection ID #2, Kilpatrick Cherokee */
 	body.collection2 #transcribebox {
-		font-family: 'phoreuscherokee';
+		
 	}
 
 /* 	Custom Ro Nikkatsu Sei Kai Std font for Collection ID #4, Asakawa */
 	body.collection4 #transcribebox {
-		font-family: 'tk-ro-nikkatsu-sei-kai-std';
+		
 	}
 
 	
@@ -42,20 +42,20 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	}
 	
 	div.transcribeLeft h1 {
-		font-family: InterstateRegular;
+	
 		font-size: 20px;
 		color:#666666;
 		margin-bottom:23px;
 	}
 	
 	.transcribeLeft h2 {
-		font-family: "InterstateLight";
+	
 		font-size: 16px;
 		margin: 0 0 2px 0;
 	}
 	
 	div#transcribeBack {
-			font-family: InterstateLight;
+		
 			color:#999999;
 			left:-8px;
 			position:relative;
@@ -71,7 +71,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	}
 	
 	.nav-tabs li {
-		font-family: InterstateRegular;
+	
 		font-size:16px;
 		height:32px;
 	
@@ -80,13 +80,13 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		border-radius: 8px 8px 0 0;
 		border: 1px solid #ddd;
 		color:#999999;
-		background-color: #ececec;
+		background-color: white;
 		margin-right:5px;
 		height:32px;
 	}
 	
 	div#transcribePageNav {
-		font-family: "InterstateLight";
+	
 		font-size:16px;
 	
 		padding:24px;
@@ -103,7 +103,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 
 	input#save-button {
-		background-color:#f6a947;
+		background-color:#2750A0;
 		color:white;
 		border:none;
 		width:30%;

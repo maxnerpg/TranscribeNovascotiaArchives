@@ -35,7 +35,7 @@
 <div class="well">
 <h2>Your Transcriptions</h2>
 </div>
-	<div class="masonryrow">			
+<div id="columns" class="container">		
 		<?php foreach ($this->recentUserTranscriptions as $transcriptionItem): ?>
 	
 	        <figure>
@@ -73,7 +73,7 @@
 <div class="well">
 <h2>All Transcriptions</h2>
 </div>
-<div class="masonryrow">
+<div id="columns" class="container">
 			<?php foreach ($this->recentTranscriptions as $transcriptionItem): ?>
 	
 	        <div class="col-sm-3">
