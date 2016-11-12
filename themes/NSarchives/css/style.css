@@ -8,7 +8,7 @@ img {
 
 body {
 	font-family: 'Roboto', sans-serif;
-	background-color:#ECECEC;
+	background-color:white;
 
 
 }
@@ -17,7 +17,7 @@ body {
 
 }
 .site-banner {
-	background-color:#ECECEC;
+	background-color:white;
 }
 
 .navbar {
@@ -195,7 +195,8 @@ div.calltoactionbox p {
 }
 
 .item-search{
-	margin-bottom:100px;
+	margin-bottom:250px;
+	border: 2px solid grey;
 }
 
 .advanced-search-form {
@@ -329,8 +330,8 @@ div#pageshavebeen {
 
 
 div.header-gradient {
-	background:linear-gradient(#ececec, #ffffff);
-	background:-webkit-linear-gradient(#ececec, #ffffff);
+	background:linear-gradient(white, #ffffff);
+	background:-webkit-linear-gradient(white, #ffffff);
 
 }
 
