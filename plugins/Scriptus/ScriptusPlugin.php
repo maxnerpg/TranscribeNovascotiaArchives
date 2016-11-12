@@ -126,17 +126,7 @@ class ScriptusPlugin extends Omeka_Plugin_AbstractPlugin
             )
         );    
 
-        $router->addRoute(
-            'dashboard',
-            new Zend_Controller_Router_Route(
-                'dash',
-                array(
-                    'module'       => 'scriptus',
-                    'controller'   => 'index',
-                    'action'       => 'dashboard',
-                )
-            )
-        ); 
+       
 
         $router->addRoute(
             'submissionstats',
@@ -161,9 +151,20 @@ class ScriptusPlugin extends Omeka_Plugin_AbstractPlugin
                 )
             )
         ); 
+        $router->addRoute(
+            'dashboard',
+            new Zend_Controller_Router_Route(
+                'dashboard',
+                array(
+                    'module'       => 'scriptus',
+                    'controller'   => 'index',
+                    'action'       => 'dashboard',
+                )
+            )
+        ); 
 
         $router->addRoute(
-            'colllectionstats',
+            'collectionstats',
             new Zend_Controller_Router_Route(
                 'collection-stats',
                 array(
@@ -173,6 +174,7 @@ class ScriptusPlugin extends Omeka_Plugin_AbstractPlugin
                 )
             )
         ); 
+
 
     }
 }

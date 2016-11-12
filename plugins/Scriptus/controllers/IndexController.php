@@ -320,7 +320,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
 
         //Get an array of private IDs for items so that we can ignore these private items for our recent transcriptions list
         $arrayOfPrivateIDs = array();
-        $sqlToGetPrivateItems = "select * from omeka_items where public = 0;";
+        $sqlToGetPrivateItems = "select * from items where public = 0;";
         $privateItemResults = $db->query($sqlToGetPrivateItems);
 
         while ($row = $privateItemResults->fetch()){

@@ -2,13 +2,14 @@
     $pageTitle = __('Browse collections');
     echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
-       
-            	               
-	
-	
+   <div class="section-title">    
+	<div class="header-gradient">
+		<div class="collectionTitle">
+		      <h1><?php echo 'Browse all collections'; ?></h1>
+		</div>
+	</div>
 </div>
-</div>
-    <h1><?php echo 'Browse all collections'; ?></h1>
+
      <div id="columns" class="container">
         
         <?php if ($total_results > 0): ?>
