@@ -8,7 +8,7 @@
         <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
 	<meta name="application-name" content="Transcribe@NovaScotiaArchives"/>
-	<link rel="icon" href="<?php echo img('falvicon.ico'); ?>"  />
+	<link rel="icon" href="<?php echo img('images/falvicon.ico'); ?>"  />
 	
 
     <!-- Will build the page <title> -->
@@ -51,7 +51,7 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header role="banner" class="site-banner">
-         <div class="container">
+         <div class="container banner-imgs">
             
             <!-- <h1 class="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1> -->
             <img class="img-responsive" src="<?php echo img("ns-archives-a.jpg"); ?>" />
