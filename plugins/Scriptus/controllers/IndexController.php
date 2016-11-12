@@ -285,6 +285,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
                     $transcribeItem = array();
 
                     $lastTranscribed = $row['URL_changed'];
+                    $transcribeItem["URL_changed"] = $row['URL_changed'];
                     $transcribeItem['last_transcribed']  = (string)$lastTranscribed;
                     $transcribeItem['time_changed'] = $row['time_changed'];
                     $transcribeItem['display_title'] = $row['file_name'] . ', ' . $row['item_name'];
