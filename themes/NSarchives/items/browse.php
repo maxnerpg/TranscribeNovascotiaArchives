@@ -2,11 +2,21 @@
     $pageTitle = __('Browse Items');
     echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
-
-    <h1><?php echo 'Browse all items'; ?></h1>
-    <?php $subnav = public_nav_items(); echo $subnav->setUlClass('nav nav-pills'); ?>
-    <hr>    
-
+   
+<div class="section-title">    
+	<div class="header-gradient">
+		<div class="collectionTitle">
+		     <h1><?php echo 'Browse all items'; ?></h1>
+		</div>
+		<div class="main">
+		    <div class="container-fluid">
+		        <div class="row-fluid">
+		             <?php $subnav = public_nav_items(); echo $subnav->setUlClass('nav nav-pills'); ?>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
     <div id="columns" class="container">
         <?php if ($total_results > 0): ?>
         <?php
@@ -46,9 +56,11 @@
                     <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
             
             <?php endforeach; ?>
+            <div class="col-sm-9">
             <div id="outputs">
                 <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
                 <?php echo output_format_list(false); ?>
+            </div>
             </div>
         <?php else : ?>
             <p><?php echo 'No items added, yet.'; ?></p>

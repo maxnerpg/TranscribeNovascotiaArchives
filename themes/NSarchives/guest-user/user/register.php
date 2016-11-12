@@ -9,7 +9,6 @@ echo head(array('bodyclass' => 'login', 'title' => $pageTitle));
 div.loginbox {
 	background-color:rgba(0,0,0,.7);
 	color:white;
-	width:590px;
 	padding:35px;
 }
 
@@ -23,7 +22,7 @@ div.loginbox .btn {
 	margin: 40px auto 0 auto;
 	font-weight: bold;
 	color:#666666;
-	font-size:18px;
+	font-size:22px;
 }
 
  
@@ -34,11 +33,11 @@ div.loginbox input#submit {
 	border-radius: 4px;
 	border:none;
 	color:#666666;
-	font-size:18px;
+	font-size:22px;
 	font-family:"InterstateBold"
 }
 div.loginbox input#submit:hover {
- background-color:#f6a947;
+ background-color:#2750A0;
  color:white;
 }
 
@@ -47,7 +46,7 @@ div.loginbox input {width:100%;
 	font-family:"InterstateLight";
 	line-height: normal;
 	height:30px;
-	font-size:14px;
+	font-size:18px;
 	padding-left:8px;
 	padding-top:6px;
 	padding-bottom:2px;
@@ -66,7 +65,7 @@ p.explanation {
 }
 
  div.loginbox .btn:hover {
-	 background-color:#f6a947;
+	 background-color:#2750A0;
 	 color:white;
  }
 
@@ -82,7 +81,7 @@ div.loginbox h4 {
 	margin-bottom:30px;
 }
 div.loginbox label, div.checkbox {	font-family: InterstateLight;
-	font-size:12px;
+	font-size:18px;
 
 }
 div.loginbox p {
@@ -93,7 +92,7 @@ div.loginbox p {
 
 div.loginbox p, div.loginbox li {
 	font-family: InterstateLight;
-	font-size:14px;
+	font-size:18px;
 }
 div.loginbox li {
 	margin-bottom:20px;
@@ -113,12 +112,6 @@ label#rememberMe {
 	float:right;
 }
 
-div.vcenter {
- position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
 
 
 #content #flash ul {
@@ -147,7 +140,7 @@ div.vcenter {
 </style>
 
  
-<div class="container loginbox vcenter">
+<div class="loginbox col-md-4 col-md-offset-4">
 	<div class="row">
 		<div class="col-sm-6" style="border-right: 1px solid white;padding-right:30px;">
 			<h4>
@@ -166,9 +159,7 @@ div.vcenter {
 			</div>
 		
 			<ul>
-				                            <li>
-                              No Yale affiliation is required.
-                            </li>
+				             
 			   <li>
                               The transcriptions you contribute will be licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-0 »</a>.
 

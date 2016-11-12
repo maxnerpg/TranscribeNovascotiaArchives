@@ -36,17 +36,17 @@ div.loginbox .form-control {
 }
 div.loginbox h4 {
 	font-family: YaleDesign;
-	font-size:24px;
+	font-size:28px;
 	text-align: center;
 	margin-bottom:30px;
 }
 div.loginbox label, div.checkbox {	font-family: InterstateLight;
-	font-size:12px;
+	font-size:16px;
 
 }
 div.loginbox p {
 	font-family: InterstateLight;
-	font-size:14px;
+	font-size:18px;
 	text-align: justify;
 }
 #remember {
