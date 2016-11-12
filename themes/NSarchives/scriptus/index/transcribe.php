@@ -32,7 +32,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 	
 	div.transcribeLeft {
-		width:330px;
+		width:30%;
 		float:right; 
 		padding-right:22px;
 		padding-left:22px;
@@ -72,7 +72,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 	.nav-tabs li {
 	
-		font-size:18px;
+		font-size:16px;
 		height:32px;
 	
 	}
@@ -120,7 +120,36 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 	</style>
 
-<div class="section-title" style="padding:0;">    
+<div class="section-title" style="padding:0;"> 
+		<div class="main-transcribe">
+		    <div class="container-fluid" style="padding-right:0;padding-left:0;">
+		        <div class="row-fluid">
+		           <img id="ImageID" src="<?php echo $this->imageUrl; ?>" alt=''/>
+		        </div>
+		    </div>
+
+
+		    <!-- Modal that can be served if a user navigates away from the form with unsaved content -->
+		    <div id="saveChangesModal" class="modal fade">
+			<div class="modal-dialog">
+			    <div class="modal-content">
+				<div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				    <h4 class="modal-title">Confirmation</h4>
+				</div>
+				<div class="modal-body">
+				    <p>Do you want to save the changes you made before leaving?</p>
+				    <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
+				</div>
+				<div class="modal-footer">
+				    <button type="button" class="btn btn-default" data-dismiss="modal" id="doNotSaveChangesButton">Close</button>
+				    <button type="button" class="btn btn-primary" id="saveChangesButton">Save changes</button>
+				</div>
+			    </div>
+			</div>
+		    </div>
+
+		</div> <!-- /.main -->   
 		<div class="transcribeLeft">
 			<div id="transcribeBack"><?php echo $this->back_link;
 				 ?></div>
@@ -187,35 +216,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 			</div>
 		</div>
-		<div class="main">
-		    <div class="container-fluid" style="padding-right:0;padding-left:0;">
-		        <div class="row-fluid">
-		           <img id="ImageID" src="<?php echo $this->imageUrl; ?>" alt=''/>
-		        </div>
-		    </div>
-
-
-		    <!-- Modal that can be served if a user navigates away from the form with unsaved content -->
-		    <div id="saveChangesModal" class="modal fade">
-			<div class="modal-dialog">
-			    <div class="modal-content">
-				<div class="modal-header">
-				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				    <h4 class="modal-title">Confirmation</h4>
-				</div>
-				<div class="modal-body">
-				    <p>Do you want to save the changes you made before leaving?</p>
-				    <p class="text-warning"><small>If you don't save, your changes will be lost.</small></p>
-				</div>
-				<div class="modal-footer">
-				    <button type="button" class="btn btn-default" data-dismiss="modal" id="doNotSaveChangesButton">Close</button>
-				    <button type="button" class="btn btn-primary" id="saveChangesButton">Save changes</button>
-				</div>
-			    </div>
-			</div>
-		    </div>
-
-		</div> <!-- /.main -->
+	
 </div>
 
 
