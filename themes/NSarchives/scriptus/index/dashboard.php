@@ -25,7 +25,6 @@
 }
 </style>
 
-<div id="columns" class="container">
 
 	<?php $user = current_user(); ?>
 <?php if (!$user): ?>
@@ -40,7 +39,7 @@
 		<?php foreach ($this->recentUserTranscriptions as $transcriptionItem): ?>
 	
 	        <figure>
-	            <div class="masonrywell">
+	            <div class="col-sm-3">
 					<div class="thumbholder">
 	                    <a href="<?php echo $transcriptionItem["URL_changed"];?>"><img src="<?php echo $transcriptionItem["image_url"] ?>" alt="<?php echo $transcriptionItem["file_title"] ?>,a part of <?php echo $transcriptionItem["item_title"] ?>" /></a>
 	                    
@@ -78,7 +77,7 @@
 			<?php foreach ($this->recentTranscriptions as $transcriptionItem): ?>
 	
 	        <figure>
-	            <div class="masonrywell">
+	            <div class="col-sm-3">
 					<div class="thumbholder">
 	                    <a href="<?php echo $transcriptionItem["URL_changed"];?>"><img src="<?php echo $transcriptionItem["image_url"] ?>" alt="<?php echo $transcriptionItem["file_title"] ?>,a part of <?php echo $transcriptionItem["item_title"] ?>" /></a>
 	                    
@@ -110,7 +109,7 @@
 				     
 </div>
 
-</div>
+
 
 
 
