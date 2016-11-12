@@ -195,8 +195,9 @@ div.calltoactionbox p {
 }
 
 .item-search{
-	margin-bottom:250px;
+	margin-bottom:200px;
 	border: 2px solid grey;
+	padding: 20px;
 }
 
 .advanced-search-form {
