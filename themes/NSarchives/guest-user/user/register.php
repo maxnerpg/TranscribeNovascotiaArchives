@@ -57,7 +57,7 @@ div.loginbox input {width:100%;
 }
 
 div.two {
-	display:none;
+	
 }
 p.explanation {
 	line-height: normal;
@@ -78,12 +78,12 @@ div.loginbox .form-control {
 	border-radius: 0;
 }
 div.loginbox h4 {
-	font-family: YaleDesign;
+	YaleDesign;
 	font-size:24px;
 	text-align: center;
 	margin-bottom:30px;
 }
-div.loginbox label, div.checkbox {	font-family: InterstateLight;
+div.loginbox label, div.checkbox {	
 	font-size:18px;
 
 }
@@ -94,7 +94,7 @@ div.loginbox p {
 
 
 div.loginbox p, div.loginbox li {
-	font-family: InterstateLight;
+
 	font-size:18px;
 }
 div.loginbox li {
