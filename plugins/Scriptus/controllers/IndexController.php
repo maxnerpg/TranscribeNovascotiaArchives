@@ -288,7 +288,16 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
                     $transcribeItem['last_transcribed']  = (string)$lastTranscribed;
                     $transcribeItem['time_changed'] = $row['time_changed'];
                     $transcribeItem['display_title'] = $row['file_name'] . ', ' . $row['item_name'];
-       
+                    $urlArray = explode("/", $transcribeItem["URL_changed"]);
+                    $fileID = array_pop($urlArray); //file ID in URL
+                    $itemID = array_pop($urlArray); //item ID in URL
+                    $scriptus = new Scriptus($itemID, $fileID);
+                    $transcribeItem["image_url"] = $scriptus->getImageThumbnail();
+                    $transcribeItem["collection_link"] = $scriptus->getCollectionLink();;
+                    $transcribeItem["item_link"] = $scriptus->getItemLink();
+                    $transcribeItem["item_title"] = $scriptus->getItemTitle();
+                    $transcribeItem["file_title"] = $scriptus->getFileTitle();
+                    $transcribeItem["transcription"] = $scriptus->getTranscription();
 
                     array_push($recentlyTranscribed, $transcribeItem);
 
