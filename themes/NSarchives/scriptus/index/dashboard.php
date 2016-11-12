@@ -26,12 +26,16 @@
 </style>
 
 <div id="columns" class="container">
+
 	<?php $user = current_user(); ?>
 <?php if (!$user): ?>
+<div class="panel">
 <h2><div class="login-link"><a href="<?php echo WEB_ROOT;?>/guest-user/user/login">Login </a>to see your recent transcriptions and view account options.</div></h2>
+</div>
 <?php else: ?>
-
+<div class="well">
 <h2>Your Transcriptions</h2>
+</div>
 	<div class="masonryrow">			
 		<?php foreach ($this->recentUserTranscriptions as $transcriptionItem): ?>
 	
@@ -67,7 +71,9 @@
    <?php endif; ?>				
 				     
 </div>
+<div class="well">
 <h2>All Transcriptions</h2>
+</div>
 <div class="masonryrow">
 			<?php foreach ($this->recentTranscriptions as $transcriptionItem): ?>
 	
@@ -100,7 +106,7 @@
 	            
 	      
             <?php endforeach; ?>
-			
+
 				     
 </div>
 
