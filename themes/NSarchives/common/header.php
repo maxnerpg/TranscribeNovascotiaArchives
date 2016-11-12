@@ -52,7 +52,9 @@
     <header role="banner" class="site-banner">
          <div class="container">
             
-             <h1 class="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1>
+            <!-- <h1 class="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1> -->
+            <?php echo img("ns-archives-a.png"); ?>
+            <!-- Social Media goes here -->
       
         </div>
 <nav class="navbar navbar-default">
