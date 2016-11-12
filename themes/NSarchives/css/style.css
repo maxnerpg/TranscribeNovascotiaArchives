@@ -19,6 +19,9 @@ body {
 .site-banner {
 	background-color:white;
 }
+.banner-image {
+	padding:25px;
+}
 
 .navbar {
 	border-radius: 0;
@@ -28,7 +31,9 @@ body {
 	margin-bottom:0;
   z-index: 1001;
 	}
-
+.subnav {
+	font-size: 16px;
+}
 div#transcribe-navbar {
 	background-color:#2750A0;
 	padding-left:0;
@@ -135,7 +140,7 @@ input#query {width:220px;display:inline;}
 
 	color:#cccccc;
 	background-color:#464646;
-	font-size:14px;
+	font-size:16px;
 	height:55px;
 	line-height:55px;
 	text-transform:none;
@@ -190,7 +195,7 @@ div.calltoactionbox h1 {
 
 div.calltoactionbox p {
 	
-	font-size:14px;
+	font-size:18px;
 	text-align: justify;
 }
 
@@ -260,10 +265,6 @@ div#footersection div.row {
 }
 
 
-div#footerPOTYDHL {
-	font-size:16px;
-	margin-right:20px;
-}
 
 
 /* COLLECTION VIEW */
@@ -290,7 +291,7 @@ div.collectionTitle {
 
 div.collectionDesc {
 
-	font-size:14px;
+	font-size:16px;
 	line-height:1.5em;
 	margin-top:50px;
 	padding-right:40px;
@@ -352,13 +353,13 @@ div#columns figcaption {
 	padding:19px;
 	background-color:#ffffff;
 	
-	font-size:12px;
+	font-size:16px;
 	line-height: 1.25em;
 }
 
 div#columns figcaption h3, div#columns figcaption h3 a {
 
-	font-size:16px;
+	font-size:18px;
 	margin-top:0;
 	color:#666666;
 	text-decoration: none;

@@ -20,11 +20,11 @@
 	            <div class="masonrywell">
 					<div class="thumbholder">
                             <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
-                               <h3> <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?> </h3>
+                              <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?> 
                             <?php endif; ?>
                     </div>
                     <figcaption>
-                           
+                           <h3> <?php echo link_to_collection(); ?> <h3>
                             <?php if ($collection->hasContributor()): ?>
                                 <?php echo metadata('collection', array('Dublin Core', 'Contributor'), array('all'=>true, 'delimiter'=>', ')); ?>
                             <?php endif; ?>
@@ -33,7 +33,7 @@
                                 <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet'=>150))); ?>
                             <?php endif; ?>
                           
-                            <?php echo link_to_collection(); ?>
+                           
                     </figcaption>
         
                             
