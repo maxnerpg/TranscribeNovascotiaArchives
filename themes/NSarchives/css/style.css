@@ -586,12 +586,11 @@ div.collectionTitleToItem {
 	div#transcribeNavbar li {
 		height:inherit;
 	}
-	div#transcribeLeft {
+	.transcribeLeft {
 		    width: 100%;
     float: right;
     padding-right: 22px;
     padding-left: 22px;
-   
     height: calc(100vh - 70px);
     background-color: #fff;
     display: block;
