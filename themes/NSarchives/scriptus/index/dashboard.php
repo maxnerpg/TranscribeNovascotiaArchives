@@ -76,8 +76,9 @@
 <div class="masonryrow">
 			<?php foreach ($this->recentTranscriptions as $transcriptionItem): ?>
 	
-	        <figure>
-	            <div class="col-sm-3">
+	        <div class="col-sm-3">
+                <figure>
+	            <div class="masonrywell">
 					<div class="thumbholder">
 	                    <a href="<?php echo $transcriptionItem["URL_changed"];?>"><img src="<?php echo $transcriptionItem["image_url"] ?>" alt="<?php echo $transcriptionItem["file_title"] ?>,a part of <?php echo $transcriptionItem["item_title"] ?>" /></a>
 	                    
@@ -102,6 +103,7 @@
 	            </div>
 	            </figure>
 	            
+			</div>
 	            
 	      
             <?php endforeach; ?>
