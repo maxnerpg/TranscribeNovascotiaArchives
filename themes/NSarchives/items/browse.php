@@ -3,14 +3,6 @@
     echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
    
-<div class="section-title">    
-	<div class="">
-		<div class="panel">
-		     
-            
-		</div>
-	</div>
-</div>
 
 <div class="section-title">    
 		<div class="panel">
