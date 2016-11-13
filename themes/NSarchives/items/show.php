@@ -51,15 +51,18 @@
 </style>
 
 
-	<div class="section-title">
+
+<div class="section-title">    
 		<div class="panel">
-		     <h3><?php echo $itemTitle; ?></h3>
-		    
+            <div class="container">
+		     <h1><?php echo $itemTitle; ?></h1>
+            </div>
 		</div>
-		 <div class="well"><?php echo $itemDesc; ?></div>
+         <div class="well col-sm-12">
+		      <?php echo $itemDesc; ?>
+</div>
 	</div>
-
-
+		   
 
 <div id="columns" class="container">
 

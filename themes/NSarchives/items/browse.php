@@ -6,13 +6,22 @@
 <div class="section-title">    
 	<div class="">
 		<div class="panel">
-		     <h1><?php echo 'Browse all items'; ?></h1>
-             <div class="panel col-sm-12">
-		      <?php $subnav = public_nav_items(); echo $subnav->setUlClass('nav nav-pills subnav'); ?>
-</div>
+		     
+            
 		</div>
 	</div>
 </div>
+
+<div class="section-title">    
+		<div class="panel">
+            <div class="container">
+		      <h1><?php echo 'Browse all items'; ?></h1>
+            </div>
+		</div>
+         <div class="well col-sm-12">
+		      <?php $subnav = public_nav_items(); echo $subnav->setUlClass('nav nav-pills subnav'); ?>
+</div>
+	</div>
 
     <div id="columns" class="container">
         <?php if ($total_results > 0): ?>
