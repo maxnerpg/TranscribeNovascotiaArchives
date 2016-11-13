@@ -27,9 +27,7 @@
 <?php
 
 
-$this->partial('scriptus/submission-stats.pthml', array());
-$this->partial('submission-stats.pthml', array());
-$this->partial('scriptus/index/submission-stats.pthml', array());
+echo $this->partial('scriptus/index/submission-stats.php');
 
 
 ?>
