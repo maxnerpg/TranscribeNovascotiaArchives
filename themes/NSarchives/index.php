@@ -15,6 +15,9 @@
         <br><br>
         <b>Transcribe @ Nova Scotia Archives</b> is built on the Omeka Digital Library platform using the Scriptus Platform by DIYhistory.
     </h4>
+    <h4>
+        Total items transcribed: <?php echo total_transcribed();  ?>
+    <h4>
 </div>
 </div>
 <div class="row">

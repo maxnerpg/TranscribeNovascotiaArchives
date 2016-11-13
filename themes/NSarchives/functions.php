@@ -44,7 +44,19 @@ function public_nav_main_bootstrap() {
     $nav->setPartial($partial);
     return $nav->render();
 }
-
+function total_transcribed(){
+    $sql = 'select * from Scriptus_changes;';     
+    //print_r($sql);
+    $stmt = new Zend_Db_Statement_Mysqli($db, $sql);
+    $stmt->execute();
+    $rowCount = 0;
+    while ($row = $stmt->fetch()){
+        if ($row["new_transcription"]==1){
+            $rowCount++;
+        }
+    }
+    return $rowCount;
+}
 class Omeka_Form_User_Transcribe extends Omeka_Form
 {
     private $_hasRoleElement;
