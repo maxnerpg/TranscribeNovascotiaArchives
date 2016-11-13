@@ -59,9 +59,8 @@
 <?php $filter = new Zend_Filter_Word_CamelCaseToDash; ?>
 <?php foreach (loop('search_texts') as $searchText): ?>
 <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
-<?php $recordType = $searchText['record_type']; ?>
-<?php set_current_record($recordType, $record); 
- $file = $recordType;
+<?php $file = $searchText['file']; ?>
+<?php set_current_record($file, $record); 
  
   ?>
 <?php 
