@@ -69,40 +69,47 @@
         <?php endif; ?>
     </div>
     <div class="col-lrg-4 col-sm-6 col-xs-12">
-        <?php if (get_theme_option('Display Featured Collection') !== '0'): ?>
+       
         <div class="container panel">
-            <h2><?php echo __('Featured Collection'); ?></h2>
+            <h2>; Recently Added Collections </h2>
         </div>
-              <?php  $collection = get_random_featured_collection();
-              set_current_record('collection', $collection);
-               ?>        
-        <div class="col-sm-3">
-            <figure>
+              <?php  $item = get_recent_collection(); ?>        
+        
+
+             <div class="col-sm-3">
+                <figure>
 	            <div class="masonrywell">
 					<div class="thumbholder">
-                            <?php if ($collectionImage = record_image('collection', 'square_thumbnail')): ?>
-                              <?php echo link_to_collection($collectionImage, array('class' => 'image')); ?> 
-                            <?php endif; ?>
+                         <?php if (metadata($item, 'has files')) {
+                                                        echo link_to_item(
+                                                            item_image('square_thumbnail', array(), 0, $item), 
+                                                            array('class' => 'image'), 'show', $item
+                                                        );
+                                                }
+                            ?>
                     </div>
                     <figcaption>
-                           <h3> <?php echo link_to_collection(); ?> <h3> 
-                            <?php if ($collection->hasContributor()): ?>
-                                <?php echo metadata('collection', array('Dublin Core', 'Contributor'), array('all'=>true, 'delimiter'=>', ')); ?>
+                            <?php
+                            $title = metadata($item, array('Dublin Core', 'Title'));
+                            $description = metadata($item, array('Dublin Core', 'Description'), array('snippet' => 150));
+                            ?>
+                            <h3><?php echo link_to($item, 'show', strip_formatting($title)); ?></h3>
+                        
+                            <?php if ($description): ?>
+                                <p class="item-description"><?php echo $description; ?></p>
                             <?php endif; ?>
-                    
-                            <?php if (metadata('collection', array('Dublin Core', 'Description'))): ?>
-                                <?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet'=>150))); ?>
-                            <?php endif; ?>
-                          
-                           
-                    </figcaption>
-        
-                            
-                    </div>
-                </figure>
+                    </figcaption>                
                 </div>
-                    
-                        <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'collection' => $collection)); ?>
+                </figure>
+            </div>
+
+                  
+                
+                    <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
+            
+            
+            
+            
 
         <?php endif; ?>
     </div>
