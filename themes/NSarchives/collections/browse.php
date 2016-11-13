@@ -2,10 +2,12 @@
     $pageTitle = __('Browse collections');
     echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
+
    <div class="section-title">    
-	
 		<div class="panel">
+            <div class="container">
 		      <h1><?php echo 'Browse all collections'; ?></h1>
+            </div>
 		</div>
 	</div>
 
