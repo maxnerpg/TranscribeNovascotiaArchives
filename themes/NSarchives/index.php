@@ -106,12 +106,6 @@
                   
                 
                     <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
-            
-            
-            
-            
-
-        <?php endif; ?>
     </div>
 </div>    
 <div class="row">
