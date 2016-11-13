@@ -24,9 +24,15 @@
 	}
 }
 </style>
+<?php
 
- <?php echo $this->partial('/submission-stats.php'); ?>
 
+$this->partial('scriptus/submission-stats.pthml', array());
+$this->partial('submission-stats.pthml', array());
+$this->partial('scriptus/index/submission-stats.pthml', array());
+
+
+?>
 	<?php $user = current_user(); ?>
 <?php if (!$user): ?>
 <div class="panel">
