@@ -1,6 +1,6 @@
 
 <?php
-    $pageTitle = __('Search Transcribe@Nova Scotia Archives ') . __('(%s results)', $total_results);
+    $pageTitle = __('Search Transcribe@Yale ') . __('(%s results)', $total_results);
     echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
     $searchRecordTypes = get_search_record_types();
     $uri = WEB_ROOT .'/transcribe/';
@@ -59,13 +59,21 @@
 <?php $filter = new Zend_Filter_Word_CamelCaseToDash; ?>
 <?php foreach (loop('search_texts') as $searchText): ?>
 <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
-<?php $recordType = $searchText['record_type']; ?>
-<?php set_current_record($recordType, $record); 
- $file = get_record_by_id('file', $searchText['record_id']);
+<?php $recordType = $searchText['record_type'];
+print_r( $searchText['record_type']);
+ ?>
+<?php set_current_record($recordType, $record); ?>
+<?php $fileTitle = strip_formatting(metadata('recordType', array('Dublin Core', 'Title')));
+	  $theTranscription = strip_formatting(metadata('recordType', array('Scriptus', 'Transcription')));
+	 $status =  $record->getElementTexts('Scriptus', 'Status');
 
-  ?>
-<?php 
-		$item_id = metadata('file', 'item_id');
+	  
+		 ?>
+		<figure>
+			<div class="masonrywell">
+				<div class="thumbholder">
+<?php echo '<a href="' . $uri . $record->item_id . '/' . $record->id . '">' . file_image('thumbnail', array('alt' => $fileTitle)) .'</a>';
+			$item_id = metadata('recordType', 'item_id');
 			$item = get_record_by_id('item', $item_id);
 			
 			set_current_record('item', $item);

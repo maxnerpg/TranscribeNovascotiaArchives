@@ -22,6 +22,9 @@ body {
 .banner-image {
 	padding:25px;
 }
+.panel {
+	margin-bottom: 0px;
+}
 
 .navbar {
 	border-radius: 0;
