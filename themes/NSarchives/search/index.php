@@ -54,7 +54,7 @@
 
 
 <div id="columns" class="container">
-	<div class="masonryrow">
+
 <?php if ($total_results): ?>
 <?php $filter = new Zend_Filter_Word_CamelCaseToDash; ?>
 <?php foreach (loop('search_texts') as $searchText): ?>
@@ -105,7 +105,7 @@
 						</h3>
                     <?php if($itemCreator!='') { echo $itemCreator . '<br>'; }  ?>
                     <?php if($itemDate!='' && $itemDate!='undated') { echo $itemDate . '<br>';} 
-                    echo  '<p>' . "&ldquo;" . snippet_by_word_count($theTranscription2, 10, '...') . "&rdquo; </p>"  ;
+                    echo  '<p>' . "&ldquo;" . snippet_by_word_count($theTranscription, 10, '...') . "&rdquo; </p>"  ;
                 
                     
                     ?>
@@ -124,7 +124,7 @@
 
 <?php echo pagination_links(); ?>
 
-	</div>
+
 </div>
 
 
