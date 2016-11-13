@@ -6,7 +6,7 @@
     
 
     <div class="section-title">    
-	<div class="header">
+	<div class="">
 		<div class="panel">
 		     <h1><?php echo $pageTitle; ?></h1>
              <div class="panel col-sm-12">
