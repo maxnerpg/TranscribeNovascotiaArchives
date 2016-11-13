@@ -51,10 +51,10 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header role="banner" class="site-banner">
-         <div class="container banner-imgs">
+         <div class="container">
             
             <!-- <h1 class="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1> -->
-            <img class="img-responsive" src="<?php echo img("ns-archives-a.jpg"); ?>" />
+            <img class="img-responsive banner-imgs" src="<?php echo img("ns-archives-a.jpg"); ?>" />
             <!-- Social Media goes here -->
       
         </div>

@@ -19,9 +19,9 @@ body {
 .site-banner {
 	background-color:white;
 }
-.banner-image {
-	padding:25px;
+.banner-imgs{
     opacity: 0.8;
+	min-height: 50px;
 }
 .panel {
 	margin-bottom: 0px;
@@ -534,6 +534,9 @@ div.collectionTitleToItem {
 	}
 	div#header-transcribebox {
 	width:230px;
+	}
+	.search-form{
+		padding:10px;
 	}
 
 
