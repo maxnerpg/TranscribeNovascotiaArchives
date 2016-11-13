@@ -32,7 +32,7 @@
         
         <?php foreach (loop('items') as $item): ?>
 
-             <div class="col-sm-3">
+             <div class="col-sm-6">
                 <figure>
 	            <div class="masonrywell">
 					<div class="thumbholder">
@@ -79,7 +79,7 @@
         
         <?php foreach (loop('items') as $item): ?>
 
-             <div class="col-sm-4 col-xs-6">
+             <div class="col-sm-6">
                 <figure>
 	            <div class="masonrywell">
 					<div class="thumbholder">
