@@ -63,8 +63,8 @@
 print_r( $searchText['record_type']);
  ?>
 <?php set_current_record($recordType, $record); ?>
-<?php $fileTitle = strip_formatting(metadata('recordType', array('Dublin Core', 'Title')));
-	  $theTranscription = strip_formatting(metadata('recordType', array('Scriptus', 'Transcription')));
+<?php $fileTitle = strip_formatting(metadata('record', array('Dublin Core', 'Title')));
+	  $theTranscription = strip_formatting(metadata('record', array('Scriptus', 'Transcription')));
 	 $status =  $record->getElementTexts('Scriptus', 'Status');
 
 	  
@@ -73,7 +73,7 @@ print_r( $searchText['record_type']);
 			<div class="masonrywell">
 				<div class="thumbholder">
 <?php echo '<a href="' . $uri . $record->item_id . '/' . $record->id . '">' . file_image('thumbnail', array('alt' => $fileTitle)) .'</a>';
-			$item_id = metadata('recordType', 'item_id');
+			$item_id = metadata('record', 'item_id');
 			$item = get_record_by_id('item', $item_id);
 			
 			set_current_record('item', $item);
