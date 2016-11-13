@@ -77,7 +77,7 @@
 			set_current_record('item', $record);
 				  $itemDate = strip_formatting(metadata('item', array('Dublin Core', 'Date')));
 				  $itemCreator= strip_formatting(metadata('item', array('Dublin Core', 'Creator')));
-				  $itemLoc = strip_formatting(metadata('item', array('Item Type Metadata', 'Location')));
+				  
 
 	        $percentNeedsReview = metadata('item', array('Scriptus', 'Percent Needs Review'));
             $percentCompleted = metadata('item', array('Scriptus', 'Percent Completed'));
@@ -102,7 +102,6 @@
 						</h3>
                     <?php if($itemCreator!='') { echo $itemCreator . '<br>'; }  ?>
                     <?php if($itemDate!='' && $itemDate!='undated') { echo $itemDate . '<br>';} 
-                    echo $itemLoc . "<hr>";
                      
                     echo str_replace($_GET["query"], ("<b style=\"color:red;\">" . $_GET["query"] . "</b>"), $theTranscription);
                     

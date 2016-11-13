@@ -25,7 +25,9 @@ body {
 .panel {
 	margin-bottom: 0px;
 }
-
+.nav-pills{
+	border-radius: 0px;
+}
 .navbar {
 	border-radius: 0;
 	border:0;
