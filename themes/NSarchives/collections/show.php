@@ -29,11 +29,17 @@
 </style>
 
 
+<div class="section-title">    
 		<div class="panel">
-		     <h3><?php echo $collectionTitle; ?></h3>
-		    <?php echo $collectionDesc; ?>
+            <div class="container">
+		     <h1><?php echo $collectionTitle; ?></h1>
+            </div>
 		</div>
-
+         <div class="well col-sm-12">
+		     <h3> <?php echo $collectionDesc; ?> </h3>
+</div>
+	</div>
+		   
 
 	<div class="well" >
 	    <div class="container-fluid">

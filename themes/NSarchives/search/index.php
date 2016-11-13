@@ -5,51 +5,20 @@
     $searchRecordTypes = get_search_record_types();
     $uri = WEB_ROOT .'/transcribe/';
 ?>
-<style>	
-	.collectionTitle h1, div.collectionDesc {
-			margin-top:20px;
-	}
-	
-	@media (max-width: 767px) {
-	.main {
-	padding-left: 0;
-	}
-	div.collectionTitle {
-	width:100%;
-	
-	padding-left:15px;
-	}
-	.collectionTitle h1 {
-	text-align:left;
-	
-	}
-	div.collectionDesc {
-		margin-top:0;
-		padding-right:10px;
-	
-	}
-	}
-</style>
+
 <div class="section-title">    
-	<div class="row">
-		<div class="collectionTitleToItem">
-			<h1>
+	<div class="panel">
+		<div class="container">
+		     <h1>Results: </h1>
+		</div>
+		
+	</div>
+	 <div class="well col-sm-12">
+					<h3>
 			Searching <?php echo total_records('Item'); ?> manuscripts 
-			</h1>
+					</h3>
+		            <h3>Found <?php echo $total_results; ?> instances of <?php echo htmlspecialchars($_GET["query"]) . ".</p><p>All transcriptions are licensed under a Creative Commons License (<a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\">CC-0</a>); please feel free to use the texts in your own research and/or teaching.";?></h3>
 		</div>
-	</div>
-	<div class="header-gradient">
-		<div class="collectionTitle">
-		     <h1>Results</h1>
-		</div>
-		<div class="main">
-		    <div class="container-fluid">
-		        <div class="row-fluid">
-		            <div class="collectionDesc"><p>Found <?php echo $total_results; ?> instances of <?php echo htmlspecialchars($_GET["query"]) . ".</p><p>All transcriptions are licensed under a Creative Commons License (<a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\">CC-0</a>); please feel free to use the texts in your own research and/or teaching.";?></div>
-		        </div>
-		    </div>
-		</div>
-	</div>
 </div>
 
 
