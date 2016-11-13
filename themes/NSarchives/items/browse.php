@@ -7,7 +7,7 @@
 <div class="section-title">    
 		<div class="panel">
             <div class="container">
-		      <h1><?php echo 'Browse all items'; ?></h1>
+		      <h2><?php echo 'Browse all items'; ?></h2>
             </div>
 		</div>
         <!-- Alternative Search

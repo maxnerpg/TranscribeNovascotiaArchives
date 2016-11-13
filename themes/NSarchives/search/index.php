@@ -9,14 +9,9 @@
 <div class="section-title">    
 	<div class="panel">
 		<div class="container">
-		     <h1>Results: </h1>
-		</div>
-		
-	</div>
-	 <div class="well col-sm-12">
-		<p>
-			Searching <?php echo total_records('Item'); ?> manuscripts:  Found <?php echo $total_results; ?> instances of <?php echo htmlspecialchars($_GET["query"]) ?>
-		</p>
+		     <h3>
+			 	Searching <?php echo total_records('Item'); ?> manuscripts. Results: Found <?php echo $total_results; ?> instances of <?php echo htmlspecialchars($_GET["query"]) ?>
+			</h3>
 		</div>
 </div>
 
