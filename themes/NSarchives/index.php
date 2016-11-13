@@ -71,10 +71,11 @@
     <div class="col-lrg-4 col-sm-6 col-xs-12">
        
         <div class="container panel">
-            <h2>; Recently Added Collections </h2>
-        </div>
-              <?php  $item = get_recent_collections(3); ?>        
+            <h2>; Recently Added Items </h2>
+        </div>     
+         <?php  set_loop_records('items',get_recent_collections(3)); ?>
         
+        <?php foreach (loop('items') as $item): ?>
 
              <div class="col-sm-3">
                 <figure>
@@ -106,6 +107,10 @@
                   
                 
                     <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
+            
+            <?php endforeach; ?>
+            
+            
     </div>
 </div>    
 <div class="row">
