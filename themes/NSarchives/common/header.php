@@ -9,7 +9,7 @@
     <?php endif; ?>
 	<meta name="application-name" content="Transcribe@NovaScotiaArchives"/>
 	<link rel="icon" href="<?php echo img('favicons/flavicon.ico'); ?>"  />
-	
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Will build the page <title> -->
     <?php
@@ -77,6 +77,53 @@
       
          <?php echo public_nav_main_bootstrap(); ?>
        
+<div class="container pull-right">
+	<div class="row mobile-social-share">
+            <div id="socialHolder" class="col-md-3">
+        		<div id="socialShare" class="btn-group share-group">
+                    <a data-toggle="dropdown" class="btn btn-info">
+                         <i class="fa fa-share-alt fa-inverse"></i>
+                    </a>
+    				<button href="#" data-toggle="dropdown" class="btn btn-info dropdown-toggle share">
+    					<span class="caret"></span>
+    				</button>
+    				<ul class="dropdown-menu">
+        				<li>
+    					    <a data-original-title="Twitter" rel="tooltip"  href="#" class="btn btn-twitter" data-placement="left">
+								<i class="fa fa-twitter"></i>
+							</a>
+    					</li>
+    					<li>
+    						<a data-original-title="Facebook" rel="tooltip"  href="#" class="btn btn-facebook" data-placement="left">
+								<i class="fa fa-facebook"></i>
+							</a>
+    					</li>					
+    					<li>
+    						<a data-original-title="Google+" rel="tooltip"  href="#" class="btn btn-google" data-placement="left">
+								<i class="fa fa-google-plus"></i>
+							</a>
+    					</li>
+    				    <li>
+    						<a data-original-title="LinkedIn" rel="tooltip"  href="#" class="btn btn-linkedin" data-placement="left">
+								<i class="fa fa-linkedin"></i>
+							</a>
+    					</li>
+    					<li>
+    						<a data-original-title="Pinterest" rel="tooltip"  class="btn btn-pinterest" data-placement="left">
+								<i class="fa fa-pinterest"></i>
+							</a>
+    					</li>
+                        <li>
+    						<a  data-original-title="Email" rel="tooltip" class="btn btn-mail" data-placement="left">
+								<i class="fa fa-envelope"></i>
+							</a>
+    					</li>
+                    </ul>
+    			</div>
+            </div>
+        </div>
+	</div>
+</div>
 
     <form class="navbar-form navbar-right" role="search" action="<?php echo public_url(''); ?>search">
                         <?php echo search_form(array('show_advanced' => false)); ?>
