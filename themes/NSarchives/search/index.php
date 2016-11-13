@@ -64,9 +64,8 @@
 <?php $fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title')));
 	  $theTranscription = strip_formatting(metadata('file', array('Scriptus', 'Transcription')));
 	 $status =  $record->getElementTexts('Scriptus', 'Status');
-
-	  
 		 ?>
+	<div class="col-md-3">
 		<figure>
 			<div class="masonrywell">
 				<div class="thumbholder">
@@ -82,7 +81,7 @@
 	        $percentNeedsReview = metadata('item', array('Scriptus', 'Percent Needs Review'));
             $percentCompleted = metadata('item', array('Scriptus', 'Percent Completed'));
             $totalPercent = $percentNeedsReview + $percentCompleted;
-			$theTranscription2 = strip_formatting(metadata('item', array('Scriptus', 'Transcription')));
+			
             if ($totalPercent > 100) $totalPercent = 100; ?>
             	<div class="hoverEdit"><span class="glyphicon glyphicon-pencil"></span></div>
 					
@@ -106,14 +105,15 @@
 						</h3>
                     <?php if($itemCreator!='') { echo $itemCreator . '<br>'; }  ?>
                     <?php if($itemDate!='' && $itemDate!='undated') { echo $itemDate . '<br>';} 
-                    echo  '<br>' . "&ldquo;" . snippet_by_word_count($theTranscription2, 10, '...') . "&rdquo;" ;
-                    echo $theTranscription;
+                    echo  '<p>' . "&ldquo;" . snippet_by_word_count($theTranscription2, 10, '...') . "&rdquo; </p>"  ;
+                
                     
                     ?>
 
 					</figcaption>
 				</div>
 			</figure>
+		</div>
 <?php endforeach; ?>
 <?php else: ?>
 	<p>
