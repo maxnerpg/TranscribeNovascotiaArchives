@@ -27,7 +27,7 @@
 <?php
 
 
-echo $this->partial('scriptus/index/submission-stats.php');
+echo $this->partial('scriptus/index/submissionstats.php');
 
 
 ?>
