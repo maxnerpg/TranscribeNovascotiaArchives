@@ -74,7 +74,7 @@
 			$item_id = $record->item_id;
 			$item = get_record_by_id('item', $item_id);
 			
-			set_current_record('item', $item);
+			set_current_record('item', $record);
 				  $itemDate = strip_formatting(metadata('item', array('Dublin Core', 'Date')));
 				  $itemCreator= strip_formatting(metadata('item', array('Dublin Core', 'Creator')));
 				  $itemLoc = strip_formatting(metadata('item', array('Item Type Metadata', 'Location')));
