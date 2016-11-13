@@ -40,29 +40,15 @@
   <div class="container col-sm-4 col-sm-offset-2">
     <div class="panel">
 	<h2> New Collection Stats</h2>
-          <div class="well">    <p>Collection: <b>Commissioner of Public Records</b></p>
-        <p>Number Of Files: 10</p>
-  </div>
-          </div>
-  </div>
-</div>
-<div id="jumbotron">
-  <div id="container col-sm-4 col-offset-1">
-    <div id="panel" >
-       <h2>Most recent transcriptions</h2>
-      
-    </div>
-  </div>
-  <div id="container col-sm-4 col-offset-1">
-    <div id="panel" >
-	<h2> New Collection Stats</h2>
-      <?php foreach ($this->collectionStats as $collection): ?>
+          <div class="well">    <?php foreach ($this->collectionStats as $collection): ?>
         <p>Collection: <b><?php echo $collection["title"] ?></b></p>
         <p>Number Of Files: <?php echo $collection["noOfFiles"] ?></p>
       <?php endforeach; ?>
+  		</div>
     </div>
   </div>
 </div>
+
 <?php $user = current_user(); ?>
 <?php if (!$user): ?>
 <div class="panel">
