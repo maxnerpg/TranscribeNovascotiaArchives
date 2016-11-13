@@ -45,6 +45,7 @@ function public_nav_main_bootstrap() {
     return $nav->render();
 }
 function total_transcribed(){
+    $db = get_db();
     $sql = 'select * from Scriptus_changes;';     
     //print_r($sql);
     $stmt = new Zend_Db_Statement_Mysqli($db, $sql);
