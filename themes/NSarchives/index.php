@@ -14,9 +14,10 @@
         To begin please select a collection you would be interested in contributing too
         <br><br>
         <b>Transcribe @ Nova Scotia Archives</b> is built on the Omeka Digital Library platform using the Scriptus Platform by DIYhistory.
+        <br><br>
     </h4>
     <h4>
-        Total items transcribed: <?php echo total_transcribed();  ?>
+        <b>Total items transcribed: </b> <?php echo total_transcribed();  ?>
     <h4>
 </div>
 </div>
@@ -72,8 +73,8 @@
         <div class="container panel">
             <h2><?php echo __('Featured Collection'); ?></h2>
         </div>
-              <?php  set_loop_records('items',get_random_featured_collection()); ?>        
-        <?php foreach (loop('items') as $item): ?>
+              <?php  $item = get_random_featured_collection(); ?>        
+        
 
              <div class="col-sm-3">
                 <figure>
@@ -106,7 +107,7 @@
                 
                     <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>
             
-            <?php endforeach; ?>
+            
             
             
 
