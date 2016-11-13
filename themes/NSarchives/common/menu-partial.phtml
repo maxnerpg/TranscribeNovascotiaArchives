@@ -25,7 +25,14 @@
                             </a>
                         </li>
                     <?php endforeach ?>
-                    <li>
+                 
+                </ul>
+            </li>   
+        <?php endif; ?>
+        <?php $count++ ?>
+    <?php endforeach; ?>
+    
+          <li>
 		<?php if (!current_user()) { ?>
 		<a href="<?php echo WEB_ROOT; ?>/guest-user/user/login">Login</a>
 		<?php }; ?>
@@ -33,9 +40,4 @@
 		<a href="<?php echo WEB_ROOT; ?>/users/logout">Logout</a>
 		<?php }; ?>
 		</li>
-                </ul>
-            </li>   
-        <?php endif; ?>
-        <?php $count++ ?>
-    <?php endforeach; ?>
 </ul>
