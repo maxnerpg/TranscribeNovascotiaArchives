@@ -82,6 +82,7 @@
 	        $percentNeedsReview = metadata('item', array('Scriptus', 'Percent Needs Review'));
             $percentCompleted = metadata('item', array('Scriptus', 'Percent Completed'));
             $totalPercent = $percentNeedsReview + $percentCompleted;
+			$theTranscription2 = strip_formatting(metadata('item', array('Scriptus', 'Transcription')));
             if ($totalPercent > 100) $totalPercent = 100; ?>
             	<div class="hoverEdit"><span class="glyphicon glyphicon-pencil"></span></div>
 					
@@ -93,6 +94,9 @@
 				 </div>
 				
 					<figcaption>
+					<div class="progress item-progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $totalPercent;?>"  aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $totalPercent;?>%;"><span class="sr-only"><?php echo $totalPercent;?>% Complete</span></div>
+                    </div>
 <?php $baseURL = Zend_Controller_Front::getInstance()->getRequest()->getBaseURL();
 			
 	
@@ -102,8 +106,8 @@
 						</h3>
                     <?php if($itemCreator!='') { echo $itemCreator . '<br>'; }  ?>
                     <?php if($itemDate!='' && $itemDate!='undated') { echo $itemDate . '<br>';} 
-                     
-                    echo str_replace($_GET["query"], ("<b style=\"color:red;\">" . $_GET["query"] . "</b>"), $theTranscription);
+                    echo  $formattedchangedtime . '<br>' . "&ldquo;" . snippet_by_word_count($theTranscription2, 10, '...') . "&rdquo;" ;
+                    echo $theTranscription;
                     
                     ?>
 

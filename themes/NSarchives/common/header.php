@@ -76,18 +76,18 @@
     <div class="collapse navbar-collapse"  id="transcribe-navbar">
       <ul class="nav navbar-nav">
         <ul class="nav nav-pills navbar-left">
-        <li>
-		<?php if (!current_user()) { ?>
+        <li <?php if($page->isActive()) echo 'class="active"'?> role="presentation">
+            <a class="nav-header" href="<?php echo WEB_ROOT; ?>/dashboard">Dashboard</a>
+        </li>
+        <li <?php if($page->isActive()) echo 'class="active"'?> role="presentation">
+	
 		<a class="nav-header" href="<?php echo WEB_ROOT; ?>/dashboard">Dashboard</a>
-		<?php }; ?>
-		<?php if (current_user()) { ?>
-		<a class="nav-header" href="<?php echo WEB_ROOT; ?>/dashboard">Dashboard</a>
-		<?php }; ?>
+		
 		</li>
         </ul>
          <?php echo public_nav_main_bootstrap(); ?>
         <ul class="nav nav-pills navbar-left">
-        <li>
+        <li  <?php if($page->isActive()) echo 'class="active"'?> role="presentation">
 		<?php if (!current_user()) { ?>
 		<a class="nav-header" href="<?php echo WEB_ROOT; ?>/users/login">Login</a>
 		<?php }; ?>
