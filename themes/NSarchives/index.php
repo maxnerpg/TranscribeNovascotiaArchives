@@ -73,7 +73,7 @@
         <div class="container panel">
             <h2>; Recently Added Collections </h2>
         </div>
-              <?php  $item = get_recent_collection(); ?>        
+              <?php  $item = get_recent_collections(3); ?>        
         
 
              <div class="col-sm-3">
