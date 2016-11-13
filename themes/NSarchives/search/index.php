@@ -1,6 +1,6 @@
 
 <?php
-    $pageTitle = __('Search Transcribe@Yale ') . __('(%s results)', $total_results);
+    $pageTitle = __('Search Transcribe@Nova Scotia Archives ') . __('(%s results)', $total_results);
     echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
     $searchRecordTypes = get_search_record_types();
     $uri = WEB_ROOT .'/transcribe/';
@@ -60,58 +60,60 @@
 <?php foreach (loop('search_texts') as $searchText): ?>
 <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
 <?php $recordType = $searchText['record_type']; ?>
-<?php set_current_record($recordType, $record); ?> 
-<?php set_loop_records('files', get_current_record('record')->Files);             
-			            $uri = WEB_ROOT .'/transcribe/';?>
-			    		<?php foreach (loop('files') as $file): 
-			                
-			                    $status =  $file->getElementTexts('Scriptus', 'Status');
-			
-			                    if ($status){
-			                        $status = $status[0];
-			                    }
-			                    else {
-			                        $status = 'Not Started';
-			                    }
-			                    
-			                    $fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title'))); 
-			
-?>
-						<div class="col-sm-3">
-                    	            <figure>
-                    	            <div class="masonrywell">
-										<div class="thumbholder">
-						                    <?php echo '<a href="' . $uri . $file->item_id . '/' . $file->id . '">';
-							                        $percentNeedsReview = metadata('record', array('Scriptus', 'Percent Needs Review'));
-					                                $percentCompleted = metadata('record', array('Scriptus', 'Percent Completed'));
-					                                $totalPercent = $percentNeedsReview + $percentCompleted;
-					                                if ($totalPercent > 100) $totalPercent = 100;
-							                     ?>
-										<div class="hoverEdit"><span class="glyphicon glyphicon-pencil"></span></div>
-					
-										<div class="hoverMeta"><span class="glyphicon glyphicon-info-sign"></span> <?php
-											if ($status == 'Not Started') { echo $status; }
-											else {echo 'Started';}
-											?>
-											 </div>
-										</div>
-										
-					                  
-					          
-					                    
-						                <figcaption>
-						                    <?php $baseURL = Zend_Controller_Front::getInstance()->getRequest()->getBaseURL(); ?>
+<?php set_current_record($recordType, $record); 
 
-						                    <h3><?php echo '<a href="'. $baseURL . '/transcribe/' . $file->item_id.'/'.$file->id.'">' . $fileTitle . '</a>'; ?></h3>
-						                    <?php if($itemCreator!='') { echo $itemCreator . '<br>'; }  ?>
-						                    <?php if($itemDate!='' && $itemDate!='undated') { echo $itemDate . '<br>';} ?>
-						                    <?php echo $itemLoc; ?>
+ $file = get_record_by_id('file', $searchText['record_id']);
+  ?>
+<?php $fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title')));
+	  $theTranscription = strip_formatting(metadata('file', array('Scriptus', 'Transcription')));
+	 $status =  $record->getElementTexts('Scriptus', 'Status');
+
+	  
+		 ?>
+		<figure>
+			<div class="masonrywell">
+				<div class="thumbholder">
+<?php echo '<a href="' . $uri . $record->item_id . '/' . $record->id . '">' . file_image('thumbnail', array('alt' => $fileTitle)) .'</a>';
+			$item_id = metadata('file', 'item_id');
+			$item = get_record_by_id('item', $item_id);
+			
+			set_current_record('item', $item);
+				  $itemDate = strip_formatting(metadata('item', array('Dublin Core', 'Date')));
+				  $itemCreator= strip_formatting(metadata('item', array('Dublin Core', 'Creator')));
+				  $itemLoc = strip_formatting(metadata('item', array('Item Type Metadata', 'Location')));
+
+	        $percentNeedsReview = metadata('item', array('Scriptus', 'Percent Needs Review'));
+            $percentCompleted = metadata('item', array('Scriptus', 'Percent Completed'));
+            $totalPercent = $percentNeedsReview + $percentCompleted;
+            if ($totalPercent > 100) $totalPercent = 100; ?>
+            	<div class="hoverEdit"><span class="glyphicon glyphicon-pencil"></span></div>
 					
-						                </figcaption>
-                    	            </div>
-					            </figure>
-						</div>
-			            <?php endforeach; ?>       
+			<div class="hoverMeta"><span class="glyphicon glyphicon-info-sign"></span> <?php
+				if ($status == 'Not Started') { echo $status; }
+				else {echo 'Started';}
+				?>
+			</div>
+				 </div>
+				
+					<figcaption>
+<?php $baseURL = Zend_Controller_Front::getInstance()->getRequest()->getBaseURL();
+			
+	
+			?>
+						<h3>
+<?php echo '<a href="'. $baseURL . '/transcribe/' . $record->item_id.'/'.$record->id.'">' . metadata('item', array('Dublin Core', 'Title')) . ' &mdash; ' .$fileTitle . '</a>'; ?>
+						</h3>
+                    <?php if($itemCreator!='') { echo $itemCreator . '<br>'; }  ?>
+                    <?php if($itemDate!='' && $itemDate!='undated') { echo $itemDate . '<br>';} 
+                    echo $itemLoc . "<hr>";
+                     
+                    echo str_replace($_GET["query"], ("<b style=\"color:red;\">" . $_GET["query"] . "</b>"), $theTranscription);
+                    
+                    ?>
+
+					</figcaption>
+				</div>
+			</figure>
 <?php endforeach; ?>
 <?php else: ?>
 	<p>
