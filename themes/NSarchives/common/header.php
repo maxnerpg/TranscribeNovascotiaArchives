@@ -76,7 +76,7 @@
     <div class="collapse navbar-collapse"  id="transcribe-navbar">
       
          <?php echo public_nav_main_bootstrap(); ?>
-       
+         
 
 
 
