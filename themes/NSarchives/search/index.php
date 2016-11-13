@@ -65,7 +65,7 @@
 			<div class="masonrywell">
 				<div class="thumbholder">
 <?php echo '<a href="' . $uri . $record->item_id . '/' . $record->id . '"> </a>';
-			$item_id = metadata('record', 'item_id');
+			$item_id = $record->item_id ;
 			$item = get_record_by_id('record', $item_id);
 			
 			set_current_record('item', $item);
