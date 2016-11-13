@@ -61,12 +61,16 @@
 <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
 <?php $recordType = $searchText['record_type']; ?>
 <?php set_current_record($recordType, $record); 
-
  $file = get_record_by_id('file', $searchText['record_id']);
   ?>
-<?php $fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title')));
-	  $theTranscription = strip_formatting(metadata('file', array('Scriptus', 'Transcription')));
-	 $status =  $record->getElementTexts('Scriptus', 'Status');
+<?php try{
+		$fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title')));
+		}
+		catch (MyException $e) {
+			$fileTitle = $searchText['original_filename'];
+		}
+	  	$theTranscription = strip_formatting(metadata('file', array('Scriptus', 'Transcription')));
+	 	$status =  $record->getElementTexts('Scriptus', 'Status');
 
 	  
 		 ?>
