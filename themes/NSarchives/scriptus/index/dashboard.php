@@ -24,23 +24,28 @@
 	}
 }
 </style>
-<div id="primary">
-<h1>New Submission Stats</h1>
-  <div id="content">
-   
-    <div id="recent-transcriptions" style="float: left; margin: 10px;">
+<div id="jumbotron">
+  <div id="container col-sm-4 col-offset-1">
+    <div id="panel" >
        <h2>Most recent transcriptions</h2>
-      
       <?php foreach ($this->submissionStats as $submissionMonth): ?>
-     
         <p>Collection: <b><?php echo $submissionMonth["collection"] ?></b></p>
         <p>Date: <?php echo $submissionMonth["date"] ?></p>
         <p> Transcription count:<b> <?php echo $submissionMonth["transcriptionCount"] ?></b></p>
       <?php endforeach; ?>
     </div>
   </div>
+  <div id="container col-sm-4 col-offset-1">
+    <div id="panel" >
+	<h1> New Collection Stats</h1>
+      <?php foreach ($this->collectionStats as $collection): ?>
+        <p>Collection: <b><?php echo $collection["title"] ?></b></p>
+        <p>Number Of Files: <?php echo $collection["noOfFiles"] ?></p>
+      <?php endforeach; ?>
+    </div>
+  </div>
 </div>
-	<?php $user = current_user(); ?>
+<?php $user = current_user(); ?>
 <?php if (!$user): ?>
 <div class="panel">
 <h2><div class="login-link"><a href="<?php echo WEB_ROOT;?>/guest-user/user/login">Login </a>to see your recent transcriptions and view account options.</div></h2>
