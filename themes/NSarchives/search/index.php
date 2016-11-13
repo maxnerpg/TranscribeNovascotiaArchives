@@ -14,10 +14,9 @@
 		
 	</div>
 	 <div class="well col-sm-12">
-					<h3>
-			Searching <?php echo total_records('Item'); ?> manuscripts 
-					</h3>
-		            <h3>Found <?php echo $total_results; ?> instances of <?php echo htmlspecialchars($_GET["query"]) . ".</p><p>All transcriptions are licensed under a Creative Commons License (<a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\">CC-0</a>); please feel free to use the texts in your own research and/or teaching.";?></h3>
+		<p>
+			Searching <?php echo total_records('Item'); ?> manuscripts:  Found <?php echo $total_results; ?> instances of <?php echo htmlspecialchars($_GET["query"]) ?>
+		</p>
 		</div>
 </div>
 

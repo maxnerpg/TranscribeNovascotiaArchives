@@ -95,7 +95,7 @@
 					<div class="thumbholder">
 	                <?php if (metadata('item', 'has thumbnail')): ?>
 	                    <?php echo link_to_item(item_image('thumbnail', array('alt' => $itemTitle)));
-								$theTranscription = strip_formatting(metadata('item', array('Scriptus', 'Transcription')));
+								
 		                        $percentNeedsReview = metadata('item', array('Scriptus', 'Percent Needs Review'));
                                 $percentCompleted = metadata('item', array('Scriptus', 'Percent Completed'));
                                 $totalPercent = $percentNeedsReview + $percentCompleted;
@@ -116,8 +116,7 @@
 	                    <h3><?php echo link_to_item($itemTitle); ?></h3>
 	                    <?php if($itemCreator!='') { echo $itemCreator . '<br>'; }  ?>
 	                    <?php if($itemDate!='' && $itemDate!='undated') { echo $itemDate . '<br>';} ?>
-						<?php  echo  '<p>' . "&ldquo;" . snippet_by_word_count($theTranscription, 10, '...') . "&rdquo; </p>"  ; ?> ?>
-
+					
 	                </figcaption>
 	            </div>
 	            </figure>
