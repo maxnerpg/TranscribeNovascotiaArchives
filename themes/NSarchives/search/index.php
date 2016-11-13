@@ -63,12 +63,12 @@
 <?php set_current_record($recordType, $record); ?>
 		
 <?php echo '<a href="' . $uri . $record->item_id . '/' . $record->id . '"> </a>'; ?>
-	<?php	 echo $record; ?>
+	<?php	 print_r( $record); ?>
+	<div class="container">
+	<?php	 print_r( $searchText); ?>
 
-						
-
-				</div>
-			</figure>
+</div>
+			
 <?php endforeach; ?>
 <?php else: ?>
 	<p>
