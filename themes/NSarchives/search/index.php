@@ -61,8 +61,8 @@
 <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
 <?php $recordType = $searchText['record_type']; ?>
 <?php set_current_record($recordType, $record); 
- $file = "";
- set_current_record($file, $record);
+ $file = $recordType;
+ 
   ?>
 <?php 
 		$fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title')));
