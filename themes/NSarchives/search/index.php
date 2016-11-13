@@ -61,48 +61,12 @@
 <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
 <?php $recordType = $searchText['record_type']; ?>
 <?php set_current_record($recordType, $record); ?>
-		<figure>
-			<div class="masonrywell">
-				<div class="thumbholder">
-<?php echo '<a href="' . $uri . $record->item_id . '/' . $record->id . '"> </a>';
-			$item_id = $record->item_id ;
-			$item = get_record_by_id('record', $item_id);
-			
-			set_current_record('item', $item);
-				  $itemDate = strip_formatting(metadata('item', array('Dublin Core', 'Date')));
-				  $itemCreator= strip_formatting(metadata('item', array('Dublin Core', 'Creator')));
-				  $itemLoc = strip_formatting(metadata('item', array('Item Type Metadata', 'Location')));
+		
+<?php echo '<a href="' . $uri . $record->item_id . '/' . $record->id . '"> </a>'; ?>
+	<?php	 echo $record; ?>
 
-	        $percentNeedsReview = metadata('item', array('Scriptus', 'Percent Needs Review'));
-            $percentCompleted = metadata('item', array('Scriptus', 'Percent Completed'));
-            $totalPercent = $percentNeedsReview + $percentCompleted;
-            if ($totalPercent > 100) $totalPercent = 100; ?>
-            	<div class="hoverEdit"><span class="glyphicon glyphicon-pencil"></span></div>
-					
-			<div class="hoverMeta"><span class="glyphicon glyphicon-info-sign"></span> <?php
-				if ($status == 'Not Started') { echo $status; }
-				else {echo 'Started';}
-				?>
-			</div>
-				 </div>
-				
-					<figcaption>
-<?php $baseURL = Zend_Controller_Front::getInstance()->getRequest()->getBaseURL();
-			
-	
-			?>
-						<h3>
-<?php echo '<a href="'. $baseURL . '/transcribe/' . $record->item_id.'/'.$record->id.'">' . metadata('item', array('Dublin Core', 'Title')) . ' &mdash; ' .$fileTitle . '</a>'; ?>
-						</h3>
-                    <?php if($itemCreator!='') { echo $itemCreator . '<br>'; }  ?>
-                    <?php if($itemDate!='' && $itemDate!='undated') { echo $itemDate . '<br>';} 
-                    echo $itemLoc . "<hr>";
-                     
-                    echo str_replace($_GET["query"], ("<b style=\"color:red;\">" . $_GET["query"] . "</b>"), $theTranscription);
-                    
-                    ?>
+						
 
-					</figcaption>
 				</div>
 			</figure>
 <?php endforeach; ?>
