@@ -21,6 +21,7 @@ body {
 }
 .banner-image {
 	padding:25px;
+    opacity: 0.8;
 }
 .panel {
 	margin-bottom: 0px;

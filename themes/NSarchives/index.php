@@ -17,12 +17,13 @@
         <br><br>
     </h4>
     <h4>
-        <b>Total items transcribed: </b> <?php echo total_transcribed();  ?>
+        <b>Total Transcrions Started: </b> <?php echo total_transcribed();  ?>
+        <!-- Can change to total transcriptions finished or a progress bar against total items -->
     <h4>
 </div>
 </div>
 <div id="columns" class="container">
-    <div class="col-lrg-4 col-sm-5 col-xs-12 col-sm-offset-1">
+    <div class="col-lrg-4 col-sm-6 col-xs-12">
         <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
         <div class="container">
             <h2><?php echo __('Featured Item'); ?></h2>
@@ -69,16 +70,16 @@
 
         <?php endif; ?>
     </div>
-    <div class="col-lrg-4 col-sm-5 col-xs-12">
+    <div class="col-lrg-4 col-sm-6 col-xs-12">
        
         <div class="container">
-            <h2>; Recently Added Items </h2>
+            <h2>Recently Added Collections </h2>
         </div>     
          <?php  set_loop_records('items',get_recent_collections(3)); ?>
         
         <?php foreach (loop('items') as $item): ?>
 
-             <div class="col-sm-3">
+             <div class="col-sm-4 col-xs-6">
                 <figure>
 	            <div class="masonrywell">
 					<div class="thumbholder">
