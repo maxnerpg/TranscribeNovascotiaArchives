@@ -405,7 +405,8 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
 
         //add recent transcriptions to view
         $this->view->recentTranscriptions = $recentlyTranscribed;
-        
+        //call in submissionstats for dashboard
+        $this->submissionstatsAction();
     }
 
     //Get the new transcription submissions in past months.
