@@ -21,10 +21,10 @@
     <h4>
 </div>
 </div>
-<div class="row">
-    <div class="col-lrg-4 col-sm-6 col-xs-12">
+<div id="columns" class="container">
+    <div class="col-lrg-4 col-sm-5 col-xs-12 col-sm-offset-1">
         <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
-        <div class="container panel">
+        <div class="container">
             <h2><?php echo __('Featured Item'); ?></h2>
         </div>
             <?php  set_loop_records('items',get_random_featured_items(1)); ?>
@@ -56,6 +56,7 @@
                     </figcaption>                
                 </div>
                 </figure>
+            
             </div>
 
                   
@@ -68,9 +69,9 @@
 
         <?php endif; ?>
     </div>
-    <div class="col-lrg-4 col-sm-6 col-xs-12">
+    <div class="col-lrg-4 col-sm-5 col-xs-12">
        
-        <div class="container panel">
+        <div class="container">
             <h2>; Recently Added Items </h2>
         </div>     
          <?php  set_loop_records('items',get_recent_collections(3)); ?>
@@ -113,9 +114,9 @@
             
     </div>
 </div>    
-<div class="row">
+<div id="columns" class="container">
     <div class="col-sm-12">
-        <div class="container panel">
+        <div class="container">
         <h2><?php echo __('Recently Added Items'); ?></h2>
         
         <p class="view-items-link"><a href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a></p> 
