@@ -10,9 +10,10 @@
 		      <h1><?php echo 'Browse all items'; ?></h1>
             </div>
 		</div>
+        <!-- Alternative Search
          <div class="well col-sm-12">
 		      <?php $subnav = public_nav_items(); echo $subnav->setUlClass('nav nav-pills subnav'); ?>
-</div>
+        </div> -->
 	</div>
 
     <div id="columns" class="container">

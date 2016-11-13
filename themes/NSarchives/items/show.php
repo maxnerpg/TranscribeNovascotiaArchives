@@ -59,7 +59,7 @@
             </div>
 		</div>
          <div class="well col-sm-12">
-		      <?php echo $itemDesc; ?>
+		     <h3> <?php echo $itemDesc; ?> </h3>
 </div>
 	</div>
 		   
