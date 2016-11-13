@@ -24,8 +24,9 @@
 	}
 }
 </style>
-<?php echo submission-stats(); ?>
+
  <?php echo $this->partial('/submission-stats.php'); ?>
+
 	<?php $user = current_user(); ?>
 <?php if (!$user): ?>
 <div class="panel">
