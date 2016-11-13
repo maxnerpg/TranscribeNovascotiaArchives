@@ -62,12 +62,12 @@
 <?php $recordType = $searchText['record_type']; ?>
 <?php set_current_record($recordType, $record); 
  $file = get_record_by_id('file', $searchText['record_id']);
+if(!$file){
+	$file = get_record_by_id('item', $searchText['record_id']);
+}
   ?>
 <?php 
-			
-		
-		$fileTitle = $searchText['original_filename'];
-	
+		$fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title')));
 	  	$theTranscription = strip_formatting(metadata('file', array('Scriptus', 'Transcription')));
 	 	$status =  $record->getElementTexts('Scriptus', 'Status');
 
@@ -81,7 +81,6 @@
 			$item = get_record_by_id('item', $item_id);
 			
 			set_current_record('item', $item);
-				  $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title')));
 				  $itemDate = strip_formatting(metadata('item', array('Dublin Core', 'Date')));
 				  $itemCreator= strip_formatting(metadata('item', array('Dublin Core', 'Creator')));
 				  $itemLoc = strip_formatting(metadata('item', array('Item Type Metadata', 'Location')));
