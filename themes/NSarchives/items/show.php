@@ -91,7 +91,7 @@
                     	            <div class="masonrywell">
 										<div class="thumbholder">
 						                    <?php echo '<a href="' . $uri . $file->item_id . '/' . $file->id . '">' . file_image('thumbnail', array('alt' => $fileTitle)) .'</a>';
-							                        $theTranscription = strip_formatting(metadata('item', array('Scriptus', 'Transcription')));
+							                        $theTranscription = strip_formatting(metadata('file', array('Scriptus', 'Transcription')));
 													$percentNeedsReview = metadata('item', array('Scriptus', 'Percent Needs Review'));
 					                                $percentCompleted = metadata('item', array('Scriptus', 'Percent Completed'));
 					                                $totalPercent = $percentNeedsReview + $percentCompleted;
