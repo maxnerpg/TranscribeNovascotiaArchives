@@ -55,11 +55,11 @@
 <div class="section-title">    
 		<div class="panel">
             <div class="container">
-		     <h1><?php echo $itemTitle; ?></h1>
+		     <h2><?php echo $itemTitle; ?></h2>
             </div>
 		</div>
          <div class="well col-sm-12">
-		     <h3> <?php echo $itemDesc; ?> </h3>
+		     <h4> <?php echo $itemDesc; ?> </h4>
 </div>
 	</div>
 		   

@@ -6,7 +6,7 @@
    <div class="section-title">    
 		<div class="panel">
             <div class="container">
-		      <h1><?php echo 'Browse all collections'; ?></h1>
+		      <h2><?php echo 'Browse all collections'; ?></h2>
             </div>
 		</div>
 	</div>

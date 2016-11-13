@@ -32,8 +32,8 @@
 <div class="section-title">    
 		<div class="panel">
             <div class="container">
-		     <h1><?php echo $collectionTitle; ?></h1>
-			 <h3> <?php echo $collectionDesc; ?> </h3>
+		     <h2><?php echo $collectionTitle; ?></h2>
+			 <h4> <?php echo $collectionDesc; ?> </h4>
             </div>
 		</div>
 </div>

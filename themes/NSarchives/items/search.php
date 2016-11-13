@@ -8,7 +8,7 @@
 <div class="section-title">    
 		<div class="panel">
             <div class="container">
-		     <h1><?php echo $pageTitle; ?></h1>
+		     <h2><?php echo $pageTitle; ?></h2>
             </div>
 		</div>
          <div class="well col-sm-12">
