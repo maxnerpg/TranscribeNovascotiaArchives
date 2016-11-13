@@ -22,7 +22,7 @@
 </div>
 </div>
 <div class="row">
-    <div class="col-lrg-4 col-sm-6 col-xs-12">
+    <div class="col-lrg-4 col-sm-5 col-xs-12 col-sm-offset-1">
         <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
         <div class="container panel">
             <h2><?php echo __('Featured Item'); ?></h2>
@@ -68,7 +68,7 @@
 
         <?php endif; ?>
     </div>
-    <div class="col-lrg-4 col-sm-6 col-xs-12">
+    <div class="col-lrg-4 col-sm-5 col-xs-12">
        
         <div class="container panel">
             <h2>; Recently Added Items </h2>
