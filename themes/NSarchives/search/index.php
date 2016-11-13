@@ -59,7 +59,9 @@
 <?php $filter = new Zend_Filter_Word_CamelCaseToDash; ?>
 <?php foreach (loop('search_texts') as $searchText): ?>
 <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
-<?php $recordType = $searchText['record_type']; ?>
+<?php $recordType = $searchText['record_type'];
+print_r( $searchText['record_type']);
+ ?>
 <?php set_current_record($recordType, $record); ?>
 <?php $fileTitle = strip_formatting(metadata('recordType', array('Dublin Core', 'Title')));
 	  $theTranscription = strip_formatting(metadata('recordType', array('Scriptus', 'Transcription')));
