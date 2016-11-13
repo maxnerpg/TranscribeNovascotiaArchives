@@ -74,6 +74,7 @@
             <h2><?php echo __('Featured Collection'); ?></h2>
         </div>
               <?php  $collection = get_random_featured_collection();
+              set_current_record('collection', $collection);
                ?>        
         <div class="col-sm-3">
             <figure>
