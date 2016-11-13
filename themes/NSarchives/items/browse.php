@@ -4,7 +4,7 @@
 ?>
    
 <div class="section-title">    
-	<div class="header">
+	<div class="">
 		<div class="panel">
 		     <h1><?php echo 'Browse all items'; ?></h1>
              <div class="panel col-sm-12">
@@ -21,6 +21,7 @@
             $sortLinks[__('Creator')] = 'Dublin Core,Creator';
             ?>
             <?php foreach (loop('items') as $item): ?>
+        
              <div class="col-sm-3">
                 <figure>
 	            <div class="masonrywell">

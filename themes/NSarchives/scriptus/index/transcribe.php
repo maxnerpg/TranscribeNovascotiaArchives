@@ -12,7 +12,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 	
 	textarea#transcribebox {
 		font-size:18px;
-		height:calc(100vh - 360px);
+	
 		margin-top:-10px;
 		resize: none;
 		border-radius: 8px;
@@ -120,7 +120,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 <div class="section-title" style="padding:0;">    
 		
-		<div class="main-transcribe col-md-6 col-xs-12">
+		<div class="main-transcribe col-md-7 col-xs-12">
 		    <div class="container-fluid" style="padding-right:0;padding-left:0;">
 		        <div class="row-fluid">
 		           <img id="ImageID" src="<?php echo $this->imageUrl; ?>" alt=''/>

@@ -3,12 +3,12 @@
     echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
    <div class="section-title">    
-	<div class="header">
+	
 		<div class="panel">
 		      <h1><?php echo 'Browse all collections'; ?></h1>
 		</div>
 	</div>
-</div>
+
 
 
      <div id="columns" class="container">
@@ -24,7 +24,7 @@
                             <?php endif; ?>
                     </div>
                     <figcaption>
-                           <h3> <?php echo link_to_collection(); ?> <h3>
+                           <h3> <?php echo link_to_collection(); ?> <h3> 
                             <?php if ($collection->hasContributor()): ?>
                                 <?php echo metadata('collection', array('Dublin Core', 'Contributor'), array('all'=>true, 'delimiter'=>', ')); ?>
                             <?php endif; ?>
