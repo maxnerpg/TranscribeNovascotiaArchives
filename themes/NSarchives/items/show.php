@@ -84,14 +84,15 @@
 			                    }
 			                    
 			                    $fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title'))); 
-			
+								
 ?>
 						<div class="col-sm-3">
                     	            <figure>
                     	            <div class="masonrywell">
 										<div class="thumbholder">
 						                    <?php echo '<a href="' . $uri . $file->item_id . '/' . $file->id . '">' . file_image('thumbnail', array('alt' => $fileTitle)) .'</a>';
-							                        $percentNeedsReview = metadata('item', array('Scriptus', 'Percent Needs Review'));
+							                        $theTranscription = strip_formatting(metadata('item', array('Scriptus', 'Transcription')));
+													$percentNeedsReview = metadata('item', array('Scriptus', 'Percent Needs Review'));
 					                                $percentCompleted = metadata('item', array('Scriptus', 'Percent Completed'));
 					                                $totalPercent = $percentNeedsReview + $percentCompleted;
 					                                if ($totalPercent > 100) $totalPercent = 100;
@@ -114,8 +115,8 @@
 						                    <h3><?php echo '<a href="'. $baseURL . '/transcribe/' . $file->item_id.'/'.$file->id.'">' . $fileTitle . '</a>'; ?></h3>
 						                    <?php if($itemCreator!='') { echo $itemCreator . '<br>'; }  ?>
 						                    <?php if($itemDate!='' && $itemDate!='undated') { echo $itemDate . '<br>';} ?>
-						                    <?php echo $itemLoc; ?>
-					
+						                    <?php  echo  '<p>' . "&ldquo;" . snippet_by_word_count($theTranscription, 10, '...') . "&rdquo; </p>"  ; ?>
+											
 						                </figcaption>
                     	            </div>
 					            </figure>
