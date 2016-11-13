@@ -59,12 +59,10 @@
 <?php $filter = new Zend_Filter_Word_CamelCaseToDash; ?>
 <?php foreach (loop('search_texts') as $searchText): ?>
 <?php $record = get_record_by_id($searchText['record_type'], $searchText['record_id']); ?>
-<?php $recordType = $searchText['record_type'];
-print_r( $searchText['record_type']);
- ?>
-<?php set_current_record($recordType, $record); ?>
-<?php $fileTitle = strip_formatting(metadata('record', array('Dublin Core', 'Title')));
-	  $theTranscription = strip_formatting(metadata('record', array('Scriptus', 'Transcription')));
+<?php $recordType = $searchText['record_type']; ?>
+<?php set_current_record($file, $record); ?>
+<?php $fileTitle = strip_formatting(metadata('file', array('Dublin Core', 'Title')));
+	  $theTranscription = strip_formatting(metadata('file', array('Scriptus', 'Transcription')));
 	 $status =  $record->getElementTexts('Scriptus', 'Status');
 
 	  
@@ -73,7 +71,7 @@ print_r( $searchText['record_type']);
 			<div class="masonrywell">
 				<div class="thumbholder">
 <?php echo '<a href="' . $uri . $record->item_id . '/' . $record->id . '">' . file_image('thumbnail', array('alt' => $fileTitle)) .'</a>';
-			$item_id = metadata('record', 'item_id');
+			$item_id = metadata('file', 'item_id');
 			$item = get_record_by_id('item', $item_id);
 			
 			set_current_record('item', $item);
