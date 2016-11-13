@@ -106,7 +106,7 @@
 						</h3>
                     <?php if($itemCreator!='') { echo $itemCreator . '<br>'; }  ?>
                     <?php if($itemDate!='' && $itemDate!='undated') { echo $itemDate . '<br>';} 
-                    echo  $formattedchangedtime . '<br>' . "&ldquo;" . snippet_by_word_count($theTranscription2, 10, '...') . "&rdquo;" ;
+                    echo  '<br>' . "&ldquo;" . snippet_by_word_count($theTranscription2, 10, '...') . "&rdquo;" ;
                     echo $theTranscription;
                     
                     ?>
