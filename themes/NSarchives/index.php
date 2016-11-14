@@ -3,30 +3,28 @@
 <?php echo get_theme_option('Homepage About'); ?>
 <div class="container">
 <div class="panel text-center">
-    <h2> About Transcribe @ Nova Scotia Archives </h2>
+    <h3> About Transcribe @ Nova Scotia Archives </h3>
 </div>
 <div class="well">
-    <h4>
+    <p>
         <b>Transcribe @ Nova Scotia Archives</b> is a web application that enables crowdsourcing transcription of archival documents held by the Nova Scotia Archives.
-        <br><br>
+        <br>
         By transcribing these documents you are helping further the mission of the Nova Scotia Archives to provide access to heritage material.
-        <br><br>
+        <br>
         To begin please select a collection you would be interested in contributing too
-        <br><br>
+        <br>
         <b>Transcribe @ Nova Scotia Archives</b> is built on the Omeka Digital Library platform using the Scriptus Platform by DIYhistory.
-        <br><br>
-    </h4>
-    <h4>
+        <br>
         <b>Total Transcriptions Started: </b> <?php echo total_transcribed();  ?>
         <!-- Can change to total transcriptions finished or a progress bar against total items -->
-    <h4>
+    </p>
 </div>
 </div>
 <div id="columns" class="container">
     <div class="col-lrg-4 col-sm-6 col-xs-12">
         <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
         <div class="container">
-            <h2><?php echo __('Featured Item'); ?></h2>
+            <h3><?php echo __('Featured Item'); ?></h3>
         </div>
             <?php  set_loop_records('items',get_random_featured_items(1)); ?>
         
@@ -73,7 +71,7 @@
     <div class="col-lrg-4 col-sm-6 col-xs-12">
        
         <div class="container">
-            <h2>Recently Added Collections </h2>
+            <h3>Recently Added Collections </h3>
         </div>     
          <?php  set_loop_records('items',get_recent_collections(3)); ?>
         
@@ -118,7 +116,7 @@
 <div id="columns" class="container">
     <div class="col-sm-12">
         <div class="container">
-        <h2><?php echo __('Recently Added Items'); ?></h2>
+        <h3><?php echo __('Recently Added Items'); ?></h3>
         
         <p class="view-items-link"><a href="<?php echo html_escape(url('items')); ?>"><?php echo __('View All Items'); ?></a></p> 
         </div>    

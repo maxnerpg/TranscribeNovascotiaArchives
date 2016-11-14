@@ -55,7 +55,7 @@
 <div class="section-title">    
 		<div class="panel">
             <div class="container">
-		     <h2><?php echo $itemTitle; ?></h2>
+		     <h3><?php echo $itemTitle; ?></h3>
             </div>
 		</div>
          <div class="well col-sm-12">

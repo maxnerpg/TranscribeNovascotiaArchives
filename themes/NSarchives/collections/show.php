@@ -32,7 +32,7 @@
 <div class="section-title">    
 		<div class="panel">
             <div class="container">
-		     <h2><?php echo $collectionTitle; ?></h2>
+		     <h3><?php echo $collectionTitle; ?></h3>
 			 <h4> <?php echo $collectionDesc; ?> </h4>
             </div>
 		</div>
