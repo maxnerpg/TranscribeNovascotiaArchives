@@ -135,13 +135,12 @@ label#rememberMe {
 		
 	</div>
 	<div class="col-sm-12">
-		<div class="col-sm-6" style="padding-left:30px;">
-			<input type="submit" name="submit" id="submit" form="login-form" class="btn btn-large btn-blue btn-block" value="Log In">
-		</div>
 		<div class="col-sm-6" style="padding-right:30px;">
 			<a href="<?php echo WEB_ROOT ?>/guest-user/user/register" class="btn btn-large btn-block btn-fb">Sign Up</a>
 		</div>
-		
+		<div class="col-sm-6" style="padding-left:30px;">
+			<input type="submit" name="submit" id="submit" form="login-form" class="btn btn-large btn-blue btn-block" value="Log In">
+		</div>
 	</div>
 </div>
 </div>
