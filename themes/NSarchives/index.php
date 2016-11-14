@@ -17,7 +17,7 @@
         <br><br>
     </h4>
     <h4>
-        <b>Total Transcrions Started: </b> <?php echo total_transcribed();  ?>
+        <b>Total Transcriptions Started: </b> <?php echo total_transcribed();  ?>
         <!-- Can change to total transcriptions finished or a progress bar against total items -->
     <h4>
 </div>
