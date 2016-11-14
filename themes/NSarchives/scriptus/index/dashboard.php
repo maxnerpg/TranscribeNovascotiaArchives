@@ -27,7 +27,7 @@
 <div class="container">
   <div class="container col-sm-4 ">
     <div class="panel">
-       <h2>Most recent transcriptions</h2>
+       <h3>Most recent transcriptions</h3>
 	   <div class="well">  
         <?php foreach ($this->submissionStats as $submissionMonth): ?>
         <p>Collection: <b><?php echo $submissionMonth["collection"] ?></b></p>
@@ -39,7 +39,7 @@
   </div>
   <div class="container col-sm-4 col-sm-offset-2">
     <div class="panel">
-	<h2> New Collection Stats</h2>
+	<h3> New Collection Stats</h3>
           <div class="well">    <?php foreach ($this->collectionStats as $collection): ?>
         <p>Collection: <b><?php echo $collection["title"] ?></b></p>
         <p>Number Of Files: <?php echo $collection["noOfFiles"] ?></p>
@@ -51,12 +51,12 @@
 
 <?php $user = current_user(); ?>
 <?php if (!$user): ?>
-<div class="panel">
-<h2><div class="login-link"><a href="<?php echo WEB_ROOT;?>/guest-user/user/login">Login </a>to see your recent transcriptions and view account options.</div></h2>
+<div class="well">
+<h3><div class="login-link"><a href="<?php echo WEB_ROOT;?>/guest-user/user/login">Login </a>to see your recent transcriptions and view account options.</div></h3>
 </div>
 <?php else: ?>
 <div class="well">
-<h2>Your Transcriptions</h2>
+<h3>Your Transcriptions</h3>
 </div>
 <div id="columns" class="container">		
 		<?php foreach ($this->recentUserTranscriptions as $transcriptionItem): ?>

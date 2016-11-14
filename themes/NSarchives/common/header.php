@@ -95,7 +95,7 @@
     					
 
     <main id="content" role="main">
-    <div class="btn-group col-xs-12 col-sm-2 col-sm-offset-10
+    <div class="btn-group col-xs-12 col-sm-3 
            container social-media">
 
     					    
