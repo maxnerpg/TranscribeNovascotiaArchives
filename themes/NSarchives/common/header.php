@@ -47,6 +47,13 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+    .fa{
+        line-height: 3;
+    
+    font-size: 18px;
+    }
+    </style>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
@@ -95,21 +102,21 @@
 
     <main id="content" role="main">
     <div class="btn-group col-sm-2 col-sm-offset-10
-           container">
+           container social-media">
 
     					    
                         
-    						<a data-original-title="Facebook" rel="tooltip" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//transcribe.novascotia.io/" class="btn btn-facebook" data-placement="left">
+    						<a data-original-title="Facebook" rel="tooltip" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//transcribe.novascotia.io/" class="btn btn-social-media btn-facebook" data-placement="left">
 								<i class="fa fa-facebook"></i>
 							</a>
-                            <a data-original-title="Twitter" rel="tooltip" href="https://twitter.com/home?status=http%3A//transcribe.novascotia.io/" class="btn btn-twitter" data-placement="left">
+                            <a data-original-title="Twitter" rel="tooltip" href="https://twitter.com/home?status=http%3A//transcribe.novascotia.io/" class="btn btn-social-media btn-twitter" data-placement="left">
 								<i class="fa fa-twitter"></i>
 							</a>
-    						<a data-original-title="LinkedIn" rel="tooltip" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//transcribe.novascotia.io/&title=&summary=&source=" class="btn btn-linkedin" data-placement="left">
+    						<a data-original-title="LinkedIn" rel="tooltip" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//transcribe.novascotia.io/&title=&summary=&source=" class="btn btn-social-media btn-linkedin" data-placement="left">
 								<i class="fa fa-linkedin"></i>
 							</a>
     					
-    						<a data-original-title="Pinterest" rel="tooltip" href="https://pinterest.com/pin/create/button/?url=&media=http%3A//transcribe.novascotia.io/&description=" class="btn btn-pinterest" data-placement="left">
+    						<a data-original-title="Pinterest" rel="tooltip" href="https://pinterest.com/pin/create/button/?url=&media=http%3A//transcribe.novascotia.io/&description=" class="btn btn-social-media btn-pinterest" data-placement="left">
 								<i class="fa fa-pinterest"></i>
 							</a>
 </div>
