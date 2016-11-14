@@ -55,7 +55,7 @@
          <div class="container">
             
             <!-- <h1 class="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1> -->
-            <img class="img-responsive banner-imgs" src="<?php echo img("ns-archives-a.jpg"); ?>" />
+            <img class="img-responsive banner-imgs" src="<?php echo img("logo.jpg"); ?>" />
             <!-- Social Media goes here -->
       
         </div>
