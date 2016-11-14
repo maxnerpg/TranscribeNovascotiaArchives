@@ -98,7 +98,17 @@ label#rememberMe {
 <div class="loginbox col-md-4 col-md-offset-4">
 	<div class="row">
 		<div class="col-sm-6" style="border-right: 1px solid white;padding-right:30px;">
-					<h4 class="header">
+			<h4>
+				Join to transcribe.
+			</h4>
+			<p>
+				Don&rsquo;t have an account? Register for a free account today and start tracking your transcriptions! 
+			</p>
+			 
+		</div>
+		<div class="col-sm-6" style="padding-left:30px;">
+			<div class="form-heading">
+				<h4 class="header">
 					Welcome back!
 				</h4>
 			</div>
@@ -121,27 +131,17 @@ label#rememberMe {
 				
 <?php echo flash(); ?>
 			</div>
-			 
-		</div>
-		<div class="col-sm-6" style="padding-left:30px;">
-			<h4>
-				Join to transcribe.
-			</h4>
-			<p>
-				Don&rsquo;t have an account? Register for a free account today and start tracking your transcriptions! 
-			</p>
-			<div class="form-heading">
-		
 		
 		
 	</div>
 	<div class="col-sm-12">
-		<div class="col-sm-6" style="padding-right:30px;">
-			<a href="<?php echo WEB_ROOT ?>/guest-user/user/register" class="btn btn-large btn-block btn-fb">Sign Up</a>
-		</div>
 		<div class="col-sm-6" style="padding-left:30px;">
 			<input type="submit" name="submit" id="submit" form="login-form" class="btn btn-large btn-blue btn-block" value="Log In">
 		</div>
+		<div class="col-sm-6" style="padding-right:30px;">
+			<a href="<?php echo WEB_ROOT ?>/guest-user/user/register" class="btn btn-large btn-block btn-fb">Sign Up</a>
+		</div>
+		
 	</div>
 </div>
 </div>
