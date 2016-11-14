@@ -276,7 +276,11 @@ body.simple-page div.row {
     margin-left: 4px;
     margin-top: 3px;
 }
-
+.social-media {
+    position: absolute;
+    right: 0;
+	z-index: 99;
+}
 .btn-share {
     background-color: #BEBEBE;
     border-color: #CCCCCC;
@@ -344,6 +348,11 @@ body.simple-page div.row {
 #socialShare > a{
     padding: 6px 10px 6px 10px;
 }
+.fa{
+        line-height: 3;
+    
+    font-size: 18px;
+    }
 
 @media (max-width : 320px) {
     #socialHolder{
@@ -740,7 +749,10 @@ div.collectionTitleToItem {
 	div#transcribeNavbar li {
 		height:inherit;
 	}
-
+	.social-media {
+		position: relative;
+		background-color: white;
+	}
 	
 }
 
