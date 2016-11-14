@@ -479,8 +479,8 @@ div.item-progress {
 	background-color:#2750A0;
 	box-shadow: none;
 }
-.panel {
-	    
+.container {
+	padding-bottom: 3px;    
 }
 div#pageshavebeen {
 	
