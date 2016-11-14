@@ -94,7 +94,7 @@
 				     
 </div>
 <div class="well">
-<h2>All Transcriptions</h2>
+<h3>All Transcriptions</h3>
 </div>
 <div id="columns" class="container">
 			<?php foreach ($this->recentTranscriptions as $transcriptionItem): ?>
