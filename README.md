@@ -1,30 +1,17 @@
-# Welcome to Omeka
+# Welcome to [Transcribe @ Nova Scotia Archives](http://transcribe.novascotia.io)
 
-© 2008-2015 [Roy Rosenzweig Center for History and New Media](http://chnm.gmu.edu/)
+Built using Omeka [Roy Rosenzweig Center for History and New Media](http://chnm.gmu.edu/) (Zend)
+DIYhistory's Scriptus plugin
+and Parts of Transcribe @ Yale's Scriptus Theme
 
-This program is free software: you can redistribute it and/or modify it under 
-the terms of the GNU General Public License as published by the Free Software 
-Foundation, either version 3 of the License, or (at your option) any later
-version.
+The majority of development has been on themes/NSarchive
+Primary efforts have been:
+- Implement the requirements and features of the Nova Scotia Archives
+- To make the site Bootstrap 3 and RWD compliant
+- Resolve issues from other Scriptus Omeka Themes:
+-- including developing a set of core features that seperate Scriptus logic from the views
+(see themes/NSarchives/functios.php)
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with
-this program. If not, see [http://www.gnu.org/licenses/](http://www.gnu.org/licenses/).
-
-Omeka includes:
-
-* [Zend Framework](http://framework.zend.com)
-* [getID3](http://getid3.sourceforge.net)
-* [jQuery](http://jquery.com)
-* [jQuery UI](http://jqueryui.com)
-* [TinyMCE](http://tinymce.moxiecode.com)
-* [Silk Icons](http://www.famfamfam.com/lab/icons/silk/)
-
-Use and modifications of these libraries must comply with their respective 
-licenses.
-
-Release notes for Omeka are available at
-[http://omeka.org/codex/Release_Notes](http://omeka.org/codex/Release_Notes).
+Future features include:
+OAuth with Google and Facebook
+Enable Omeka Tagging
