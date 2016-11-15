@@ -10,7 +10,7 @@ Primary efforts have been:
 - To make the site Bootstrap 3 and RWD compliant
 - Resolve issues from other Scriptus Omeka Themes:
   - including developing a set of core features that seperate Scriptus logic from the views
-(see themes/NSarchives/functios.php)
+(see themes/NSarchives/functions.php)
 
 Future features include:
 OAuth with Google and Facebook
