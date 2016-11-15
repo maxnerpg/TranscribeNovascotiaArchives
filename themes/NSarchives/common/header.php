@@ -7,7 +7,10 @@
     <?php if ( $description = option('description')): ?>
         <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
-	<meta name="application-name" content="Transcribe@NovaScotiaArchives"/>
+    <meta property="og:title"              content="Transcribe @ Nova Scotia" />
+<meta property="og:description"        content="Crowdsourcing Transcription of Archival Documents" />
+<meta property="og:image"              content="<?php echo img("logo.jpg"); ?>" />
+
 	<link rel="icon" href="<?php echo img('favicons/flavicon.ico'); ?>"  />
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -48,9 +51,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <meta property="og:url"                content="http://transcribe.archives.novascotia.io" />
-<meta property="og:title"              content="Transcribe @ Nova Scotia" />
-<meta property="og:description"        content="Crowdsourcing Transcription of Archival Documents" />
-<meta property="og:image"              content="<?php echo img("logo.jpg"); ?>" />
+
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
