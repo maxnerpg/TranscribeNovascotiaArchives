@@ -1,6 +1,6 @@
 
 <?php
-    $pageTitle = __('Search Transcribe@Yale ') . __('(%s results)', $total_results);
+    $pageTitle = __('Search Transcribe@Nova Scotia Archives ') . __('(%s results)', $total_results);
     echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
     $searchRecordTypes = get_search_record_types();
     $uri = WEB_ROOT .'/transcribe/';
@@ -28,6 +28,7 @@
 	  $theTranscription = strip_formatting(metadata('file', array('Scriptus', 'Transcription')));
 	 $status =  $record->getElementTexts('Scriptus', 'Status');
 		 ?>
+	<!-- Insert conditional on links to items v. collections -->
 	<div class="col-md-3">
 		<figure>
 			<div class="masonrywell">
