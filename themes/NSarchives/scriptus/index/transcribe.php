@@ -266,7 +266,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 					textHasChanged = true;
 				 });
 				
-				$('form #transcribeform').submit(function(event) {
+				$('#transcribeform').submit(function(event) {
 
 						// get the form data				
 						var formData = {
