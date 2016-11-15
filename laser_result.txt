@@ -1,0 +1,153 @@
+
+Laser Process Date: 2016-11-14, 12:20:02.025000 
+Question : Code Construction 
+Property Type : Trajectory or Input-Altering Transducer 
+Output : ['000'] 
+
+Laser Process Date: 2016-11-14, 12:20:42.273000 
+Question : Code Construction 
+Property Type : Trajectory or Input-Altering Transducer 
+Output : ['110', '001', '111', '000', '011', '100'] 
+
+Laser Process Date: 2016-11-14, 17:29:16.388000 
+Question : Satisfaction 
+Property Type : Trajectory or Input-Altering Transducer 
+automaton : Language: C:\Users\Owner\code\laser-test\test_files\DFA-ab#.fa 
+result : The property file appears to be incorrectly formatted. 
+transducer : Property: C:\Users\Owner\code\laser-test\test_files\1#0#.traj 
+
+Laser Process Date: 2016-11-14, 17:38:42.315000 
+Question : Satisfaction 
+Property Type : Trajectory or Input-Altering Transducer 
+automaton : Language: C:\Users\Owner\code\laser-test\test_files\DFA-ab#.fa 
+result : The property file appears to be incorrectly formatted. 
+transducer : Property: C:\Users\Owner\code\laser-test\test_files\1#0#.traj 
+
+Laser Process Date: 2016-11-14, 17:39:46.544000 
+Question : Satisfaction 
+Property Type : Trajectory or Input-Altering Transducer 
+automaton : Language: C:\Users\Owner\code\laser-test\test_files\DFA-ab#.fa 
+result : The property file appears to be incorrectly formatted. 
+transducer : Property: C:\Users\Owner\code\laser-test\test_files\1#0#.traj 
+
+Laser Process Date: 2016-11-14, 17:40:33.625000 
+Question : Satisfaction 
+Property Type : Trajectory or Input-Altering Transducer 
+automaton : Language: C:\Users\Owner\code\laser-test\test_files\DFA-ab#.fa 
+result : The property file appears to be incorrectly formatted. 
+transducer : Property: C:\Users\Owner\code\laser-test\test_files\1#0#.traj 
+
+Laser Process Date: 2016-11-14, 17:54:54.051000 
+Question : Satisfaction 
+Property Type : Trajectory or Input-Altering Transducer 
+automaton : Language: C:\Users\Owner\code\laser-test\test_files\DFA-ab#.fa 
+transducer : Property: C:\Users\Owner\code\laser-test\test_files\1#0#.traj 
+proof :  
+result : YES, the language satisfies the property 
+
+Laser Process Date: 2016-11-14, 17:55:34.211000 
+Question : Satisfaction 
+Property Type : Trajectory or Input-Altering Transducer 
+automaton : Language: C:\Users\Owner\code\laser-test\test_files\DFA-ab#.fa 
+transducer : Property: C:\Users\Owner\code\laser-test\test_files\1#0#.traj 
+proof :  
+result : YES, the language satisfies the property 
+
+Laser Process Date: 2016-11-14, 17:56:47.203000 
+Question : Satisfaction 
+Property Type : Trajectory or Input-Altering Transducer 
+automaton : Language: C:\Users\Owner\code\laser-test\test_files\DFA-ab#.fa 
+transducer : Property: C:\Users\Owner\code\laser-test\test_files\1#0#.traj 
+proof :  
+result : YES, the language satisfies the property 
+
+Laser Process Date: 2016-11-14, 17:58:10.010000 
+Question : Maximality 
+Property Type : Trajectory or Input-Altering Transducer 
+automaton : Language: C:\Users\Owner\code\laser-test\test_files\DFA-ab#.fa 
+transducer : Property: C:\Users\Owner\code\laser-test\test_files\1#0#.traj 
+proof :  
+result : YES, the language is maximal with respect to the property. 
+
+Laser Process Date: 2016-11-14, 18:02:59.208000 
+Question : Code Construction 
+Property Type : Error-Detection (via input-preserving transducer) 
+Output : ['10010', '11110', '01011', '01101', '11000', '10001', '00100', '00111'] 
+
+Laser Process Date: 2016-11-14, 18:08:22.454000 
+Question : Code Construction 
+Property Type : Error-Detection (via input-preserving transducer) 
+Output : ['11001', '11100', '10101', '00011', '01101', '10010', '00110', '01000', '11111'] 
+
+Laser Process Date: 2016-11-14, 18:09:43.433000 
+Question : Code Construction 
+Property Type : Error-Detection (via input-preserving transducer) 
+Output : ['01010', '11001', '00111', '10010', '11110', '10100', '00001', '01100'] 
+
+Laser Process Date: 2016-11-14, 18:11:24.899000 
+Question : Code Construction 
+Property Type : Error-Detection (via input-preserving transducer) 
+Output : ['000'] 
+
+Laser Process Date: 2016-11-14, 18:15:13.379000 
+Question : Code Construction 
+Property Type : Error-Detection (via input-preserving transducer) 
+Output : ['001', '100', '010'] 
+
+Laser Process Date: 2016-11-14, 18:21:02.907000 
+Question : Code Construction 
+Property Type : Error-Detection (via input-preserving transducer) 
+Output : ['01331', '01120', '03212', '31030', '11033', '20213', '20121', '30232', '32323', '33110', '01231', '20223', '33320', '31003', '12100', '01121', '23222', '03112', '30221', '23001'] 
+
+Laser Process Date: 2016-11-14, 18:21:33.103000 
+Question : Code Construction 
+Property Type : Error-Detection (via input-preserving transducer) 
+Output : ['210', '110', '101'] 
+
+Laser Process Date: 2016-11-14, 18:21:55.353000 
+Question : Code Construction 
+Property Type : Error-Detection (via input-preserving transducer) 
+Output : ['100', '111', '010'] 
+
+Laser Process Date: 2016-11-14, 18:22:23.880000 
+Question : Code Construction 
+Property Type : Error-Detection (via input-preserving transducer) 
+Output : ['011001', '001000', '111010', '110110', '010101', '011110', '111111', '001011', '101100', '001101', '110000', '000111', '100101', '000100', '010010', '101001', '000001', '100011'] 
+
+Laser Process Date: 2016-11-14, 18:23:37.410000 
+Question : Code Construction 
+Property Type : Trajectory or Input-Altering Transducer 
+Output : ['101', '001', '111', '100', '000'] 
+
+Laser Process Date: 2016-11-14, 18:24:28.227000 
+Question : Code Construction 
+Property Type : Trajectory or Input-Altering Transducer 
+Output : ['0010', '0011', '1101', '1010', '1111', '0111', '0000', '1000'] 
+
+Laser Process Date: 2016-11-14, 18:27:46.983000 
+Question : Code Construction 
+Property Type : Trajectory or Input-Altering Transducer 
+Output : ['02031', '13213', '33203', '20131', '10300', '20313', '33301', '13202', '32311', '03011'] 
+
+Laser Process Date: 2016-11-14, 18:28:55.617000 
+Question : Satisfaction 
+Property Type : Trajectory or Input-Altering Transducer 
+automaton : Language: C:\Users\Owner\code\laser-test\test_files\DFA-ab#.fa 
+transducer : Property: C:\Users\Owner\code\laser-test\test_files\1#0#.traj 
+proof :  
+result : YES, the language satisfies the property 
+
+Laser Process Date: 2016-11-14, 18:29:06.560000 
+Question : Satisfaction 
+Property Type : Fixed 
+Fixed type : PREFIX 
+automaton : Language: C:\Users\Owner\code\laser-test\test_files\DFA-ab#.fa 
+transducer :  
+proof : Witness: The words 'ab' and 'a' violate the property 
+result : NO, the language does not satisfy the property 
+
+Laser Process Date: 2016-11-14, 18:29:28.542000 
+Question : Code Construction 
+Property Type : Fixed 
+Fixed type : PREFIX 
+Output : ['000', '100', '010', '110', '001', '101', '011', '111'] 

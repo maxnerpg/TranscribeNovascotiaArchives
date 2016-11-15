@@ -282,6 +282,7 @@ body.simple-page div.row {
     position: absolute;
     right: 0;
 	z-index: 99;
+	margin-top: 2px;
 }
 .btn-share {
     background-color: #BEBEBE;
@@ -350,7 +351,7 @@ body.simple-page div.row {
 #socialShare > a{
     padding: 6px 10px 6px 10px;
 }
-.fa{
+.fa fa-twitter fa-facebook{
         line-height: 2;
     
     font-size: 18px;
@@ -758,7 +759,7 @@ input#query {width:100px;display:inline;}
 	}
 	.social-media {
 		position: relative;
-		background-color: white;
+		margin-top: 0px;
 	}
 	
 }

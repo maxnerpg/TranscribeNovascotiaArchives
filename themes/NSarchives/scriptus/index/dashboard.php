@@ -59,7 +59,7 @@
 <h3>Your Transcriptions</h3>
 </div>
 <div id="columns" class="container">		
-		<?php foreach ($this->recentUserTranscriptions as $transcriptionItem): ?>
+	<?php foreach ($this->recentUserTranscriptions as $transcriptionItem): ?>
 	 <div class="col-sm-3">
 	        <figure>
 	             <div class="masonrywell">
