@@ -35,7 +35,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		padding-right:22px;
 		padding-left:22px;
 		padding-top:12px;
-		height:calc(100vh - 70px);
+		
 		background-color:#fff;
 	}
 	
@@ -108,7 +108,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		position:relative;
 		float:right;
 		margin-bottom:0;
-		top:-25px;
+		top:-5px;
 	}	
 	
 	dt#transcribebox-label {
@@ -266,7 +266,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 					textHasChanged = true;
 				 });
 				
-				$('form').submit(function(event) {
+				$('form #transcribeform').submit(function(event) {
 
 						// get the form data				
 						var formData = {

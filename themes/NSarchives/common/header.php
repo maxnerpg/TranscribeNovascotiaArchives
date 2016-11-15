@@ -98,7 +98,8 @@
     					
 
     <main id="content" role="main">
-    <div class="btn-group col-xs-12 col-sm-3 
+    <div class="btn-group col-lg-2 col-lg-offset-11
+            col-sm-2 col-sm-offset-10
            container social-media">
 
     					    
@@ -109,13 +110,7 @@
                             <a data-original-title="Twitter" rel="tooltip" href="https://twitter.com/home?status=http%3A//transcribe.novascotia.io/" class="btn btn-social-media btn-twitter" data-placement="left">
 								<i class="fa fa-twitter"></i>
 							</a>
-    						<a data-original-title="LinkedIn" rel="tooltip" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//transcribe.novascotia.io/&title=&summary=&source=" class="btn btn-social-media btn-linkedin" data-placement="left">
-								<i class="fa fa-linkedin"></i>
-							</a>
-    					
-    						<a data-original-title="Pinterest" rel="tooltip" href="https://pinterest.com/pin/create/button/?url=&media=http%3A//transcribe.novascotia.io/&description=" class="btn btn-social-media btn-pinterest" data-placement="left">
-								<i class="fa fa-pinterest"></i>
-							</a>
+
 </div>
           <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
 		  
