@@ -1,8 +1,24 @@
+engines:
+  eslint:
+    enabled: true
+  csslint:
+    enabled: true
+  phpcodesniffer:
+    enabled: true
+  phpmd:
+    enabled: true
+  duplication:
+  	enabled: true
+    config:
+    	languages:
+      - php
+      	#mass_threshold: 30
+      - javascript
 exclude_paths:
-- "admin"
-- "application"
-- "files"
-- "install"
+- "admin/"
+- "application/"
+- "files/"
+- "install/"
 - "plugins/Coins"
 - "plugins/CsvImportPlus"
 - "plugins/DublinCoreExtended"
