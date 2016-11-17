@@ -1,0 +1,14 @@
+{
+    "name": "owner/transcribe-novascotia-archives",
+    "authors": [
+        {
+            "name": "Domenic Rosati",
+            "email": "domenicrosati@gmail.com"
+        }
+    ],
+    "require": {},
+    "config": {
+        "secure-http": false
+    }
+
+}
