@@ -1,32 +1,31 @@
-engines:
-  eslint:
-    enabled: true
-  csslint:
-    enabled: true
-  phpcodesniffer:
-    enabled: true
-  phpmd:
-    enabled: true
-  duplication:
-  	enabled: true
-    config:
-    	languages:
+engines: 
+  config: 
+    languages: 
       - php
-      	#mass_threshold: 30
       - javascript
-exclude_paths:
-- "admin/"
-- "application/"
-- "files/"
-- "install/"
-- "plugins/Coins"
-- "plugins/CsvImportPlus"
-- "plugins/DublinCoreExtended"
-- "plugins/ExhibitBuilder"
-- "plugins/SimplePage"
-- "themes/ani-yun-wiya"
-- "themes/berlin"
-- "themes/default"
-- "themes/omeka-starter-theme"
-- "themes/Scribe"
-- "themes/seasons"
+  csslint: 
+    enabled: true
+  duplication: 
+    enabled: true
+  eslint: 
+    enabled: true
+  phpcodesniffer: 
+    enabled: true
+  phpmd: 
+    enabled: true
+exclude_paths: 
+  - admin/
+  - application/
+  - files/
+  - install/
+  - plugins/Coins
+  - plugins/CsvImportPlus
+  - plugins/DublinCoreExtended
+  - plugins/ExhibitBuilder
+  - plugins/SimplePage
+  - themes/ani-yun-wiya
+  - themes/berlin
+  - themes/default
+  - themes/omeka-starter-theme
+  - themes/Scribe
+  - themes/seasons
