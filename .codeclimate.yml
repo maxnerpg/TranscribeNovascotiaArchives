@@ -1,12 +1,12 @@
 engines: 
-  config: 
-    languages: 
-      - php
-      - javascript
   csslint: 
     enabled: true
   duplication: 
     enabled: true
+    config: 
+      languages: 
+        - php
+        - javascript
   eslint: 
     enabled: true
   phpcodesniffer: 
