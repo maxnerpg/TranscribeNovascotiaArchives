@@ -2,7 +2,11 @@ engines:
   csslint: 
     enabled: true
   duplication: 
-    enabled: true
+      enabled: true
+    config: 
+      languages: 
+      - php
+      - javascript
   eslint: 
     enabled: true
   phpcodesniffer: 
