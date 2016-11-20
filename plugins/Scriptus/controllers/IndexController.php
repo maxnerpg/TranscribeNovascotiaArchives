@@ -61,15 +61,29 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
 
         //get the posted transcription data       
         $request = new Zend_Controller_Request_Http();
-        $transcription = $request->getPost('transcription');
-
-        /*
-        $captcha_json =  $request->getPost('g-recaptcha-response');
-        $captcha_response = json_decode($captcha_json, TRUE);
+        $transcription = $request->getPost('transcription'); 
+        // Get cURL resource
+        $curl = curl_init();
+        // Set some options - we are passing in a useragent too here
+        curl_setopt_array($curl, array(
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_URL => 'https://www.google.com/recaptcha/api/siteverify',
+            CURLOPT_POST => 1,
+            CURLOPT_POSTFIELDS => array(
+                secret => '6LeXxAsUAAAAABRtoOVXIUSOB0S9MkgoRbzJgVnx',
+                response => $request->getPost('g-recaptcha-response')
+         )
+        ));
+        // Send the request & save response to $resp
+        $resp = curl_exec($curl);
+        // Close request to clear up some resources
+        curl_close($curl);
+     
+        $captcha_response = json_decode($resp, TRUE);
         if($captcha_response['success'] == false) {
-            return $captcha_json;
+            return $resp;
         }
-        */
+        
         if (!$request->isPost()){
             throw new Exception('Request must be POST.');
         }
@@ -196,8 +210,8 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $sql = "insert into Scriptus_changes VALUES (?, ?, ?, ?, ?, ?, ?)"; 
         $stmt = new Zend_Db_Statement_Mysqli($db, $sql);
         $stmt->execute(array($uri, $username, $timestamp, $newTranscription, $collectionName, $itemName , $fileName));
-        $this->view->$newTranscription = $newTranscription;
         
+       
     }
 
 
@@ -531,8 +545,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
     
                 
         $this->form->addElement($transcriptionArea);
-        
-        
+
 
         $save = new Zend_Form_Element_Submit('save');
         $save ->setLabel('Save');
