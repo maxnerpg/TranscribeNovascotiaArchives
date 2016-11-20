@@ -65,7 +65,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         // Get cURL resource
       
 
-$client = new Client();
+$client = new Zend_Http_Client();
 $client->setUri('https://www.google.com/recaptcha/api/siteverify');
 $client->setMethod('POST');
 $client->setParameterPost(array(
