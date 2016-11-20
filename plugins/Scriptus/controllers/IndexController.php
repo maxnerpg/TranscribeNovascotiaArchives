@@ -533,7 +533,6 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $transcriptionArea  ->setRequired(true)       
                             ->setValue($this->transcription)
                             ->setAttrib('class', 'col-xs-12')
-                            ->setAttrib('readonly', 'true')
                             ->setAttrib('class', 'form-control');
             
     
@@ -559,12 +558,6 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $save->setAttrib('class', 'btn btn-primary');
         $save->setAttrib('data-loading-text', "Saving...");
         $save->setAttrib('id', 'save-button');
-
-        $login = new Zend_Form_Element_Submit('login');
-        $login ->setLabel('Sign in to transcribe');
-        $login->setAttrib('class', 'btn btn-danger');
-        $login->setAttrib('onclick', "window.location.href = 'http://transcribe.novascotia.io/users/login';");
-        $login->setAttrib('id', 'save-button');
 
         $this->form->addElement($save);
 
