@@ -63,22 +63,6 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $request = new Zend_Controller_Request_Http();
         $transcription = $request->getPost('transcription'); 
         // Get cURL resource
-      
-
-$client = new Zend_Http_Client();
-$client->setUri('https://www.google.com/recaptcha/api/siteverify');
-$client->setMethod('POST');
-$client->setParameterPost(array(
-    secret => '6LeXxAsUAAAAABRtoOVXIUSOB0S9MkgoRbzJgVnx',
-    response => $request->getPost('g-recaptcha-response')
-));
-
-$response = $client->send();
-
-if ($response->isSuccess()) {
-    // the POST was successful
-}
-        return $response;
 
         if (!$request->isPost()){
             throw new Exception('Request must be POST.');
@@ -536,6 +520,7 @@ if ($response->isSuccess()) {
         $transcriptionArea  ->setRequired(true)       
                             ->setValue($this->transcription)
                             ->setAttrib('class', 'col-xs-12')
+                            ->setAttrib('readonly', 'true')
                             ->setAttrib('class', 'form-control');
             
     
@@ -548,6 +533,7 @@ if ($response->isSuccess()) {
         $save->setAttrib('class', 'btn btn-primary');
         $save->setAttrib('data-loading-text', "Saving...");
         $save->setAttrib('id', 'save-button');
+
 
         $this->form->addElement($save);
 

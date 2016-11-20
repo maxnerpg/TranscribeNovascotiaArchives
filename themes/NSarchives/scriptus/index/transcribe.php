@@ -184,7 +184,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 				
 				<?php echo $this->form; ?>	
  
-				<div class="g-recaptcha" data-sitekey="6LeXxAsUAAAAAJG7zygr4wR1ZvmdnSzylg6JYzqR"></div>
+				<div class="g-recaptcha" data-sitekey="6LeXxAsUAAAAAJG7zygr4wR1ZvmdnSzylg6JYzqR" data-callback="verifyHuman()"></div>
 
 
 				</div>
@@ -229,7 +229,9 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="../../plugins/Scriptus/views/public/javascripts/classie.js"></script>
 		<script>
-			
+			function verifyHuman(response){
+				$("#transcribebox").prop("readonly", false);
+			}
 			//Loads discuss tab if user navigated from recent comments page. discussOpen is the URL parameter used for this purpose
 			$(document).ready(function(){
 		
@@ -271,10 +273,10 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 				
 				$('#transcribeform').submit(function(event) {
 
-						// get the form data				
+						// get the form data	
+
 						var formData = {
 							'transcription'	: $('#transcribebox').val(),
-							'g-recaptcha-response' : grecaptcha.getResponse()
 
 						};
 

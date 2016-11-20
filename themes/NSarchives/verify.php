@@ -1,9 +1,20 @@
-$result = $recaptcha->verify(
-    $_POST['recaptcha_challenge_field'],
-    $_POST['recaptcha_response_field']
-);
-if (!$result->isValid()) {
-    // JSON Return Verification failed {'verificaiton'' => false'}
-} else {
-    //JSON return {'verification' => true}
+<?php
+
+$request = new Zend_Controller_Request_Http();
+$client = new Omeka_Http_Client();
+$client->setUri('https://www.google.com/recaptcha/api/siteverify');
+$client->setMethod('POST');
+$client->setParameterPost(array(
+    'secret' => '6LeXxAsUAAAAABRtoOVXIUSOB0S9MkgoRbzJgVnx',
+    'response' => $request->getPost('g-recaptcha-response')
+));
+
+$response = $client->send();
+
+if ($response->isSuccess()) {
+    echo("A success")
 }
+
+return $response;
+
+?>
