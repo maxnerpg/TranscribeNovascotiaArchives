@@ -1,5 +1,4 @@
 <?php
-  use Zend\Http\Client;
 
 class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
 {
