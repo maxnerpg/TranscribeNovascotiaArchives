@@ -288,9 +288,8 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 						})
 							// using the done promise callback
 							.done(function(data) {
-
 								//log data to the console so we can see
-								//console.log(data); 
+								console.log(data); 
 								//console.log("DONE HIT");
 
 								// here we will handle errors and validation messages
@@ -299,7 +298,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 								//console.log("FAIL HIT");
 								//console.log("ERROR IS:");
 								//console.log(error);
-								//console.log(request.responseText)
+								console.log(request.responseText)
 							});
 
 							
