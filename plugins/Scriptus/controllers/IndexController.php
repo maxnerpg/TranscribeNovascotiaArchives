@@ -62,8 +62,8 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         //get the posted transcription data       
         $request = new Zend_Controller_Request_Http();
         $transcription = $request->getPost('transcription');  
-        $captcha_json = $request->getPost('g-recaptcha-response');
-       
+        return $request->getPost('g-recaptcha-response');
+        /*
         $captcha_response = json_decode($captcha_json, TRUE);
         if($captcha_response['success'] == false) {
             return $captcha_json;
@@ -72,7 +72,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         if (!$request->isPost()){
             throw new Exception('Request must be POST.');
         }
-       
+       */
 
         //get the record based on URL param
         $fileId = $this->getParam('file');
