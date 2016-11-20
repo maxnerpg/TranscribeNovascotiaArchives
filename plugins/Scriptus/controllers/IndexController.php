@@ -62,9 +62,6 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         //get the posted transcription data       
         $request = new Zend_Controller_Request_Http();
         $transcription = $request->getPost('transcription'); 
-        if(!$transcription){
-            $transcription = "test";
-        }
         /*
         $captcha_json =  $request->getPost('g-recaptcha-response');
         $captcha_response = json_decode($captcha_json, TRUE);
@@ -197,7 +194,6 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
 
         $sql = "insert into Scriptus_changes VALUES (?, ?, ?, ?, ?, ?, ?)"; 
         $stmt = new Zend_Db_Statement_Mysqli($db, $sql);
-        return array($uri, $username, $timestamp, $newTranscription, $collectionName, $itemName , $fileName);
         $stmt->execute(array($uri, $username, $timestamp, $newTranscription, $collectionName, $itemName , $fileName));
         
        
