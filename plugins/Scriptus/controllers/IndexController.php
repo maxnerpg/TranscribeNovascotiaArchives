@@ -197,6 +197,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
 
         $sql = "insert into Scriptus_changes VALUES (?, ?, ?, ?, ?, ?, ?)"; 
         $stmt = new Zend_Db_Statement_Mysqli($db, $sql);
+        return array($uri, $username, $timestamp, $newTranscription, $collectionName, $itemName , $fileName);
         $stmt->execute(array($uri, $username, $timestamp, $newTranscription, $collectionName, $itemName , $fileName));
         
        
