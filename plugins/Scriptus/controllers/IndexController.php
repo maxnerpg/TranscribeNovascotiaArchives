@@ -69,11 +69,11 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         if($captcha_response['success'] == false) {
             return $captcha_json;
         }
-        
+        */
         if (!$request->isPost()){
             throw new Exception('Request must be POST.');
         }
-        */
+        
 
         //get the record based on URL param
         $fileId = $this->getParam('file');
@@ -196,6 +196,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $sql = "insert into Scriptus_changes VALUES (?, ?, ?, ?, ?, ?, ?)"; 
         $stmt = new Zend_Db_Statement_Mysqli($db, $sql);
         $stmt->execute(array($uri, $username, $timestamp, $newTranscription, $collectionName, $itemName , $fileName));
+        $this->view->$newTranscription = $newTranscription;
         
     }
 
