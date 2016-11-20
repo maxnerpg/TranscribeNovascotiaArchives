@@ -298,8 +298,8 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 							.fail(function(request, error) {
 								//console.log("FAIL HIT");
 								//console.log("ERROR IS:");
-								//console.log(error);
-								console.log('fail')
+							    console.log(error);
+								
 							});
 
 							
