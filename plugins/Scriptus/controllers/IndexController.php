@@ -65,6 +65,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
        
         
         return $request->getPost('g-recaptcha-response');
+        $captcha_json =  $request->getPost('g-recaptcha-response');
         $captcha_response = json_decode($captcha_json, TRUE);
         if($captcha_response['success'] == false) {
             return $captcha_json;
