@@ -63,7 +63,8 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $request = new Zend_Controller_Request_Http();
         $transcription = $request->getPost('transcription');  
         $captcha_json = $request->getPost('g-recaptcha-response');
-        $captcha_response = json_decode($response_json, TRUE);
+       
+        $captcha_response = json_decode($captcha_json, TRUE);
         if($captcha_response['success'] == false) {
             return $captcha_json;
         }

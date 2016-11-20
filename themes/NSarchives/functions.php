@@ -58,6 +58,7 @@ function total_transcribed(){
     }
     return $rowCount;
 }
+
 class Omeka_Form_User_Transcribe extends Omeka_Form
 {
     private $_hasRoleElement;
