@@ -23,6 +23,9 @@ exclude_paths:
   - plugins/DublinCoreExtended
   - plugins/ExhibitBuilder
   - plugins/SimplePage
+  - plugins/GuestUser
+  - plugins/Scriptus
+  - vendor/
   - themes/ani-yun-wiya
   - themes/berlin
   - themes/default
