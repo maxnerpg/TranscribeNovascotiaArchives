@@ -62,7 +62,28 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         //get the posted transcription data       
         $request = new Zend_Controller_Request_Http();
         $transcription = $request->getPost('transcription'); 
-       
+        // Get cURL resource
+        $curl = curl_init();
+        // Set some options - we are passing in a useragent too here
+        curl_setopt_array($curl, array(
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_URL => 'https://www.google.com/recaptcha/api/siteverify',
+            CURLOPT_POST => 1,
+            CURLOPT_POSTFIELDS => array(
+                secret => '6LeXxAsUAAAAABRtoOVXIUSOB0S9MkgoRbzJgVnx',
+                response => $request->getPost('g-recaptcha-response')
+         )
+        ));
+        // Send the request & save response to $resp
+        $resp = curl_exec($curl);
+        // Close request to clear up some resources
+        curl_close($curl);
+        return  $resp;
+        $captcha_response = json_decode($resp, TRUE);
+        if($captcha_response['success'] == false) {
+            return $resp;
+        }
+        
         if (!$request->isPost()){
             throw new Exception('Request must be POST.');
         }
