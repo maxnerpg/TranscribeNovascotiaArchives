@@ -290,7 +290,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 							// using the done promise callback
 							.done(function(data) {
 								//log data to the console so we can see
-								console.log('succes'); 
+								console.log('success'); 
 								//console.log("DONE HIT");
 
 								// here we will handle errors and validation messages
