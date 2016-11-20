@@ -531,19 +531,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
                 
         $this->form->addElement($transcriptionArea);
         
-        $publickey = '6LeXxAsUAAAAAJG7zygr4wR1ZvmdnSzylg6JYzqR';
-        $privatekey = '6LeXxAsUAAAAABRtoOVXIUSOB0S9MkgoRbzJgVnx';
-        $recaptcha = new Zend_Service_ReCaptcha($publickey, $privatekey);
-
-        $captcha = new Zend_Form_Element_Captcha('captcha',
-            array(
-                'captcha'       => 'ReCaptcha',
-                'captchaOptions' => array('captcha' => 'ReCaptcha', 'service' => $recaptcha),
-                'ignore' => true
-                )
-        );
-
-        $this->form->addElement($captcha);
+        
 
         $save = new Zend_Form_Element_Submit('save');
         $save ->setLabel('Save');

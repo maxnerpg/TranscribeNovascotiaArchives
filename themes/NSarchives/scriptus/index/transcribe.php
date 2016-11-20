@@ -274,6 +274,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 						// get the form data				
 						var formData = {
 							'transcription'	: $('#transcribebox').val()
+
 						};
 
 
