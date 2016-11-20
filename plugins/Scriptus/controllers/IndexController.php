@@ -179,16 +179,9 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         //Chop save off of end of URL
         $uri = substr($uri, 0, -5);
   
-        $user = current_user();
-
-        //Get username, or define as empty string if user isn't logged in -- this will be saved to Scriptus_changes
-        if ($user){
-            $username = $user->username;
-
-        }
-        else{
-            $username = '';
-        }
+        
+        $username = '';
+      
 
         //Get database
         $db = get_db();
