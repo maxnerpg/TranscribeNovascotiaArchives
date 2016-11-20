@@ -184,7 +184,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 				
 				<?php echo $this->form; ?>	
  
-				<div class="g-recaptcha" data-sitekey="6LeXxAsUAAAAAJG7zygr4wR1ZvmdnSzylg6JYzqR" data-callback="verifyHuman()"></div>
+				<div class="g-recaptcha" data-sitekey="6LeXxAsUAAAAAJG7zygr4wR1ZvmdnSzylg6JYzqR" data-callback="verifyHuman"></div>
 
 
 				</div>
