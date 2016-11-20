@@ -285,12 +285,12 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 							url 		: '<?php echo Zend_Controller_Front::getInstance()->getRequest()->getRequestUri(); ?>/save', // the url where we want to POST
 							data 		: formData, // our data object
 							dataType 	: 'json', // what type of data do we expect back from the server
-				            encode          : true
+				            encode       : true
 						})
 							// using the done promise callback
 							.done(function(data) {
 								//log data to the console so we can see
-								console.log('success'); 
+								console.log(data); 
 								//console.log("DONE HIT");
 
 								// here we will handle errors and validation messages
