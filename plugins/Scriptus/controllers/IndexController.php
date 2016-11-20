@@ -516,7 +516,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
 
     private function _buildForm() {
 
-        $user = current_user();
+
         //create a new Omeka form
         $this->form = new Omeka_Form;         
         $this->form->setMethod('post'); 
@@ -524,22 +524,29 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $this->form->setAttrib('id', 'transcribeform');
 
         $transcriptionArea = new Zend_Form_Element_Textarea('transcribebox');
-
-        if ($user) {
-            $transcriptionArea  ->setRequired(true)       
-                            ->setValue($this->transcription)
-                            ->setAttrib('class', 'col-xs-12')                          
-                            ->setAttrib('class', 'form-control');
-        } else {
-            $transcriptionArea  ->setRequired(true)       
+        $transcriptionArea  ->setRequired(true)       
                             ->setValue($this->transcription)
                             ->setAttrib('class', 'col-xs-12')
                             ->setAttrib('readonly', 'true')
                             ->setAttrib('class', 'form-control');
             
-        }   
+    
                 
         $this->form->addElement($transcriptionArea);
+        
+        $publickey = '6LeXxAsUAAAAAJG7zygr4wR1ZvmdnSzylg6JYzqR';
+        $privatekey = '6LeXxAsUAAAAABRtoOVXIUSOB0S9MkgoRbzJgVnx';
+        $recaptcha = new Zend_Service_ReCaptcha($publickey, $privatekey);
+
+        $captcha = new Zend_Form_Element_Captcha('captcha',
+            array(
+                'captcha'       => 'ReCaptcha',
+                'captchaOptions' => array('captcha' => 'ReCaptcha', 'service' => $recaptcha),
+                'ignore' => true
+                )
+        );
+
+        $this->form->addElement($captcha);
 
         $save = new Zend_Form_Element_Submit('save');
         $save ->setLabel('Save');
@@ -553,12 +560,9 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $login->setAttrib('onclick', "window.location.href = 'http://transcribe.novascotia.io/users/login';");
         $login->setAttrib('id', 'save-button');
 
-        if ($user) {
-            $this->form->addElement($save);
-        } else {
-            $this->form->addElement($login);
-            
-        }        
+        $this->form->addElement($save);
+
+   
 
         return $this->form;
     }

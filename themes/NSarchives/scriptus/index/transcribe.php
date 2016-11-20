@@ -4,6 +4,7 @@ $collectionclass = ('collection' . $item->collection_id);
 echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 <script src="https://use.typekit.net/twf3pvh.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
 
 <link href="../../plugins/Scriptus/views/public/css/component.css" rel="stylesheet"> 
@@ -180,8 +181,10 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 						<?php endif; ?>	
 								   		
 			   		</div>
+				
 				<?php echo $this->form; ?>	
  
+		
 
 
 				</div>
