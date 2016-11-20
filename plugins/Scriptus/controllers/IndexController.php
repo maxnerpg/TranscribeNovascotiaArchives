@@ -1,6 +1,6 @@
 <?php
   use Zend\Http\Client;
-  
+
 class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
 {
         
@@ -79,7 +79,7 @@ $response = $client->send();
 if ($response->isSuccess()) {
     // the POST was successful
 }
-        return $response
+        return $response;
 
         if (!$request->isPost()){
             throw new Exception('Request must be POST.');
