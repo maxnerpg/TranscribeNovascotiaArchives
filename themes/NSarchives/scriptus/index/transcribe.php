@@ -274,13 +274,14 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 						// get the form data				
 						var formData = {
 							'transcription'	: $('#transcribebox').val(),
-							'g-recaptcha-response' : grecaptcha.getResponse()
+							
 
 						};
 
 
-
-						// process the form
+						console.log(grecaptcha.getResponse())
+						// process the 
+						//if(grecaptcha.getResponse() === ) {}else{}
 						$.ajax({
 							type 		: 'POST', // define the type of HTTP verb we want to use (POST for our form)
 							url 		: '<?php echo Zend_Controller_Front::getInstance()->getRequest()->getRequestUri(); ?>/save', // the url where we want to POST
