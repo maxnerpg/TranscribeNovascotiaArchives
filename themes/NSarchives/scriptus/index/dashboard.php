@@ -49,48 +49,24 @@
   </div>
 </div>
 
-<?php $user = current_user(); ?>
-<?php if (!$user): ?>
+<?php $user = current_user();
+      if ($user.getRoleId =="super"): ?>
 <div class="well">
-<h3><div class="login-link"><a href="<?php echo WEB_ROOT;?>/guest-user/user/login">Login </a>to see your recent transcriptions and view account options.</div></h3>
+<h3>Export Transcriptions</h3>
+<p> Transcriptions for each individual file along with collection,collection reference, item, and filename and imageid are exported as a .csv file</p>
 </div>
-<?php else: ?>
-<div class="well">
-<h3>Your Transcriptions</h3>
-</div>
-<div id="columns" class="container">		
-	<?php foreach ($this->recentUserTranscriptions as $transcriptionItem): ?>
-	 <div class="col-sm-3">
-	        <figure>
-	             <div class="masonrywell">
-					<div class="thumbholder">
-	                    <a href="<?php echo $transcriptionItem["URL_changed"];?>"><img src="<?php echo $transcriptionItem["image_url"] ?>" alt="<?php echo $transcriptionItem["file_title"] ?>,a part of <?php echo $transcriptionItem["item_title"] ?>" /></a>
-	                    
-	                
-		                      					<div class="hoverEdit"><span class="glyphicon glyphicon-pencil"></span></div>
+<form>
+	select month, year, day date range to export from?
+</form>
 
-					
-					</div>
-					
-                   <?php 
-	                   $changedtime = new DateTime($transcriptionItem["time_changed"]);
-	                   $formattedchangedtime = $changedtime->format('F j, Y — g:s a');
-	                   ?>
-          
-                    
-	                <figcaption>
-	                    <h3><?php echo $transcriptionItem["item_title"] . ', ' . $transcriptionItem["file_title"]; ?></h3>
-	                    <?php echo  $formattedchangedtime . '<br>' . "&ldquo;" . snippet_by_word_count($transcriptionItem["transcription"], 10, '...') . "&rdquo;"  ?>
-	              
+or 
 
-	                </figcaption>
-	            </div>
-	            </figure>
-</div>
-	            
-	      
-            <?php endforeach; ?>
-   <?php endif; ?>				
+<?php
+
+ export_transcriptions(month); 
+
+?>
+<?php endif; ?>				
 				     
 </div>
 <div class="well">
