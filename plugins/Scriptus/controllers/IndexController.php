@@ -322,7 +322,7 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
         $stmt->execute();
 
         //The number of transcriptions that should be displayed
-        $numberOfDesiredTranscriptions = 6;
+        $numberOfDesiredTranscriptions = 1000;
 
         //The number of transcriptions currently retrieved
         $numberOfRetrievedTranscriptions = 0;
