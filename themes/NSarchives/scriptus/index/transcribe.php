@@ -183,9 +183,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 			   		</div>
 				
 				<?php echo $this->form; ?>	
- 
 				<div class="g-recaptcha" data-sitekey="6LeXxAsUAAAAAJG7zygr4wR1ZvmdnSzylg6JYzqR" data-callback="verifyHuman"></div>
-
 
 				</div>
 
@@ -262,7 +260,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 				$('#ImageID').smoothZoom({
 					width: '100%',
-					height: ($(window).height()-70),
+					height: '100%',
 					responsive: true,
 					zoom_MAX: 200
 				});
