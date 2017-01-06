@@ -47,8 +47,8 @@
   		</div>
     </div>
   </div>
-</div>
-<div class="container col-sm-12">
+
+<div class="container col-lg-10">
  <div class="panel">
 <h3>Transcriptions</h3>
 </div>
@@ -67,7 +67,7 @@
 	<tr>
 		<td><?php echo $transcriptionItem["item_title"] . ', ' . $transcriptionItem["file_title"]; ?></td>
 		<td><a hred="<?php echo $transcribeItem["collection_link"];?>"><?php echo $transcriptionItem["collection_name"]; ?></a></td>
-		<td><a href="<?php echo $transcriptionItem["URL_changed"];?>">...<?php echo snippet($transcriptionItem["transcription"], strlen($transcriptionItem["transcription"]) - 100, strlen($transcriptionItem["transcription"]))?><span class="glyphicon glyphicon-pencil"></span></a></td>
+		<td><a href="<?php echo $transcriptionItem["URL_changed"];?>">...<?php echo snippet($transcriptionItem["transcription"], strlen($transcriptionItem["transcription"]) - 100, strlen($transcriptionItem["transcription"]))?>&nbsp;<span class="glyphicon glyphicon-pencil"></span></a></td>
 		<td><?php 
 	                   $changedtime = new DateTime($transcriptionItem["time_changed"]);
 	                   $formattedchangedtime = $changedtime->format('F j, Y — g:s a');
@@ -78,5 +78,5 @@
 </tbody>
 </table>
 </div>
-
+</div>
 </html>
