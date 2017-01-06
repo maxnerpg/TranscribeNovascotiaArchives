@@ -79,4 +79,11 @@
 </table>
 </div>
 </div>
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js">
+<script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js">
+<script>
+$(document).ready(function() {
+    $('#Transcriptions').DataTable();
+} );
+</script>
 </html>
