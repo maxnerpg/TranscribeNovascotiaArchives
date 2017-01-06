@@ -260,7 +260,7 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 				$('#ImageID').smoothZoom({
 					width: '100%',
-					height: ($(window).height() + 50),
+					height: ($(window).height() + 75),
 					responsive: true,
 					zoom_MAX: 200
 				});
