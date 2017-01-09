@@ -67,7 +67,7 @@
 	<tr>
 		<td><?php echo $transcriptionItem["item_title"] . ', ' . $transcriptionItem["file_title"]; ?></td>
 		<td><a hred="<?php echo $transcribeItem["collection_link"];?>"><?php echo $transcriptionItem["collection_name"]; ?></a></td>
-		<td><a href="<?php echo $transcriptionItem["URL_changed"];?>">...<?php echo snippet($transcriptionItem["transcription"], strlen($transcriptionItem["transcription"]) - 100, strlen($transcriptionItem["transcription"]))?>&nbsp;<span class="glyphicon glyphicon-pencil"></span></a></td>
+		<td><a href="<?php echo $transcriptionItem["URL_changed"];?>"><?php echo snippet_by_word_count($transcriptionItem["transcription"], 25, '...')?>&nbsp;<span class="glyphicon glyphicon-pencil"></span></a></td>
 		<td><?php 
 	                   $changedtime = new DateTime($transcriptionItem["time_changed"]);
 	                   $formattedchangedtime = $changedtime->format('F j, Y — g:s a');
