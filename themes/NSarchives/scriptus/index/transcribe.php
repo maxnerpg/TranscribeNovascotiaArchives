@@ -17,6 +17,9 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass));
 	html {
 			background-color: white;
 	}
+	.main {
+		background-color: white;
+	}
 	textarea#transcribebox {
 		font-size:18px;
 	
