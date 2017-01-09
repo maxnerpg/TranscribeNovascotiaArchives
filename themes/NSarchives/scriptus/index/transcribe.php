@@ -261,7 +261,7 @@ echo $this->fileOrder;
 				$("#transcribebox").prop("readonly", false);
 				$.ajax({
 					type: "POST",
-					url: "../../../verify.php",
+					url: "../../../verify",
 					data: {
 						captcha: grecaptcha.getResponse()
 					}
