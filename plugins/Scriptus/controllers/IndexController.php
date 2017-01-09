@@ -198,7 +198,12 @@ class Scriptus_IndexController extends Omeka_Controller_AbstractActionController
 
 
 
+    public function verifyAction() 
+     {        
 
+      
+       
+    }
 
 
      public function translateAction() 
