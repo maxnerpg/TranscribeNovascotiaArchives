@@ -307,7 +307,8 @@ echo $this->fileOrder;
 					width: '100%',
 					height: ($(window).height() + 75),
 					responsive: true,
-					zoom_MAX: 200
+					zoom_MAX: 200,
+					background_COLOR: '#fff'
 				});
 				
 				$("#transcribebox").on('change keyup paste', function() {

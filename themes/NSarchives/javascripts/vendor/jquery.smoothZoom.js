@@ -62,9 +62,9 @@
 		mouse_WHEEL_CURSOR_POS: true,				//Enable/disable position sensitive mousewheel zoom
 		mouse_DOUBLE_CLICK: true,					//Enable/disable zoom action with double click
 
-		background_COLOR: '#000000',				//Background colour of image container
+		background_COLOR: '#FFFFF',				//Background colour of image container
 		border_SIZE: 0,								//Border size of view area
-		border_COLOR: '#000000',					//Border color of view area
+		border_COLOR: '#FFFFF',					//Border color of view area
 		border_TRANSPARENCY: 10,					//Border transparency of view area
 		
 		image_url: '',								//Set url or image to be zoomed
