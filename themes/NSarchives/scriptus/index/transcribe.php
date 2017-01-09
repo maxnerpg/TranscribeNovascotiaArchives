@@ -1,7 +1,11 @@
 <?php 
-$collectionclass = ('collection' . $item->collection_id);	
+$collectionclass = ('collection' . $item->collection_id);
 
-echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
+
+
+echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass));
+
+?>
 <script src="https://use.typekit.net/twf3pvh.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -123,7 +127,9 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		<div class="main col-md-7 col-xs-12">
 		    <div class="container-fluid" style="padding-right:0;padding-left:0;">
 		        <div class="row-fluid">
-		           <img id="ImageID" src="<?php echo $this->imageUrl; ?>" alt=''/>
+		           <img id="ImageID" src="<?php echo $this->imageUrl;
+
+?>" alt=''/>
 		        </div>
 		    </div>
 		    <!-- Modal that can be served if a user navigates away from the form with unsaved content -->
@@ -148,11 +154,21 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		</div> <!-- /.main -->
 		<div class="transcribeLeft col-md-5 col-xs-12">
 			<div id="transcribeBack"><?php echo $this->back_link;
-				 ?></div>
-		     <h1><?php echo $this->file_title; ?></h1>
-		     <h2><?php echo $this->item_link; ?></h2>
-			 <h2><?php echo $this->collection_link; ?></h2>
-			 <h2><?php echo $this->location; ?></h2>
+
+
+?></div>
+		     <h1><?php echo $this->file_title;
+
+?></h1>
+		     <h2><?php echo $this->item_link;
+
+?></h2>
+			 <h2><?php echo $this->collection_link;
+
+?></h2>
+			 <h2><?php echo $this->location;
+
+?></h2>
 			 <h2 style="font-style: italic;">Transcriptions licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-0 »</a></h2>
 	   		
 
@@ -168,21 +184,35 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 			   		<div id="transcribePageNav">
 				   		  
 						<?php if (isset($this->paginationUrls['prev'])): ?>
-							<a onClick="parent.location='<?php echo html_escape($this->paginationUrls['prev']); ?>'">< Prev</a>
+							<a onClick="parent.location='<?php echo html_escape($this->paginationUrls['prev']);
+
+?>'">< Prev</a>
 						<?php else: ?>
 							< Prev
-						<?php endif; ?>
+						<?php endif;
+
+?>
 						|  Page <?php  
-							echo $this->fileOrder; ?> of <?php echo $this->metadata($item, 'file count'); ?>  |
+echo $this->fileOrder;
+
+?> of <?php echo $this->metadata($item, 'file count');
+
+?>  |
 						<?php if (isset($this->paginationUrls['next'])): ?>
-							<a onClick="parent.location='<?php echo html_escape($this->paginationUrls['next']); ?>'">Next ></a>
+							<a onClick="parent.location='<?php echo html_escape($this->paginationUrls['next']);
+
+?>'">Next ></a>
 						<?php else: ?>
 							Next >
-						<?php endif; ?>	
+						<?php endif;
+
+?>	
 								   		
 			   		</div>
 				
-				<?php echo $this->form; ?>	
+				<?php echo $this->form;
+
+?>	
 				<div class="g-recaptcha" data-sitekey="6LeXxAsUAAAAAJG7zygr4wR1ZvmdnSzylg6JYzqR" data-callback="verifyHuman"></div>
 
 				</div>
@@ -227,8 +257,15 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="../../plugins/Scriptus/views/public/javascripts/classie.js"></script>
 		<script>
-			function verifyHuman(response){
+			function verifyHuman(response) {
 				$("#transcribebox").prop("readonly", false);
+				$.ajax({
+					type: "POST",
+					url: "verify.php",
+					data: {
+						captcha: grecaptcha.getResponse()
+					}
+				})
 			}
 			//Loads discuss tab if user navigated from recent comments page. discussOpen is the URL parameter used for this purpose
 			$(document).ready(function(){
@@ -283,7 +320,9 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 						// process the form
 						$.ajax({
 							type 		: 'POST', // define the type of HTTP verb we want to use (POST for our form)
-							url 		: '<?php echo Zend_Controller_Front::getInstance()->getRequest()->getRequestUri(); ?>/save', // the url where we want to POST
+							url 		: '<?php echo Zend_Controller_Front::getInstance()->getRequest()->getRequestUri();
+
+?>/save', // the url where we want to POST
 							data 		: formData, // our data object
 							dataType 	: 'json', // what type of data do we expect back from the server
 				            encode       : true
@@ -344,6 +383,8 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass)); ?>
 
 		</script>
 
-<?php echo foot(); ?>
+<?php echo foot();
+
+?>
 
 
