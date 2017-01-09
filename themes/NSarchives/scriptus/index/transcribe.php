@@ -14,7 +14,9 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass));
 <link href="../../plugins/Scriptus/views/public/css/component.css" rel="stylesheet"> 
 
 <style>
-	
+	html {
+			background-color: white;
+	}
 	textarea#transcribebox {
 		font-size:18px;
 	
@@ -119,7 +121,9 @@ echo head(array('bodyid'=>'trancription','bodyclass'=>$collectionclass));
 	dt#transcribebox-label {
 		display:none;
 	}
-
+	.noSel {
+			background-color:#fff;
+	}
 
 	</style>
 
@@ -264,6 +268,10 @@ echo $this->fileOrder;
 					url: "../../../verify",
 					data: {
 						captcha: grecaptcha.getResponse()
+					},
+					success : function(data){
+						console.log(data);
+						$('.g-recaptcha').css('display', 'none')
 					}
 				})
 			}
