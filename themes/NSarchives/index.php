@@ -6,18 +6,9 @@
     <h3> About Transcribe @ Nova Scotia Archives </h3>
 </div>
 <div class="well">
-    <p>
-        <b>Transcribe @ Nova Scotia Archives</b> is a web application that enables crowdsourcing transcription of archival documents held by the Nova Scotia Archives.
-        <br>
-        By transcribing these documents you are helping further the mission of the Nova Scotia Archives to provide access to heritage material.
-        <br>
-        To begin please select a collection you would be interested in contributing too
-        <br>
-        <b>Transcribe @ Nova Scotia Archives</b> is built on the Omeka Digital Library platform using the Scriptus Platform by DIYhistory.
-        <br>
-        <b>Total Transcriptions Started: </b> <?php echo total_transcribed();  ?>
-        <!-- Can change to total transcriptions finished or a progress bar against total items -->
-    </p>
+    <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
+    <p><?php echo $homepageText; ?></p>
+    <?php endif; ?>
 </div>
 </div>
 <div id="columns" class="container">
