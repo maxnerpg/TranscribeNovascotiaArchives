@@ -21,6 +21,7 @@ body {
 }
 .banner-imgs{
 	min-height: 50px;
+	display: none;
 }
 .panel {
 	margin-bottom: 0px;
