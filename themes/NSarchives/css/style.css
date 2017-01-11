@@ -56,9 +56,7 @@ div#transcribeNavbar li:hover {
 	background-color:#fff;
 }
 
-div.thumbholder {
-	background-color:#fff;
-}
+
 
 
 div.vcenter {
@@ -557,7 +555,7 @@ div.masonryrow {
 }
 
 div.thumbholder{
-	background-color:#000;
+	background-color: white;
 	padding:19px;
 	padding-bottom:14px;
 	position: relative;
