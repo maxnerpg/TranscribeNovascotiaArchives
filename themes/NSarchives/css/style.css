@@ -56,7 +56,9 @@ div#transcribeNavbar li:hover {
 	background-color:#fff;
 }
 
-
+div.thumbholder {
+	background-color:#fff;
+}
 
 
 div.vcenter {
