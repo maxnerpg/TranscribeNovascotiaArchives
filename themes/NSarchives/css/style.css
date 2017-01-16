@@ -21,6 +21,7 @@ body {
 }
 .banner-imgs{
 	min-height: 50px;
+	display: none;
 }
 .panel {
 	margin-bottom: 0px;
@@ -283,6 +284,7 @@ body.simple-page div.row {
     right: 0;
 	z-index: 99;
 	margin-top: 2px;
+	display: none;
 }
 .btn-share {
     background-color: #BEBEBE;
