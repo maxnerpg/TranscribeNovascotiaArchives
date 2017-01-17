@@ -138,6 +138,7 @@ div#header-transcribebox a {
 
 .navbar li div.form-group {
 	width:135px;
+	display: none;
 }
 
 input#query {width:220px;display:inline;}
